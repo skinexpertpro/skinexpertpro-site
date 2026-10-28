@@ -1,0 +1,469 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<script>
+// Links antigos do sistema (fichas de anamnese, confirmação, login e Google Agenda) apontavam para
+// www.skinexpertpro.com. Agora o sistema fica em app.skinexpertpro.com: levamos a pessoa para lá.
+(function(){
+  var q = location.search, h = location.hash;
+  if(/[?&](anamnese|confirmar|google_agenda|code)=/.test(q) || /(access_token|type=recovery|type=signup|error_description)/.test(h)){
+    location.replace('https://app.skinexpertpro.com/' + q + h);
+  }
+})();
+</script>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Skin Expert Pro — ciência dos ativos e gestão para profissionais da estética</title>
+<meta name="description" content="Sistema para profissionais da estética que atendem por conta própria: anamnese, avaliação cutânea, planos de skincare com base de ativos, agenda e financeiro num só lugar.">
+<meta property="og:title" content="Skin Expert Pro">
+<meta property="og:description" content="A ciência dos ativos e a gestão do seu negócio, no mesmo lugar.">
+<link rel="icon" href="img/favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="img/icone-32.png">
+<link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;800&amp;family=Playfair+Display:wght@500;600;700;800&amp;family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+<style>
+html{scroll-behavior:smooth}
+.seg{font-size:14px;font-weight:700;padding:10px 16px;border-radius:999px;border:0;cursor:pointer;font-family:inherit;background:transparent;color:#5A4347;min-height:44px}
+.seg[aria-pressed="true"]{background:#6B1E2E;color:#FFFFFF}
+.seg:focus-visible,a:focus-visible{outline:2px solid #6B1E2E;outline-offset:2px}
+
+body{margin:0;background:#FBF4F1}
+a{color:#6B1E2E}a:hover{color:#4A1420}
+.marquee{overflow:hidden;-webkit-mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent)}
+.marquee-track{display:flex;width:max-content;animation:marquee 32s linear infinite}
+.marquee:hover .marquee-track{animation-play-state:paused}
+@keyframes marquee{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+@media (prefers-reduced-motion: reduce){.marquee-track{animation:none}}
+details summary{list-style:none;cursor:pointer}
+details summary::-webkit-details-marker{display:none}
+details[open] .faq-plus{transform:rotate(45deg)}
+</style>
+</head>
+<body>
+<div style="font-family: 'Inter', system-ui, sans-serif; color: #2A1A1D; background: #FBF4F1; min-height: 100vh">
+
+<header style="background: #FBF4F1; border-bottom: 1px solid #EBD8D0">
+<nav aria-label="Principal" style="max-width: 1200px; margin: 0 auto; padding: 18px 24px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px">
+<a href="#topo" style="display: flex; align-items: center; gap: 10px; text-decoration: none; color: #2A1A1D">
+<svg width="42" height="42" viewBox="0 0 100 100" fill="none" aria-hidden="true"><defs><clipPath id="tr-h"><rect x="2" y="2" width="96" height="96" rx="26"></rect></clipPath></defs><rect x="2" y="2" width="96" height="96" rx="26" fill="#6B1E2E"></rect><g clip-path="url(#tr-h)" stroke-linecap="round"><g stroke="#B5615E" stroke-width="1.5" transform="rotate(28 50 50)"><path d="M-30 -6 Q0 -11 30 -6 T90 -6 T150 -6"></path><path d="M-30 2 Q0 -3 30 2 T90 2 T150 2"></path><path d="M-30 10 Q0 5 30 10 T90 10 T150 10"></path><path d="M-30 18 Q0 13 30 18 T90 18 T150 18"></path><path d="M-30 26 Q0 21 30 26 T90 26 T150 26"></path><path d="M-30 34 Q0 29 30 34 T90 34 T150 34"></path><path d="M-30 42 Q0 37 30 42 T90 42 T150 42"></path><path d="M-30 50 Q0 45 30 50 T90 50 T150 50"></path><path d="M-30 58 Q0 53 30 58 T90 58 T150 58"></path><path d="M-30 66 Q0 61 30 66 T90 66 T150 66"></path><path d="M-30 74 Q0 69 30 74 T90 74 T150 74"></path><path d="M-30 82 Q0 77 30 82 T90 82 T150 82"></path><path d="M-30 90 Q0 85 30 90 T90 90 T150 90"></path><path d="M-30 98 Q0 93 30 98 T90 98 T150 98"></path><path d="M-30 106 Q0 101 30 106 T90 106 T150 106"></path></g><g stroke="#F6D6CE" stroke-width="1.7" transform="rotate(-16 50 50)"><path d="M-30 -2 Q-5 -8 20 -2 T70 -2 T120 -2 T170 -2"></path><path d="M-30 6 Q-5 0 20 6 T70 6 T120 6 T170 6"></path><path d="M-30 14 Q-5 8 20 14 T70 14 T120 14 T170 14"></path><path d="M-30 22 Q-5 16 20 22 T70 22 T120 22 T170 22"></path><path d="M-30 30 Q-5 24 20 30 T70 30 T120 30 T170 30"></path><path d="M-30 38 Q-5 32 20 38 T70 38 T120 38 T170 38"></path><path d="M-30 46 Q-5 40 20 46 T70 46 T120 46 T170 46"></path><path d="M-30 54 Q-5 48 20 54 T70 54 T120 54 T170 54"></path><path d="M-30 62 Q-5 56 20 62 T70 62 T120 62 T170 62"></path><path d="M-30 70 Q-5 64 20 70 T70 70 T120 70 T170 70"></path><path d="M-30 78 Q-5 72 20 78 T70 78 T120 78 T170 78"></path><path d="M-30 86 Q-5 80 20 86 T70 86 T120 86 T170 86"></path><path d="M-30 94 Q-5 88 20 94 T70 94 T120 94 T170 94"></path><path d="M-30 102 Q-5 96 20 102 T70 102 T120 102 T170 102"></path></g></g></svg>
+<span style="display: flex; flex-direction: column; line-height: 0.95"><span style="font-family: 'Syne', sans-serif; font-weight: 800; font-size: 24px; letter-spacing: -0.03em; color: #6B1E2E">skin</span><span style="font-family: 'Syne', sans-serif; font-weight: 600; font-size: 10.5px; letter-spacing: 0.08em; color: #6B1E2E">expert pro</span></span>
+</a>
+<div style="display: flex; flex-wrap: wrap; align-items: center; gap: 28px; font-size: 15px; font-weight: 600">
+<a href="#recursos" style="text-decoration: none; color: #2A1A1D">Recursos</a>
+<a href="#ativos" style="text-decoration: none; color: #2A1A1D">Ciência dos ativos</a>
+<a href="#planos" style="text-decoration: none; color: #2A1A1D">Planos</a>
+<a href="#duvidas" style="text-decoration: none; color: #2A1A1D">Dúvidas</a>
+</div>
+<div style="display: flex; align-items: center; gap: 12px">
+<a href="https://app.skinexpertpro.com" style="text-decoration: none; font-weight: 700; font-size: 15px; padding: 12px 16px; color: #6B1E2E">Entrar</a>
+<a href="#planos" style="text-decoration: none; font-weight: 700; font-size: 15px; padding: 12px 20px; border-radius: 999px; background: #6B1E2E; color: #FFFFFF">Criar conta</a>
+</div>
+</nav>
+</header>
+
+<section id="topo" style="max-width: 1200px; margin: 0 auto; padding: 72px 24px 88px; display: flex; flex-wrap: wrap; gap: 56px; align-items: center">
+<div style="flex: 1 1 460px; min-width: 0; display: flex; flex-direction: column; gap: 24px">
+<span style="align-self: flex-start; font-size: 13px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: #9E4A44; background: #F6D6CE; padding: 8px 14px; border-radius: 999px">Para profissionais da estética que atendem por conta própria</span>
+<h1 style="margin: 0; font-family: 'Playfair Display', Georgia, serif; font-weight: 700; letter-spacing: -0.01em; font-size: clamp(40px, 5.2vw, 66px); line-height: 1.04; color: #2A1A1D">A ciência dos ativos e a gestão do seu negócio, <span style="color: #6B1E2E">no mesmo lugar.</span></h1>
+<p style="margin: 0; font-size: 19px; line-height: 1.6; color: #5A4347; max-width: 560px">Anamnese, planos de skincare com produtos e ativos explicados, agenda e financeiro num sistema pensado para quem faz tudo sozinha — da avaliação da pele ao fechamento do mês.</p>
+<div style="display: flex; flex-wrap: wrap; gap: 12px; padding-top: 4px">
+<a href="https://app.skinexpertpro.com" style="text-decoration: none; font-weight: 700; font-size: 16px; padding: 16px 28px; border-radius: 999px; background: #6B1E2E; color: #FFFFFF">Criar minha conta</a>
+<a href="#como-funciona" style="text-decoration: none; font-weight: 700; font-size: 16px; padding: 16px 24px; border-radius: 999px; border: 1.5px solid #6B1E2E; color: #6B1E2E">Ver como funciona</a>
+</div>
+<div style="display: flex; flex-wrap: wrap; gap: 20px; font-size: 14px; color: #5A4347; font-weight: 600">
+<span style="display: flex; align-items: center; gap: 8px"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#9E4A44" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg>No computador e no celular</span>
+<span style="display: flex; align-items: center; gap: 8px"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#9E4A44" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg>Brasil e União Europeia</span>
+<span style="display: flex; align-items: center; gap: 8px"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#9E4A44" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg>LGPD e RGPD</span>
+</div>
+</div>
+
+<div style="flex: 1 1 460px; min-width: 0">
+<div style="background: #FFFFFF; border: 1px solid #EBD8D0; border-radius: 16px; overflow: hidden; box-shadow: 0 30px 60px -30px rgba(74,20,32,0.4); font-family: 'Inter', system-ui, sans-serif; color: #2c1b20">
+<div style="display: flex; align-items: center; gap: 12px; padding: 10px 14px; background: #f3ece4; border-bottom: 1px solid #e8ded0">
+<span style="display: flex; gap: 6px" aria-hidden="true"><span style="width: 10px; height: 10px; border-radius: 50%; background: #e0b4ab"></span><span style="width: 10px; height: 10px; border-radius: 50%; background: #e8d3b0"></span><span style="width: 10px; height: 10px; border-radius: 50%; background: #c9d8c0"></span></span>
+<span style="flex: 1; text-align: center; font-size: 11px; color: #8a7768; background: #FFFFFF; border-radius: 6px; padding: 4px 10px">skinexpertpro.com</span>
+</div>
+<div style="display: flex">
+<div style="flex: none; width: 44px; background: #4a1524; padding: 14px 0; display: flex; flex-direction: column; align-items: center; gap: 12px" aria-hidden="true"><span style="width: 22px; height: 22px; border-radius: 6px; background: #6d2340"></span><span style="width: 22px; height: 22px; border-radius: 6px; background: rgba(233,220,201,0.18)"></span><span style="width: 22px; height: 22px; border-radius: 6px; background: rgba(233,220,201,0.18)"></span><span style="width: 22px; height: 22px; border-radius: 6px; background: rgba(233,220,201,0.18)"></span><span style="width: 22px; height: 22px; border-radius: 6px; background: rgba(233,220,201,0.18)"></span><span style="width: 22px; height: 22px; border-radius: 6px; background: rgba(233,220,201,0.18)"></span></div>
+<div style="flex: 1; min-width: 0; background: #f7f1e7; padding: 14px; display: flex; flex-direction: column; gap: 10px">
+<div style="display: flex; align-items: center; gap: 10px">
+<span style="width: 32px; height: 32px; border-radius: 50%; background: #f2e2e6; color: #7a2440; display: flex; align-items: center; justify-content: center; font-size: 12px; font-weight: 700">ML</span>
+<div style="display: flex; flex-direction: column; gap: 1px"><span style="font-family: 'Playfair Display', Georgia, serif; font-size: 15px; font-weight: 700">Marina L.</span><span style="font-size: 10.5px; color: #4a7a3d; font-weight: 600">Ativo</span></div>
+</div>
+<div style="display: flex; gap: 6px; overflow: hidden"><span style="flex: none; font-size: 10.5px; font-weight: 600; padding: 6px 10px; border-radius: 8px; border: 1px solid #e8ded0; background: #FFFFFF; color: #2c1b20">Dados</span><span style="flex: none; font-size: 10.5px; font-weight: 600; padding: 6px 10px; border-radius: 8px; border: 1px solid #e8ded0; background: #FFFFFF; color: #2c1b20">Anamnese Clínica</span><span style="flex: none; font-size: 10.5px; font-weight: 600; padding: 6px 10px; border-radius: 8px; border: 1px solid #e8ded0; background: #FFFFFF; color: #2c1b20">Avaliação Cutânea</span><span style="flex: none; font-size: 10.5px; font-weight: 600; padding: 6px 10px; border-radius: 8px; border: 1px solid #4a1524; background: #4a1524; color: #FFFFFF">Plano de SkinCare</span><span style="flex: none; font-size: 10.5px; font-weight: 600; padding: 6px 10px; border-radius: 8px; border: 1px solid #e8ded0; background: #FFFFFF; color: #2c1b20">Recomendações</span></div>
+<div style="background: #FFFFFF; border: 1px solid #e8ded0; border-radius: 12px; padding: 12px; display: flex; flex-direction: column; gap: 10px">
+<div style="display: flex; flex-wrap: wrap; align-items: center; gap: 8px">
+<span style="font-size: 11px; color: #8a7768; font-weight: 600">34 anos · Feminino</span>
+<span style="font-size: 10.5px; font-weight: 700; padding: 4px 9px; border-radius: 999px; background: #f3e6d2; color: #8a6a2f">Sistema Baumann: OSPT</span>
+<span style="font-size: 10.5px; font-weight: 700; padding: 4px 9px; border-radius: 999px; background: #f3e6d2; color: #8a6a2f">Fototipo: III</span>
+</div>
+<div style="display: grid; grid-template-columns: minmax(0, 1fr) 90px; gap: 8px">
+<div style="display: flex; flex-direction: column; gap: 4px"><span style="font-size: 10.5px; font-weight: 600; color: #8a7768">Objetivo do Plano de SkinCare</span><span style="font-size: 11.5px; border: 1px solid #e8ded0; border-radius: 8px; padding: 7px 9px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis">Controle da oleosidade e clareamento de manchas</span></div>
+<div style="display: flex; flex-direction: column; gap: 4px"><span style="font-size: 10.5px; font-weight: 600; color: #8a7768">Duração (dias)</span><span style="font-size: 11.5px; border: 1px solid #e8ded0; border-radius: 8px; padding: 7px 9px">30</span></div>
+</div>
+</div>
+<div style="background: #FFFFFF; border: 1px solid #e8ded0; border-radius: 12px; padding: 12px; display: flex; flex-direction: column; gap: 8px">
+<span style="display: flex; align-items: center; gap: 8px; font-family: 'Playfair Display', Georgia, serif; font-size: 14px; font-weight: 700"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M9 11l3 3L22 4"></path><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"></path></svg>Jornada da Rotina</span>
+<div style="border: 1px solid #e8ded0; border-radius: 10px; padding: 10px 12px; background: #fafbfc"><div style="display: flex; align-items: center; justify-content: space-between; gap: 8px"><div style="display: flex; align-items: center; gap: 7px; font-size: 12px; font-weight: 700; color: #2c1b20; min-width: 0"><span style="flex: none; font-size: 9px; font-weight: 800; padding: 3px 7px; border-radius: 999px; text-transform: uppercase; letter-spacing: .03em; background: #f6ead2; color: #8a6a2f">Manhã</span><span style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis">Gel de Limpeza Purificante <span style="color: #8a7768; font-weight: 500">— Limpeza</span></span></div><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#8a7768" stroke-width="2" aria-hidden="true" style="flex: none"><polyline points="3 6 5 6 21 6"></polyline><path d="M19 6l-1 14a2 2 0 01-2 2H8a2 2 0 01-2-2L5 6"></path></svg></div></div>
+<div style="border: 1px solid #e8ded0; border-radius: 10px; padding: 10px 12px; background: #fafbfc"><div style="display: flex; align-items: center; justify-content: space-between; gap: 8px"><div style="display: flex; align-items: center; gap: 7px; font-size: 12px; font-weight: 700; color: #2c1b20; min-width: 0"><span style="flex: none; font-size: 9px; font-weight: 800; padding: 3px 7px; border-radius: 999px; text-transform: uppercase; letter-spacing: .03em; background: #f6ead2; color: #8a6a2f">Manhã</span><span style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis">Sérum Niacinamida 10% <span style="color: #8a7768; font-weight: 500">— Tratamento</span></span></div><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#8a7768" stroke-width="2" aria-hidden="true" style="flex: none"><polyline points="3 6 5 6 21 6"></polyline><path d="M19 6l-1 14a2 2 0 01-2 2H8a2 2 0 01-2-2L5 6"></path></svg></div><div style="margin-top: 10px; padding-top: 10px; border-top: 1px solid #e8ded0; display: grid; grid-template-columns: 90px minmax(0, 1fr); gap: 6px 10px; font-size: 11px"><span style="color: #8a7768; font-weight: 600">Frequência</span><span style="font-weight: 600">Diário</span><span style="color: #8a7768; font-weight: 600">Modo de uso</span><span style="line-height: 1.45">Aplicar 3 gotas no rosto limpo, antes do protetor solar.</span></div></div>
+<div style="border: 1px solid #e8ded0; border-radius: 10px; padding: 10px 12px; background: #fafbfc"><div style="display: flex; align-items: center; justify-content: space-between; gap: 8px"><div style="display: flex; align-items: center; gap: 7px; font-size: 12px; font-weight: 700; color: #2c1b20; min-width: 0"><span style="flex: none; font-size: 9px; font-weight: 800; padding: 3px 7px; border-radius: 999px; text-transform: uppercase; letter-spacing: .03em; background: #f6ead2; color: #8a6a2f">Manhã</span><span style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis">Protetor Solar FPS 50 <span style="color: #8a7768; font-weight: 500">— Proteção solar</span></span></div><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#8a7768" stroke-width="2" aria-hidden="true" style="flex: none"><polyline points="3 6 5 6 21 6"></polyline><path d="M19 6l-1 14a2 2 0 01-2 2H8a2 2 0 01-2-2L5 6"></path></svg></div></div>
+<div style="border: 1px solid #e8ded0; border-radius: 10px; padding: 10px 12px; background: #fafbfc"><div style="display: flex; align-items: center; justify-content: space-between; gap: 8px"><div style="display: flex; align-items: center; gap: 7px; font-size: 12px; font-weight: 700; color: #2c1b20; min-width: 0"><span style="flex: none; font-size: 9px; font-weight: 800; padding: 3px 7px; border-radius: 999px; text-transform: uppercase; letter-spacing: .03em; background: #4a1524; color: #FFFFFF">Noite</span><span style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis">Gel de Ácido Azelaico <span style="color: #8a7768; font-weight: 500">— Tratamento</span></span></div><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#8a7768" stroke-width="2" aria-hidden="true" style="flex: none"><polyline points="3 6 5 6 21 6"></polyline><path d="M19 6l-1 14a2 2 0 01-2 2H8a2 2 0 01-2-2L5 6"></path></svg></div></div>
+<div style="border: 1px solid #e8ded0; border-radius: 10px; padding: 10px 12px; background: #fafbfc"><div style="display: flex; align-items: center; justify-content: space-between; gap: 8px"><div style="display: flex; align-items: center; gap: 7px; font-size: 12px; font-weight: 700; color: #2c1b20; min-width: 0"><span style="flex: none; font-size: 9px; font-weight: 800; padding: 3px 7px; border-radius: 999px; text-transform: uppercase; letter-spacing: .03em; background: #4a1524; color: #FFFFFF">Noite</span><span style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis">Creme Hidratante com Ceramidas <span style="color: #8a7768; font-weight: 500">— Hidratação</span></span></div><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#8a7768" stroke-width="2" aria-hidden="true" style="flex: none"><polyline points="3 6 5 6 21 6"></polyline><path d="M19 6l-1 14a2 2 0 01-2 2H8a2 2 0 01-2-2L5 6"></path></svg></div></div>
+</div>
+<div style="display: flex; justify-content: flex-end"><span style="font-size: 11.5px; font-weight: 700; padding: 8px 14px; border-radius: 999px; background: #4a1524; color: #FFFFFF">Finalizar Plano de SkinCare</span></div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<section aria-label="Recursos principais" style="background: #FFFFFF; border-top: 1px solid #EBD8D0">
+<div class="marquee" style="padding: 22px 0">
+<div class="marquee-track">
+<span style="display: inline-flex; align-items: center; gap: 8px; font-size: 15px; font-weight: 600; color: #6B1E2E; background: #F6D6CE; padding: 10px 18px; border-radius: 999px; margin-right: 12px; white-space: nowrap; flex: none"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"></rect><path d="M16 2v4M8 2v4M3 10h18"></path></svg>Agenda</span>
+<span style="display: inline-flex; align-items: center; gap: 8px; font-size: 15px; font-weight: 600; color: #6B1E2E; background: #F6D6CE; padding: 10px 18px; border-radius: 999px; margin-right: 12px; white-space: nowrap; flex: none"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.5.5l3-3a5 5 0 0 0-7-7l-1.7 1.7"></path><path d="M14 11a5 5 0 0 0-7.5-.5l-3 3a5 5 0 0 0 7 7l1.7-1.7"></path></svg>Ficha de anamnese por link</span>
+<span style="display: inline-flex; align-items: center; gap: 8px; font-size: 15px; font-weight: 600; color: #6B1E2E; background: #F6D6CE; padding: 10px 18px; border-radius: 999px; margin-right: 12px; white-space: nowrap; flex: none"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"></path><path d="M14 3v6h6M8 13h8M8 17h5"></path></svg>Plano de SkinCare em PDF</span>
+<span style="display: inline-flex; align-items: center; gap: 8px; font-size: 15px; font-weight: 600; color: #6B1E2E; background: #F6D6CE; padding: 10px 18px; border-radius: 999px; margin-right: 12px; white-space: nowrap; flex: none"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 2v7.5L4.5 19a2 2 0 0 0 1.7 3h11.6a2 2 0 0 0 1.7-3L14 9.5V2"></path><path d="M8.5 2h7"></path></svg>Dicionário de Ativos</span>
+<span style="display: inline-flex; align-items: center; gap: 8px; font-size: 15px; font-weight: 600; color: #6B1E2E; background: #F6D6CE; padding: 10px 18px; border-radius: 999px; margin-right: 12px; white-space: nowrap; flex: none"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 3v18h18"></path><path d="m7 15 4-4 3 3 5-6"></path></svg>Financeiro integrado</span>
+<span style="display: inline-flex; align-items: center; gap: 8px; font-size: 15px; font-weight: 600; color: #6B1E2E; background: #F6D6CE; padding: 10px 18px; border-radius: 999px; margin-right: 12px; white-space: nowrap; flex: none"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="6" y="2" width="12" height="20" rx="2.5"></rect><path d="M11 18h2"></path></svg>No celular</span>
+<span aria-hidden="true" style="display: inline-flex; align-items: center; gap: 8px; font-size: 15px; font-weight: 600; color: #6B1E2E; background: #F6D6CE; padding: 10px 18px; border-radius: 999px; margin-right: 12px; white-space: nowrap; flex: none"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"></rect><path d="M16 2v4M8 2v4M3 10h18"></path></svg>Agenda</span>
+<span aria-hidden="true" style="display: inline-flex; align-items: center; gap: 8px; font-size: 15px; font-weight: 600; color: #6B1E2E; background: #F6D6CE; padding: 10px 18px; border-radius: 999px; margin-right: 12px; white-space: nowrap; flex: none"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.5.5l3-3a5 5 0 0 0-7-7l-1.7 1.7"></path><path d="M14 11a5 5 0 0 0-7.5-.5l-3 3a5 5 0 0 0 7 7l1.7-1.7"></path></svg>Ficha de anamnese por link</span>
+<span aria-hidden="true" style="display: inline-flex; align-items: center; gap: 8px; font-size: 15px; font-weight: 600; color: #6B1E2E; background: #F6D6CE; padding: 10px 18px; border-radius: 999px; margin-right: 12px; white-space: nowrap; flex: none"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"></path><path d="M14 3v6h6M8 13h8M8 17h5"></path></svg>Plano de SkinCare em PDF</span>
+<span aria-hidden="true" style="display: inline-flex; align-items: center; gap: 8px; font-size: 15px; font-weight: 600; color: #6B1E2E; background: #F6D6CE; padding: 10px 18px; border-radius: 999px; margin-right: 12px; white-space: nowrap; flex: none"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 2v7.5L4.5 19a2 2 0 0 0 1.7 3h11.6a2 2 0 0 0 1.7-3L14 9.5V2"></path><path d="M8.5 2h7"></path></svg>Dicionário de Ativos</span>
+<span aria-hidden="true" style="display: inline-flex; align-items: center; gap: 8px; font-size: 15px; font-weight: 600; color: #6B1E2E; background: #F6D6CE; padding: 10px 18px; border-radius: 999px; margin-right: 12px; white-space: nowrap; flex: none"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 3v18h18"></path><path d="m7 15 4-4 3 3 5-6"></path></svg>Financeiro integrado</span>
+<span aria-hidden="true" style="display: inline-flex; align-items: center; gap: 8px; font-size: 15px; font-weight: 600; color: #6B1E2E; background: #F6D6CE; padding: 10px 18px; border-radius: 999px; margin-right: 12px; white-space: nowrap; flex: none"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="6" y="2" width="12" height="20" rx="2.5"></rect><path d="M11 18h2"></path></svg>No celular</span>
+</div>
+</div>
+</section>
+<section aria-label="Para quem é" style="background: #F5EFEC; border-top: 1px solid #EBD8D0; border-bottom: 1px solid #EBD8D0">
+<div style="max-width: 1200px; margin: 0 auto; padding: 40px 24px; display: flex; flex-direction: column; align-items: center; gap: 20px">
+<span style="font-size: 13px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: #6B1E2E">Feito para profissionais da estética</span>
+<div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 12px">
+<span style="display: inline-flex; align-items: center; gap: 10px; font-size: 16px; font-weight: 600; color: #2A1A1D; background: #FFFFFF; border: 1px solid #EBD8D0; border-radius: 999px; padding: 12px 20px"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#6B1E2E" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg>Esteticistas</span>
+<span style="display: inline-flex; align-items: center; gap: 10px; font-size: 16px; font-weight: 600; color: #2A1A1D; background: #FFFFFF; border: 1px solid #EBD8D0; border-radius: 999px; padding: 12px 20px"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#6B1E2E" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg>Biomédicas Estetas</span>
+<span style="display: inline-flex; align-items: center; gap: 10px; font-size: 16px; font-weight: 600; color: #2A1A1D; background: #FFFFFF; border: 1px solid #EBD8D0; border-radius: 999px; padding: 12px 20px"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#6B1E2E" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg>Enfermeiras Estetas</span>
+<span style="display: inline-flex; align-items: center; gap: 10px; font-size: 16px; font-weight: 600; color: #2A1A1D; background: #FFFFFF; border: 1px solid #EBD8D0; border-radius: 999px; padding: 12px 20px"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#6B1E2E" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg>Fisioterapeutas Dermatofuncionais</span>
+<span style="display: inline-flex; align-items: center; gap: 10px; font-size: 16px; font-weight: 600; color: #2A1A1D; background: #FFFFFF; border: 1px solid #EBD8D0; border-radius: 999px; padding: 12px 20px"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#6B1E2E" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg>Farmacêuticas Estetas</span>
+<span style="display: inline-flex; align-items: center; gap: 10px; font-size: 16px; font-weight: 600; color: #2A1A1D; background: #FFFFFF; border: 1px solid #EBD8D0; border-radius: 999px; padding: 12px 20px"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#6B1E2E" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg>Cosmetólogas</span>
+<span style="display: inline-flex; align-items: center; gap: 10px; font-size: 16px; font-weight: 600; color: #2A1A1D; background: #FFFFFF; border: 1px solid #EBD8D0; border-radius: 999px; padding: 12px 20px"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#6B1E2E" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg>Dentistas em Harmonização Orofacial</span>
+<span style="display: inline-flex; align-items: center; gap: 10px; font-size: 16px; font-weight: 600; color: #2A1A1D; background: #FFFFFF; border: 1px solid #EBD8D0; border-radius: 999px; padding: 12px 20px"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#6B1E2E" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg>Tricologistas</span>
+<span style="display: inline-flex; align-items: center; gap: 10px; font-size: 16px; font-weight: 600; color: #2A1A1D; background: #FFFFFF; border: 1px solid #EBD8D0; border-radius: 999px; padding: 12px 20px"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#6B1E2E" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg>Massoterapeutas</span>
+</div>
+</div>
+</section>
+
+<section style="max-width: 1200px; margin: 0 auto; padding: 104px 24px 40px; display: flex; flex-direction: column; gap: 48px">
+<div style="max-width: 720px; display: flex; flex-direction: column; gap: 16px">
+<span style="font-size: 13px; font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase; color: #9E4A44">Antes do Skin Expert Pro</span>
+<h2 style="margin: 0; font-family: 'Playfair Display', Georgia, serif; font-weight: 700; letter-spacing: -0.01em; font-size: clamp(32px, 3.6vw, 46px); line-height: 1.1">Você estudou a pele a fundo. Sua rotina não precisa ser um caderno, três planilhas e um WhatsApp lotado.</h2>
+</div>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px">
+<div style="background: #FFFFFF; border: 1px solid #EBD8D0; border-radius: 18px; padding: 28px; display: flex; flex-direction: column; gap: 12px">
+<span style="font-family: 'Playfair Display', Georgia, serif; font-size: 40px; color: #D0897F; line-height: 1">01</span>
+<h3 style="margin: 0; font-size: 19px; font-weight: 800">Fichas espalhadas</h3>
+<p style="margin: 0; font-size: 16px; line-height: 1.6; color: #5A4347">Anamnese no papel, fotos no celular e evolução na memória. Tudo passa a ficar no registro de cada paciente.</p>
+</div>
+<div style="background: #FFFFFF; border: 1px solid #EBD8D0; border-radius: 18px; padding: 28px; display: flex; flex-direction: column; gap: 12px">
+<span style="font-family: 'Playfair Display', Georgia, serif; font-size: 40px; color: #D0897F; line-height: 1">02</span>
+<h3 style="margin: 0; font-size: 19px; font-weight: 800">Indicação de home care sem base</h3>
+<p style="margin: 0; font-size: 16px; line-height: 1.6; color: #5A4347">Saiba o que cada produto contém, para que serve cada ativo e o que evitar para cada cliente, de forma personalizada, antes de recomendar.</p>
+</div>
+<div style="background: #FFFFFF; border: 1px solid #EBD8D0; border-radius: 18px; padding: 28px; display: flex; flex-direction: column; gap: 12px">
+<span style="font-family: 'Playfair Display', Georgia, serif; font-size: 40px; color: #D0897F; line-height: 1">03</span>
+<h3 style="margin: 0; font-size: 19px; font-weight: 800">Caixa sem controle</h3>
+<p style="margin: 0; font-size: 16px; line-height: 1.6; color: #5A4347">Comandas e contas pagas entram sozinhas num único livro-caixa. No fim do mês, é só exportar.</p>
+</div>
+</div>
+</section>
+
+<section id="ativos" style="max-width: 1200px; margin: 0 auto; padding: 80px 24px; display: flex; flex-wrap: wrap; gap: 56px; align-items: center">
+<div style="flex: 1 1 440px; min-width: 0; display: flex; flex-direction: column; gap: 20px">
+<span style="font-size: 13px; font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase; color: #9E4A44">Formulações Cosméticas</span>
+<h2 style="margin: 0; font-family: 'Playfair Display', Georgia, serif; font-weight: 700; letter-spacing: -0.01em; font-size: clamp(32px, 3.6vw, 46px); line-height: 1.1">Um dicionário de ativos que pensa como cosmetóloga.</h2>
+<p style="margin: 0; font-size: 18px; line-height: 1.6; color: #5A4347">Pesquise cada ativo por mecanismo de ação, pH, concentração de uso e restrições. Filtre por paciente gestante, fórmulas veganas ou orgânicas, período de uso e classes de ativos — e guarde seus favoritos.</p>
+<ul style="margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 14px">
+<li style="display: flex; gap: 12px; font-size: 16px; line-height: 1.5"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#6B1E2E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex: none"><circle cx="11" cy="11" r="7"></circle><path d="m20 20-3.5-3.5"></path></svg><span><strong>Busca guiada</strong> por perfil da paciente, período, classe e subclasse do ativo.</span></li>
+<li style="display: flex; gap: 12px; font-size: 16px; line-height: 1.5"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#6B1E2E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex: none"><path d="M10 2v7.5L4.5 19a2 2 0 0 0 1.7 3h11.6a2 2 0 0 0 1.7-3L14 9.5V2"></path><path d="M8.5 2h7"></path></svg><span><strong>Catálogo de produtos conectado</strong>: a lista de ingredientes de cada produto aponta para os ativos — e você vê quais produtos contêm cada ativo.</span></li>
+<li style="display: flex; gap: 12px; font-size: 16px; line-height: 1.5"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#6B1E2E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex: none"><path d="M12 3 2 8l10 5 10-5-10-5Z"></path><path d="m2 16 10 5 10-5"></path></svg><span><strong>Base em crescimento</strong>, revisada por uma esteticista e cosmetóloga, compartilhada por todas as profissionais.</span></li>
+</ul>
+</div>
+<div style="flex: 1 1 440px; min-width: 0; display: flex; flex-direction: column; gap: 16px">
+<div style="background: #FFFFFF; border: 1px solid #EBD8D0; border-radius: 20px; padding: 20px; display: flex; flex-direction: column; gap: 14px">
+<div style="display: flex; align-items: center; gap: 10px; border: 1px solid #EBD8D0; border-radius: 12px; padding: 12px 14px; color: #5A4347; font-size: 15px"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="m20 20-3.5-3.5"></path></svg>Buscar ativo…</div>
+<div style="display: flex; flex-wrap: wrap; gap: 8px">
+<span style="font-size: 13px; font-weight: 700; padding: 8px 12px; border-radius: 999px; background: #6B1E2E; color: #FFFFFF">Gestante</span>
+<span style="font-size: 13px; font-weight: 700; padding: 8px 12px; border-radius: 999px; border: 1px solid #EBD8D0">Vegano</span>
+<span style="font-size: 13px; font-weight: 700; padding: 8px 12px; border-radius: 999px; border: 1px solid #EBD8D0">Orgânico</span>
+<span style="font-size: 13px; font-weight: 700; padding: 8px 12px; border-radius: 999px; background: #6B1E2E; color: #FFFFFF">Uso diurno</span>
+<span style="font-size: 13px; font-weight: 700; padding: 8px 12px; border-radius: 999px; border: 1px solid #EBD8D0">Clareadores</span>
+</div>
+<div style="display: flex; gap: 20px; border-bottom: 1px solid #EBD8D0; font-size: 14px; font-weight: 700">
+<span style="padding: 8px 0; border-bottom: 2px solid #6B1E2E; color: #6B1E2E">Todos</span>
+<span style="padding: 8px 0; color: #5A4347">Favoritos</span>
+<span style="padding: 8px 0; color: #5A4347">Selecionados</span>
+</div>
+<div style="border: 1px solid #EBD8D0; border-radius: 16px; padding: 18px; display: flex; flex-direction: column; gap: 12px">
+<div style="display: flex; justify-content: space-between; align-items: baseline; gap: 12px">
+<span style="font-family: 'Playfair Display', Georgia, serif; font-size: 26px">Niacinamida</span>
+<span style="font-size: 12px; font-weight: 700; color: #9E4A44">Vitamina B3</span>
+</div>
+<div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px">
+<div style="background: #FBF4F1; border-radius: 10px; padding: 10px; display: flex; flex-direction: column; gap: 2px"><span style="font-size: 11px; font-weight: 700; color: #5A4347">Classe</span><span style="font-size: 15px; font-weight: 800">Vitaminas</span></div>
+<div style="background: #FBF4F1; border-radius: 10px; padding: 10px; display: flex; flex-direction: column; gap: 2px"><span style="font-size: 11px; font-weight: 700; color: #5A4347">Período</span><span style="font-size: 15px; font-weight: 800">Dia e noite</span></div>
+</div>
+<p style="margin: 0; font-size: 14px; line-height: 1.55; color: #5A4347"><strong style="color: #2A1A1D">Mecanismo de ação:</strong> ajuda a fortalecer a barreira cutânea, a controlar a oleosidade e a uniformizar o tom da pele.</p>
+<span style="font-size: 13px; font-weight: 700; color: #6B1E2E">Ver produtos do catálogo com este ativo →</span>
+</div>
+</div>
+</div>
+</section>
+
+<section id="como-funciona" style="background: #4A1420; color: #FBF4F1">
+<div style="max-width: 1200px; margin: 0 auto; padding: 104px 24px; display: flex; flex-direction: column; gap: 48px">
+<div style="max-width: 720px; display: flex; flex-direction: column; gap: 16px">
+<span style="font-size: 13px; font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase; color: #F6D6CE">Como funciona</span>
+<h2 style="margin: 0; font-family: 'Playfair Display', Georgia, serif; font-weight: 700; letter-spacing: -0.01em; font-size: clamp(32px, 3.6vw, 46px); line-height: 1.1">Da avaliação ao home care da paciente, em três passos.</h2>
+</div>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px">
+<div style="border: 1px solid rgba(246,214,206,0.3); border-radius: 18px; padding: 28px; display: flex; flex-direction: column; gap: 14px">
+<span style="width: 44px; height: 44px; border-radius: 12px; background: #F6D6CE; color: #4A1420; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 18px">1</span>
+<h3 style="margin: 0; font-size: 20px; font-weight: 800">Anamnese e avaliação</h3>
+<p style="margin: 0; font-size: 16px; line-height: 1.6; color: #EBD8D0">A paciente responde a ficha de anamnese por um link antes da consulta. Na cabine, você faz a avaliação cutânea e registra as fotos de evolução.</p>
+</div>
+<div style="border: 1px solid rgba(246,214,206,0.3); border-radius: 18px; padding: 28px; display: flex; flex-direction: column; gap: 14px">
+<span style="width: 44px; height: 44px; border-radius: 12px; background: #F6D6CE; color: #4A1420; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 18px">2</span>
+<h3 style="margin: 0; font-size: 20px; font-weight: 800">Plano de SkinCare</h3>
+<p style="margin: 0; font-size: 16px; line-height: 1.6; color: #EBD8D0">Monte a rotina com produtos do catálogo e veja os ativos de cada um, com as restrições à vista.</p>
+</div>
+<div style="border: 1px solid rgba(246,214,206,0.3); border-radius: 18px; padding: 28px; display: flex; flex-direction: column; gap: 14px">
+<span style="width: 44px; height: 44px; border-radius: 12px; background: #F6D6CE; color: #4A1420; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 18px">3</span>
+<h3 style="margin: 0; font-size: 20px; font-weight: 800">PDF para a paciente</h3>
+<p style="margin: 0; font-size: 16px; line-height: 1.6; color: #EBD8D0">Ela recebe o plano com os links dos produtos. O plano fica salvo, com data, nas Recomendações da paciente.</p>
+</div>
+</div>
+</div>
+</section>
+
+<section id="recursos" style="max-width: 1200px; margin: 0 auto; padding: 104px 24px; display: flex; flex-direction: column; gap: 48px">
+<div style="max-width: 720px; display: flex; flex-direction: column; gap: 16px">
+<span style="font-size: 13px; font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase; color: #9E4A44">Recursos</span>
+<h2 style="margin: 0; font-family: 'Playfair Display', Georgia, serif; font-weight: 700; letter-spacing: -0.01em; font-size: clamp(32px, 3.6vw, 46px); line-height: 1.1">Cada recurso nasceu de uma necessidade real da cabine. Ferramentas pensadas para a rotina de quem atende.</h2>
+<p style="margin: 0; font-size: 18px; line-height: 1.6; color: #5A4347">Pensado para quem atende sozinha, com espaço para crescer quando a agenda lotar.</p>
+</div>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 16px">
+
+<div style="background: #FFFFFF; border: 1px solid #EBD8D0; border-radius: 18px; padding: 24px; display: flex; gap: 16px">
+<span style="flex: none; width: 46px; height: 46px; border-radius: 12px; background: #F6D6CE; display: flex; align-items: center; justify-content: center"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#6B1E2E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"></rect><path d="M16 2v4M8 2v4M3 10h18"></path></svg></span>
+<div style="display: flex; flex-direction: column; gap: 6px"><h3 style="margin: 0; font-size: 17px; font-weight: 800">Agenda</h3><p style="margin: 0; font-size: 15px; line-height: 1.55; color: #5A4347">Da visão mensal à diária, com bloqueio de horários e sincronização opcional com o Google Agenda.</p></div>
+</div>
+
+<div style="background: #FFFFFF; border: 1px solid #EBD8D0; border-radius: 18px; padding: 24px; display: flex; gap: 16px">
+<span style="flex: none; width: 46px; height: 46px; border-radius: 12px; background: #F6D6CE; display: flex; align-items: center; justify-content: center"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#6B1E2E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="4"></circle><path d="M4 21a8 8 0 0 1 16 0"></path></svg></span>
+<div style="display: flex; flex-direction: column; gap: 6px"><h3 style="margin: 0; font-size: 17px; font-weight: 800">Pacientes</h3><p style="margin: 0; font-size: 15px; line-height: 1.55; color: #5A4347">Prontuário completo: dados, anamnese clínica, fotos de evolução, histórico e mensagens.</p></div>
+</div>
+
+<div style="background: #FFFFFF; border: 1px solid #EBD8D0; border-radius: 18px; padding: 24px; display: flex; gap: 16px">
+<span style="flex: none; width: 46px; height: 46px; border-radius: 12px; background: #F6D6CE; display: flex; align-items: center; justify-content: center"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#6B1E2E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><circle cx="12" cy="12" r="4"></circle></svg></span>
+<div style="display: flex; flex-direction: column; gap: 6px"><h3 style="margin: 0; font-size: 17px; font-weight: 800">Avaliação cutânea</h3><p style="margin: 0; font-size: 15px; line-height: 1.55; color: #5A4347">Fitzpatrick, Baumann e Glogau, hidratação, oleosidade, acne, rosácea, discromias e olheiras.</p></div>
+</div>
+<div style="background: #FFFFFF; border: 1px solid #EBD8D0; border-radius: 18px; padding: 24px; display: flex; gap: 16px">
+<span style="flex: none; width: 46px; height: 46px; border-radius: 12px; background: #F6D6CE; display: flex; align-items: center; justify-content: center"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#6B1E2E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.5.5l3-3a5 5 0 0 0-7-7l-1.7 1.7"></path><path d="M14 11a5 5 0 0 0-7.5-.5l-3 3a5 5 0 0 0 7 7l1.7-1.7"></path></svg></span>
+<div style="display: flex; flex-direction: column; gap: 6px"><h3 style="margin: 0; font-size: 17px; font-weight: 800">Ficha por link</h3><p style="margin: 0; font-size: 15px; line-height: 1.55; color: #5A4347">A paciente preenche a anamnese antes de chegar; as respostas caem no painel.</p></div>
+</div>
+<div style="background: #FFFFFF; border: 1px solid #EBD8D0; border-radius: 18px; padding: 24px; display: flex; gap: 16px">
+<span style="flex: none; width: 46px; height: 46px; border-radius: 12px; background: #F6D6CE; display: flex; align-items: center; justify-content: center"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#6B1E2E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2v4M12 18v4M4.9 4.9l2.8 2.8M16.3 16.3l2.8 2.8M2 12h4M18 12h4"></path></svg></span>
+<div style="display: flex; flex-direction: column; gap: 6px"><h3 style="margin: 0; font-size: 17px; font-weight: 800">Áreas de atuação</h3><p style="margin: 0; font-size: 15px; line-height: 1.55; color: #5A4347">Ative harmonização facial, tricologia ou estética corporal conforme o seu trabalho.</p></div>
+</div>
+<div style="background: #FFFFFF; border: 1px solid #EBD8D0; border-radius: 18px; padding: 24px; display: flex; gap: 16px">
+<span style="flex: none; width: 46px; height: 46px; border-radius: 12px; background: #F6D6CE; display: flex; align-items: center; justify-content: center"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#6B1E2E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"></path><path d="M14 3v6h6M8 13h8M8 17h5"></path></svg></span>
+<div style="display: flex; flex-direction: column; gap: 6px"><h3 style="margin: 0; font-size: 17px; font-weight: 800">Planos de SkinCare</h3><p style="margin: 0; font-size: 15px; line-height: 1.55; color: #5A4347">Rotinas de manhã e noite em PDF, com links dos produtos para a paciente.</p></div>
+</div>
+
+<div style="background: #FFFFFF; border: 1px solid #EBD8D0; border-radius: 18px; padding: 24px; display: flex; gap: 16px">
+<span style="flex: none; width: 46px; height: 46px; border-radius: 12px; background: #F6D6CE; display: flex; align-items: center; justify-content: center"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#6B1E2E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 2v7.5L4.5 19a2 2 0 0 0 1.7 3h11.6a2 2 0 0 0 1.7-3L14 9.5V2"></path><path d="M8.5 2h7M7 15h10"></path></svg></span>
+<div style="display: flex; flex-direction: column; gap: 6px"><h3 style="margin: 0; font-size: 17px; font-weight: 800">Formulações Cosméticas</h3><p style="margin: 0; font-size: 15px; line-height: 1.55; color: #5A4347">Base de ativos pesquisável, com busca guiada e favoritos.</p></div>
+</div>
+
+<div style="background: #FFFFFF; border: 1px solid #EBD8D0; border-radius: 18px; padding: 24px; display: flex; gap: 16px">
+<span style="flex: none; width: 46px; height: 46px; border-radius: 12px; background: #F6D6CE; display: flex; align-items: center; justify-content: center"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#6B1E2E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1.5"></rect><rect x="14" y="3" width="7" height="7" rx="1.5"></rect><rect x="3" y="14" width="7" height="7" rx="1.5"></rect><rect x="14" y="14" width="7" height="7" rx="1.5"></rect></svg></span>
+<div style="display: flex; flex-direction: column; gap: 6px"><h3 style="margin: 0; font-size: 17px; font-weight: 800">Catálogo de Produtos</h3><p style="margin: 0; font-size: 15px; line-height: 1.55; color: #5A4347">Produtos com fotos e lista de ingredientes ligada aos ativos, sempre atualizado.</p></div>
+</div>
+
+<div style="background: #FFFFFF; border: 1px solid #EBD8D0; border-radius: 18px; padding: 24px; display: flex; gap: 16px">
+<span style="flex: none; width: 46px; height: 46px; border-radius: 12px; background: #F6D6CE; display: flex; align-items: center; justify-content: center"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#6B1E2E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 3v18h18"></path><path d="m7 15 4-4 3 3 5-6"></path></svg></span>
+<div style="display: flex; flex-direction: column; gap: 6px"><h3 style="margin: 0; font-size: 17px; font-weight: 800">Financeiro integrado</h3><p style="margin: 0; font-size: 15px; line-height: 1.55; color: #5A4347">Comandas, contas a pagar e receber num único livro-caixa, com exportação em CSV.</p></div>
+</div>
+
+<div style="background: #FFFFFF; border: 1px solid #EBD8D0; border-radius: 18px; padding: 24px; display: flex; gap: 16px">
+<span style="flex: none; width: 46px; height: 46px; border-radius: 12px; background: #F6D6CE; display: flex; align-items: center; justify-content: center"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#6B1E2E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9 12 3l9 6v11a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1z"></path><path d="M9 21v-7h6v7"></path></svg></span>
+<div style="display: flex; flex-direction: column; gap: 6px"><h3 style="margin: 0; font-size: 17px; font-weight: 800">Meu Negócio</h3><p style="margin: 0; font-size: 15px; line-height: 1.55; color: #5A4347">Serviços, pacotes, categorias e horários de atendimento organizados.</p></div>
+</div>
+
+<div style="background: #FFFFFF; border: 1px solid #EBD8D0; border-radius: 18px; padding: 24px; display: flex; gap: 16px">
+<span style="flex: none; width: 46px; height: 46px; border-radius: 12px; background: #F6D6CE; display: flex; align-items: center; justify-content: center"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#6B1E2E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 8 12 3 3 8v8l9 5 9-5z"></path><path d="m3 8 9 5 9-5M12 13v8"></path></svg></span>
+<div style="display: flex; flex-direction: column; gap: 6px"><h3 style="margin: 0; font-size: 17px; font-weight: 800">Estoque</h3><p style="margin: 0; font-size: 15px; line-height: 1.55; color: #5A4347">Controle dos produtos que você usa na cabine e revende.</p></div>
+</div>
+
+<div style="background: #FFFFFF; border: 1px solid #EBD8D0; border-radius: 18px; padding: 24px; display: flex; gap: 16px">
+<span style="flex: none; width: 46px; height: 46px; border-radius: 12px; background: #F6D6CE; display: flex; align-items: center; justify-content: center"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#6B1E2E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="6" y="2" width="12" height="20" rx="2.5"></rect><path d="M11 18h2"></path></svg></span>
+<div style="display: flex; flex-direction: column; gap: 6px"><h3 style="margin: 0; font-size: 17px; font-weight: 800">No celular também</h3><p style="margin: 0; font-size: 15px; line-height: 1.55; color: #5A4347">Dashboard, agenda e pacientes no celular, para consultar tudo entre um atendimento e outro.</p></div>
+</div>
+<div style="background: #FFFFFF; border: 1px solid #EBD8D0; border-radius: 18px; padding: 24px; display: flex; gap: 16px">
+<span style="flex: none; width: 46px; height: 46px; border-radius: 12px; background: #F6D6CE; display: flex; align-items: center; justify-content: center"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#6B1E2E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"></path></svg></span>
+<div style="display: flex; flex-direction: column; gap: 6px"><h3 style="margin: 0; font-size: 17px; font-weight: 800">Brasil e Europa</h3><p style="margin: 0; font-size: 15px; line-height: 1.55; color: #5A4347">Preços na moeda do país de residência da paciente e versão adaptada às regras da UE.</p></div>
+</div>
+
+</div>
+<div style="display: flex; flex-wrap: wrap; align-items: center; gap: 12px 16px; padding: 20px 24px; border: 1.5px dashed #D0897F; border-radius: 18px">
+<span style="font-size: 12px; font-weight: 800; letter-spacing: 0.08em; text-transform: uppercase; padding: 6px 10px; border-radius: 999px; background: #6B1E2E; color: #FFFFFF">Em breve</span>
+<span style="font-size: 16px; font-weight: 600">Área educacional com Comunidade e Tutoriais, inclusa no plano Expert.</span>
+</div>
+</section>
+
+<section style="background: #F6D6CE">
+<div style="max-width: 1200px; margin: 0 auto; padding: 104px 24px; display: flex; flex-wrap: wrap; gap: 56px; align-items: center">
+<div style="flex: 1 1 420px; min-width: 0; display: flex; flex-direction: column; gap: 16px">
+<span style="font-size: 13px; font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase; color: #9E4A44">Segurança e privacidade</span>
+<h2 style="margin: 0; font-family: 'Playfair Display', Georgia, serif; font-weight: 700; letter-spacing: -0.01em; font-size: clamp(32px, 3.6vw, 46px); line-height: 1.1">Os dados das suas pacientes são só seus.</h2>
+<p style="margin: 0; font-size: 18px; line-height: 1.6; color: #5A4347">Pensado desde o início para a LGPD no Brasil e o RGPD na União Europeia.</p>
+</div>
+<div style="flex: 1 1 520px; min-width: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px">
+<div style="background: #FFFFFF; border-radius: 16px; padding: 22px; display: flex; flex-direction: column; gap: 8px"><h3 style="margin: 0; font-size: 16px; font-weight: 800">Dados privados por profissional</h3><p style="margin: 0; font-size: 15px; line-height: 1.55; color: #5A4347">Pacientes, agenda, estoque e financeiro ficam visíveis apenas na sua conta.</p></div>
+<div style="background: #FFFFFF; border-radius: 16px; padding: 22px; display: flex; flex-direction: column; gap: 8px"><h3 style="margin: 0; font-size: 16px; font-weight: 800">Exclusão protegida</h3><p style="margin: 0; font-size: 15px; line-height: 1.55; color: #5A4347">Apagar um plano de skincare pede a sua senha, para nada sumir por engano.</p></div>
+<div style="background: #FFFFFF; border-radius: 16px; padding: 22px; display: flex; flex-direction: column; gap: 8px"><h3 style="margin: 0; font-size: 16px; font-weight: 800">Histórico preservado</h3><p style="margin: 0; font-size: 15px; line-height: 1.55; color: #5A4347">Serviços são desativados, não excluídos, e as comandas antigas continuam corretas.</p></div>
+<div style="background: #FFFFFF; border-radius: 16px; padding: 22px; display: flex; flex-direction: column; gap: 8px"><h3 style="margin: 0; font-size: 16px; font-weight: 800">Versão UE</h3><p style="margin: 0; font-size: 15px; line-height: 1.55; color: #5A4347">Funções que não se aplicam à estética europeia ficam de fora automaticamente.</p></div>
+</div>
+</div>
+</section>
+
+<section id="planos" style="background: #FFFFFF; border-top: 1px solid #EBD8D0; border-bottom: 1px solid #EBD8D0">
+<div style="max-width: 1200px; margin: 0 auto; padding: 104px 24px; display: flex; flex-direction: column; gap: 40px; align-items: center">
+<div style="max-width: 680px; display: flex; flex-direction: column; gap: 16px; text-align: center; align-items: center">
+<span style="font-size: 13px; font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase; color: #9E4A44">Planos</span>
+<h2 style="margin: 0; font-family: 'Playfair Display', Georgia, serif; font-weight: 700; letter-spacing: -0.01em; font-size: clamp(32px, 3.6vw, 46px); line-height: 1.1">Escolha o plano do tamanho da sua agenda.</h2>
+<p style="margin: 0; font-size: 18px; line-height: 1.6; color: #5A4347">Pague em reais ou euros. Escolha a forma de pagamento que preferir.</p>
+</div>
+<div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 12px">
+<div role="group" aria-label="Período de cobrança" style="display: flex; gap: 4px; padding: 4px; border-radius: 999px; background: #F6D6CE"><button type="button" class="seg" data-per="m" aria-pressed="true">Mensal</button><button type="button" class="seg" data-per="t" aria-pressed="false">Trimestral</button><button type="button" class="seg" data-per="a" aria-pressed="false">Anual</button></div>
+<div role="group" aria-label="Moeda" style="display: flex; gap: 4px; padding: 4px; border-radius: 999px; border: 1px solid #EBD8D0"><button type="button" class="seg" data-cur="BRL" aria-pressed="true">R$</button><button type="button" class="seg" data-cur="EUR" aria-pressed="false">€</button></div>
+</div>
+<div style="width: 100%; display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; align-items: stretch">
+<div style="border-radius: 22px; padding: 32px; display: flex; flex-direction: column; gap: 20px; position: relative; background: #FBF4F1; border: 1px solid #EBD8D0;">
+<div style="display: flex; flex-direction: column; gap: 6px"><h3 style="margin: 0; font-size: 22px; font-weight: 800; font-family: 'Playfair Display', Georgia, serif">Essencial</h3><span style="font-size: 15px; color: #5A4347">Tudo para organizar o seu atendimento</span></div>
+<div style="display: flex; align-items: baseline; gap: 6px"><span data-price="essencial" style="font-family: 'Playfair Display', Georgia, serif; font-weight: 700; font-size: 44px; line-height: 1">R$ 69</span><span style="font-size: 15px; color: #5A4347">/mês</span></div>
+<span data-note="essencial" style="font-size: 14px; color: #5A4347; margin-top: -12px">cobrado mensalmente</span>
+<ul style="margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 10px; font-size: 15px"><li style="display: flex; gap: 10px"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#6B1E2E" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex: none; margin-top: 2px"><path d="M20 6 9 17l-5-5"></path></svg>Agenda organizada</li><li style="display: flex; gap: 10px"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#6B1E2E" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex: none; margin-top: 2px"><path d="M20 6 9 17l-5-5"></path></svg>Pacientes e prontuário</li><li style="display: flex; gap: 10px"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#6B1E2E" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex: none; margin-top: 2px"><path d="M20 6 9 17l-5-5"></path></svg>Planos de SkinCare em PDF</li><li style="display: flex; gap: 10px"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#6B1E2E" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex: none; margin-top: 2px"><path d="M20 6 9 17l-5-5"></path></svg>Catálogo e Dicionário de Ativos</li><li style="display: flex; gap: 10px"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#6B1E2E" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex: none; margin-top: 2px"><path d="M20 6 9 17l-5-5"></path></svg>Financeiro e estoque</li></ul>
+<a href="https://app.skinexpertpro.com" style="margin-top: auto; text-align: center; text-decoration: none; font-weight: 700; font-size: 16px; padding: 15px 20px; border-radius: 999px; border: 1.5px solid #6B1E2E; color: #6B1E2E">Assinar Essencial</a>
+</div>
+<div style="border-radius: 22px; padding: 32px; display: flex; flex-direction: column; gap: 20px; position: relative; background: #6B1E2E; color: #FFFFFF;">
+<span style="position: absolute; top: 20px; right: 20px; font-size: 12px; font-weight: 800; padding: 6px 10px; border-radius: 999px; background: #F6D6CE; color: #4A1420">Recomendado</span>
+<div style="display: flex; flex-direction: column; gap: 6px"><h3 style="margin: 0; font-size: 22px; font-weight: 800; font-family: 'Playfair Display', Georgia, serif">Studio</h3><span style="font-size: 15px; color: #F6D6CE">Para quem divide a sala com 1 ou 2 colegas</span></div>
+<div style="display: flex; align-items: baseline; gap: 6px"><span data-price="studio" style="font-family: 'Playfair Display', Georgia, serif; font-weight: 700; font-size: 44px; line-height: 1">R$ 119</span><span style="font-size: 15px; color: #F6D6CE">/mês</span></div>
+<span data-note="studio" style="font-size: 14px; color: #F6D6CE; margin-top: -12px">cobrado mensalmente</span>
+<ul style="margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 10px; font-size: 15px"><li style="display: flex; gap: 10px"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#F6D6CE" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex: none; margin-top: 2px"><path d="M20 6 9 17l-5-5"></path></svg>Tudo do Essencial</li><li style="display: flex; gap: 10px"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#F6D6CE" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex: none; margin-top: 2px"><path d="M20 6 9 17l-5-5"></path></svg>Até 3 profissionais na mesma conta</li></ul>
+<a href="https://app.skinexpertpro.com" style="margin-top: auto; text-align: center; text-decoration: none; font-weight: 700; font-size: 16px; padding: 15px 20px; border-radius: 999px; background: #FFFFFF; color: #6B1E2E">Assinar Studio</a>
+</div>
+<div style="border-radius: 22px; padding: 32px; display: flex; flex-direction: column; gap: 20px; position: relative; background: #FBF4F1; border: 1px solid #EBD8D0; overflow: hidden;">
+<span style="position: absolute; top: 28px; right: -54px; width: 210px; transform: rotate(45deg); text-align: center; background: #6B1E2E; color: #FFFFFF; font-size: 12px; font-weight: 800; letter-spacing: 0.14em; text-transform: uppercase; padding: 8px 0; box-shadow: 0 6px 14px -6px rgba(74,20,32,0.5)">Em breve</span><div style="display: flex; flex-direction: column; gap: 6px"><h3 style="margin: 0; font-size: 22px; font-weight: 800; font-family: 'Playfair Display', Georgia, serif">Expert</h3><span style="font-size: 15px; color: #5A4347">Automação, estudo e todos os recursos</span></div>
+<div style="display: flex; align-items: baseline; gap: 6px"><span data-price="expert" style="font-family: 'Playfair Display', Georgia, serif; font-weight: 700; font-size: 44px; line-height: 1">R$ 149</span><span style="font-size: 15px; color: #5A4347">/mês</span></div>
+<span data-note="expert" style="font-size: 14px; color: #5A4347; margin-top: -12px">cobrado mensalmente</span>
+<ul style="margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 10px; font-size: 15px"><li style="display: flex; gap: 10px"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#6B1E2E" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex: none; margin-top: 2px"><path d="M20 6 9 17l-5-5"></path></svg>Tudo do Studio</li><li style="display: flex; gap: 10px"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#6B1E2E" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex: none; margin-top: 2px"><path d="M20 6 9 17l-5-5"></path></svg>Link público de agendamento</li><li style="display: flex; gap: 10px"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#6B1E2E" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex: none; margin-top: 2px"><path d="M20 6 9 17l-5-5"></path></svg>Secretária digital automática</li><li style="display: flex; gap: 10px"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#6B1E2E" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex: none; margin-top: 2px"><path d="M20 6 9 17l-5-5"></path></svg>E-mail ao paciente</li><li style="display: flex; gap: 10px"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#6B1E2E" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex: none; margin-top: 2px"><path d="M20 6 9 17l-5-5"></path></svg>Área educacional: Comunidade e Tutoriais</li></ul>
+<span style="margin-top: auto; text-align: center; text-decoration: none; font-weight: 700; font-size: 16px; padding: 15px 20px; border-radius: 999px; background: transparent; color: #6B1E2E; border: 1.5px dashed #D0897F; cursor: default">Em breve</span>
+</div>
+</div>
+<span style="font-size: 14px; color: #5A4347; font-weight: 600">Pagamento seguro via Stripe · Cancele quando quiser</span>
+</div>
+</section>
+
+<section id="duvidas" style="max-width: 860px; margin: 0 auto; padding: 104px 24px; display: flex; flex-direction: column; gap: 40px">
+<div style="display: flex; flex-direction: column; gap: 16px; text-align: center; align-items: center">
+<span style="font-size: 13px; font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase; color: #9E4A44">Perguntas frequentes</span>
+<h2 style="margin: 0; font-family: 'Playfair Display', Georgia, serif; font-weight: 700; letter-spacing: -0.01em; font-size: clamp(32px, 3.6vw, 46px); line-height: 1.1">Tudo o que você precisa saber</h2>
+</div>
+<div style="display: flex; flex-direction: column; gap: 12px">
+<details style="background: #FFFFFF; border: 1px solid #EBD8D0; border-radius: 16px; padding: 0 24px"><summary style="display: flex; justify-content: space-between; align-items: center; gap: 16px; padding: 22px 0; font-size: 17px; font-weight: 700">Para quem é o Skin Expert Pro?<span class="faq-plus" style="font-size: 26px; color: #6B1E2E; transition: transform .2s" aria-hidden="true">+</span></summary><p style="margin: 0 0 22px; font-size: 16px; line-height: 1.6; color: #5A4347">Para esteticistas e cosmetólogas que atendem por conta própria. Se você passar a dividir a agenda, os planos Studio e Expert permitem até 3 profissionais na mesma conta.</p></details>
+<details style="background: #FFFFFF; border: 1px solid #EBD8D0; border-radius: 16px; padding: 0 24px"><summary style="display: flex; justify-content: space-between; align-items: center; gap: 16px; padding: 22px 0; font-size: 17px; font-weight: 700">Funciona em Portugal e no resto da Europa?<span class="faq-plus" style="font-size: 26px; color: #6B1E2E; transition: transform .2s" aria-hidden="true">+</span></summary><p style="margin: 0 0 22px; font-size: 16px; line-height: 1.6; color: #5A4347">Sim. Há uma versão adaptada à União Europeia, e os preços aparecem na moeda do país de residência de cada paciente.</p></details>
+<details style="background: #FFFFFF; border: 1px solid #EBD8D0; border-radius: 16px; padding: 0 24px"><summary style="display: flex; justify-content: space-between; align-items: center; gap: 16px; padding: 22px 0; font-size: 17px; font-weight: 700">Posso cadastrar meus próprios produtos?<span class="faq-plus" style="font-size: 26px; color: #6B1E2E; transition: transform .2s" aria-hidden="true">+</span></summary><p style="margin: 0 0 22px; font-size: 16px; line-height: 1.6; color: #5A4347">O catálogo é mantido e revisado pela equipe do Skin Expert Pro, para que ingredientes e ativos estejam sempre corretos. Você pode sugerir produtos pelo e-mail contato@skinexpertpro.com.</p></details>
+<details style="background: #FFFFFF; border: 1px solid #EBD8D0; border-radius: 16px; padding: 0 24px"><summary style="display: flex; justify-content: space-between; align-items: center; gap: 16px; padding: 22px 0; font-size: 17px; font-weight: 700">A paciente precisa instalar alguma coisa?<span class="faq-plus" style="font-size: 26px; color: #6B1E2E; transition: transform .2s" aria-hidden="true">+</span></summary><p style="margin: 0 0 22px; font-size: 16px; line-height: 1.6; color: #5A4347">Não. Ela responde a ficha de anamnese por um link e recebe o plano de skincare em PDF, com os links dos produtos indicados.</p></details>
+<details style="background: #FFFFFF; border: 1px solid #EBD8D0; border-radius: 16px; padding: 0 24px"><summary style="display: flex; justify-content: space-between; align-items: center; gap: 16px; padding: 22px 0; font-size: 17px; font-weight: 700">Posso experimentar antes de assinar?<span class="faq-plus" style="font-size: 26px; color: #6B1E2E; transition: transform .2s" aria-hidden="true">+</span></summary><p style="margin: 0 0 22px; font-size: 16px; line-height: 1.6; color: #5A4347">Sim. Peça um acesso de demonstração pelo e-mail contato@skinexpertpro.com e conheça o sistema por dentro antes de escolher o plano.</p></details>
+<details style="background: #FFFFFF; border: 1px solid #EBD8D0; border-radius: 16px; padding: 0 24px"><summary style="display: flex; justify-content: space-between; align-items: center; gap: 16px; padding: 22px 0; font-size: 17px; font-weight: 700">Meus dados estão seguros?<span class="faq-plus" style="font-size: 26px; color: #6B1E2E; transition: transform .2s" aria-hidden="true">+</span></summary><p style="margin: 0 0 22px; font-size: 16px; line-height: 1.6; color: #5A4347">Os dados das suas pacientes são privados e só você os vê. O sistema segue a LGPD e o RGPD.</p></details>
+</div>
+</section>
+
+<section style="padding: 0 24px 104px">
+<div style="max-width: 1200px; margin: 0 auto; border-radius: 28px; background: #6B1E2E; color: #FFFFFF; padding: clamp(40px, 6vw, 80px) 24px; display: flex; flex-direction: column; align-items: center; gap: 24px; text-align: center">
+<h2 style="margin: 0; max-width: 760px; font-family: 'Playfair Display', Georgia, serif; font-weight: 700; letter-spacing: -0.01em; font-size: clamp(32px, 4vw, 52px); line-height: 1.08">Mais critério na cabine. Menos tempo com papelada.</h2>
+<p style="margin: 0; max-width: 560px; font-size: 18px; line-height: 1.6; color: #EBD8D0">Crie sua conta e organize o seu atendimento ainda hoje.</p>
+<a href="https://app.skinexpertpro.com" style="text-decoration: none; font-weight: 800; font-size: 17px; padding: 18px 32px; border-radius: 999px; background: #F6D6CE; color: #4A1420">Criar minha conta</a>
+</div>
+</section>
+
+<footer style="background: #2A1A1D; color: #EBD8D0">
+<div style="max-width: 1200px; margin: 0 auto; padding: 64px 24px 40px; display: flex; flex-direction: column; gap: 40px">
+<div style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 40px">
+<div style="display: flex; flex-direction: column; gap: 14px; max-width: 320px">
+<div style="display: flex; align-items: center; gap: 10px">
+<svg width="42" height="42" viewBox="0 0 100 100" fill="none" aria-hidden="true"><defs><clipPath id="tr-f"><rect x="2" y="2" width="96" height="96" rx="26"></rect></clipPath></defs><rect x="2" y="2" width="96" height="96" rx="26" fill="#6B1E2E"></rect><g clip-path="url(#tr-f)" stroke-linecap="round"><g stroke="#B5615E" stroke-width="1.5" transform="rotate(28 50 50)"><path d="M-30 -6 Q0 -11 30 -6 T90 -6 T150 -6"></path><path d="M-30 2 Q0 -3 30 2 T90 2 T150 2"></path><path d="M-30 10 Q0 5 30 10 T90 10 T150 10"></path><path d="M-30 18 Q0 13 30 18 T90 18 T150 18"></path><path d="M-30 26 Q0 21 30 26 T90 26 T150 26"></path><path d="M-30 34 Q0 29 30 34 T90 34 T150 34"></path><path d="M-30 42 Q0 37 30 42 T90 42 T150 42"></path><path d="M-30 50 Q0 45 30 50 T90 50 T150 50"></path><path d="M-30 58 Q0 53 30 58 T90 58 T150 58"></path><path d="M-30 66 Q0 61 30 66 T90 66 T150 66"></path><path d="M-30 74 Q0 69 30 74 T90 74 T150 74"></path><path d="M-30 82 Q0 77 30 82 T90 82 T150 82"></path><path d="M-30 90 Q0 85 30 90 T90 90 T150 90"></path><path d="M-30 98 Q0 93 30 98 T90 98 T150 98"></path><path d="M-30 106 Q0 101 30 106 T90 106 T150 106"></path></g><g stroke="#F6D6CE" stroke-width="1.7" transform="rotate(-16 50 50)"><path d="M-30 -2 Q-5 -8 20 -2 T70 -2 T120 -2 T170 -2"></path><path d="M-30 6 Q-5 0 20 6 T70 6 T120 6 T170 6"></path><path d="M-30 14 Q-5 8 20 14 T70 14 T120 14 T170 14"></path><path d="M-30 22 Q-5 16 20 22 T70 22 T120 22 T170 22"></path><path d="M-30 30 Q-5 24 20 30 T70 30 T120 30 T170 30"></path><path d="M-30 38 Q-5 32 20 38 T70 38 T120 38 T170 38"></path><path d="M-30 46 Q-5 40 20 46 T70 46 T120 46 T170 46"></path><path d="M-30 54 Q-5 48 20 54 T70 54 T120 54 T170 54"></path><path d="M-30 62 Q-5 56 20 62 T70 62 T120 62 T170 62"></path><path d="M-30 70 Q-5 64 20 70 T70 70 T120 70 T170 70"></path><path d="M-30 78 Q-5 72 20 78 T70 78 T120 78 T170 78"></path><path d="M-30 86 Q-5 80 20 86 T70 86 T120 86 T170 86"></path><path d="M-30 94 Q-5 88 20 94 T70 94 T120 94 T170 94"></path><path d="M-30 102 Q-5 96 20 102 T70 102 T120 102 T170 102"></path></g></g></svg>
+<span style="display: flex; flex-direction: column; line-height: 0.95"><span style="font-family: 'Syne', sans-serif; font-weight: 800; font-size: 24px; letter-spacing: -0.03em; color: #FBF1EC">skin</span><span style="font-family: 'Syne', sans-serif; font-weight: 600; font-size: 10.5px; letter-spacing: 0.08em; color: #F6D6CE">expert pro</span></span>
+</div>
+<p style="margin: 0; font-size: 14px; line-height: 1.6">Ciência cosmética e gestão para esteticistas autônomas. Uma solução da família Expert Pro.</p>
+</div>
+<div style="display: flex; flex-wrap: wrap; gap: 56px">
+<div style="display: flex; flex-direction: column; gap: 10px; font-size: 14px">
+<span style="font-weight: 800; color: #FFFFFF">Produto</span>
+<a href="#recursos" style="color: #EBD8D0; text-decoration: none">Recursos</a>
+<a href="#ativos" style="color: #EBD8D0; text-decoration: none">Ciência dos ativos</a>
+<a href="#planos" style="color: #EBD8D0; text-decoration: none">Planos</a>
+<a href="#duvidas" style="color: #EBD8D0; text-decoration: none">Dúvidas</a>
+</div>
+<div style="display: flex; flex-direction: column; gap: 10px; font-size: 14px">
+<span style="font-weight: 800; color: #FFFFFF">Legal</span>
+<a href="privacidade.html" style="color: #EBD8D0; text-decoration: none">Política de Privacidade</a>
+<a href="termos.html" style="color: #EBD8D0; text-decoration: none">Termos de Uso</a>
+</div>
+<div style="display: flex; flex-direction: column; gap: 10px; font-size: 14px">
+<span style="font-weight: 800; color: #FFFFFF">Contato</span>
+<a href="mailto:contato@skinexpertpro.com" style="color: #EBD8D0; text-decoration: none">contato@skinexpertpro.com</a>
+<a href="https://www.instagram.com/skinexpertpro" style="color: #EBD8D0; text-decoration: none">Instagram @skinexpertpro</a>
+</div>
+</div>
+</div>
+<div style="border-top: 1px solid rgba(234,219,200,0.2); padding-top: 24px; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px; font-size: 13px">
+<span>© 2026 Skin Expert Pro</span>
+<span>skinexpertpro.com</span>
+</div>
+</div>
+</footer>
+
+</div>
+<script>
+(function(){
+  var BASE={BRL:[69,119,149],EUR:[19,29,39]};
+  var DESC={m:1,t:0.95,a:0.9};
+  var KEYS=['essencial','studio','expert'];
+  var cur='BRL', per='m';
+  function fmt(v){
+    var r=Math.round(v*100)/100, ip=Math.floor(r), dec=Math.round((r-ip)*100);
+    var t=String(ip).replace(/\B(?=(\d{3})+(?!\d))/g,'.');
+    if(dec>0) t+=','+(dec<10?'0'+dec:dec);
+    return cur==='BRL'?'R$ '+t:t+' €';
+  }
+  function render(){
+    KEYS.forEach(function(k,i){
+      var m=BASE[cur][i]*DESC[per];
+      document.querySelector('[data-price="'+k+'"]').textContent=fmt(m);
+      document.querySelector('[data-note="'+k+'"]').textContent=
+        per==='m'?'cobrado mensalmente':(per==='t'?fmt(m*3)+' a cada 3 meses':fmt(m*12)+' por ano');
+    });
+    document.querySelectorAll('[data-per]').forEach(function(b){b.setAttribute('aria-pressed',b.dataset.per===per)});
+    document.querySelectorAll('[data-cur]').forEach(function(b){b.setAttribute('aria-pressed',b.dataset.cur===cur)});
+  }
+  document.querySelectorAll('[data-per]').forEach(function(b){b.addEventListener('click',function(){per=b.dataset.per;render()})});
+  document.querySelectorAll('[data-cur]').forEach(function(b){b.addEventListener('click',function(){cur=b.dataset.cur;render()})});
+  render();
+})();
+</script>
+</body>
+</html>
