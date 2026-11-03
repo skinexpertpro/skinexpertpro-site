@@ -447,12 +447,19 @@ details[open] .faq-plus{transform:rotate(45deg)}
   // Links de pagamento do Stripe (modo TESTE). Trocar pelos links de produção quando a conta estiver ativa.
   // Plano sem link ainda: o botão leva para o app (criar conta).
   var LINKS={
-    essencial:{m:'https://buy.stripe.com/test_14AcN449fbhGgoWgck57W02',t:'https://buy.stripe.com/test_fZudR8eNTadCc8G1hq57W04',a:'https://buy.stripe.com/test_9B6bJ00X33Pe7Sq5xG57W03'},
-    studio:{m:'https://buy.stripe.com/test_fZu6oGdJP5Xmb4C7FO57W05',t:'https://buy.stripe.com/test_6oU9AS217clKa0yaS057W07',a:'https://buy.stripe.com/test_fZu9ASeNT3Pec8G1hq57W06'}
+    EUR:{
+      essencial:{m:'https://buy.stripe.com/test_14AcN449fbhGgoWgck57W02',t:'https://buy.stripe.com/test_fZudR8eNTadCc8G1hq57W04',a:'https://buy.stripe.com/test_9B6bJ00X33Pe7Sq5xG57W03'},
+      studio:{m:'https://buy.stripe.com/test_fZu6oGdJP5Xmb4C7FO57W05',t:'https://buy.stripe.com/test_6oU9AS217clKa0yaS057W07',a:'https://buy.stripe.com/test_fZu9ASeNT3Pec8G1hq57W06'}
+    },
+    BRL:{
+      essencial:{m:'https://buy.stripe.com/test_8x24gy8pvgC06Omgck57W0a',t:'https://buy.stripe.com/test_14A00i6hnadCfkS1hq57W0g',a:'https://buy.stripe.com/test_fZucN40X3etSdcKbW457W0f'},
+      studio:{m:'',t:'',a:''}
+    }
   };
   function linkDe(plano){
-    var l=LINKS[plano]&&LINKS[plano][per]; if(!l) return 'https://app.skinexpertpro.com';
-    // abre o pagamento em português (a moeda o Stripe escolhe pelo país de quem paga)
+    // link da moeda escolhida no site; se ainda não existir, usa o da outra moeda
+    var l=(LINKS[cur][plano]||{})[per] || (LINKS[cur==='BRL'?'EUR':'BRL'][plano]||{})[per];
+    if(!l) return 'https://app.skinexpertpro.com';
     return l+'?locale=pt-BR';
   }
   function fmt(v){
