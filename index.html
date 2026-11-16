@@ -99,6 +99,59 @@ details[open] .faq-plus{transform:rotate(45deg)}
   footer{padding-bottom:72px}
 }
 @media (prefers-reduced-motion: reduce){.barra-cta{transition:none}}
+/* Feature showcase — Agenda e links */
+.showcase{max-width:1200px;margin:0 auto;padding:64px 24px}
+.showcase-label{font-size:11px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:#9E4A44;margin:0 0 12px}
+.showcase-title{margin:0 0 40px;font-family:'Playfair Display',Georgia,serif;font-weight:700;font-size:clamp(24px,3vw,40px);line-height:1.12;max-width:680px}
+.showcase-title span{color:#6B1E2E}
+.showcase-grid{display:grid;grid-template-columns:280px 1fr;gap:0;min-height:460px;border-radius:20px;overflow:hidden;border:1px solid #EBD8D0;background:#FFFFFF}
+.showcase-tabs{display:flex;flex-direction:column;border-right:1px solid #EBD8D0;background:#FDFAF8}
+.showcase-tab{display:flex;align-items:center;gap:12px;padding:18px 20px;cursor:pointer;border:0;background:transparent;text-align:left;font-family:inherit;border-bottom:1px solid #EBD8D0;position:relative;transition:background .25s ease}
+.showcase-tab:last-child{border-bottom:0}
+.showcase-tab:hover{background:#F5EFEC}
+.showcase-tab.active{background:#FFFFFF}
+.showcase-tab.active::before{content:'';position:absolute;left:0;top:0;bottom:0;width:3px;background:#6B1E2E;border-radius:0 3px 3px 0}
+.showcase-tab-icon{width:40px;height:40px;border-radius:12px;display:flex;align-items:center;justify-content:center;flex:none}
+.showcase-tab-text h4{margin:0;font-size:14px;font-weight:700;color:#2A1A1D}
+.showcase-tab-text p{margin:2px 0 0;font-size:12px;color:#8A7A7E;line-height:1.3}
+.showcase-tab .tab-progress{position:absolute;bottom:0;left:0;height:2px;background:#6B1E2E;border-radius:2px;width:0}
+.showcase-tab.active .tab-progress{animation:tab-fill 7s linear forwards}
+@keyframes tab-fill{from{width:0}to{width:100%}}
+.showcase-content{position:relative;display:flex;overflow:hidden}
+.showcase-panel{position:absolute;inset:0;display:flex;opacity:0;transition:opacity .4s ease;pointer-events:none}
+.showcase-panel.active{position:relative;opacity:1;pointer-events:auto}
+.showcase-panel-text{flex:0 0 42%;padding:36px 28px;display:flex;flex-direction:column;justify-content:center;gap:14px}
+.showcase-panel-text h3{margin:0;font-family:'Playfair Display',Georgia,serif;font-size:22px;font-weight:700;line-height:1.2}
+.showcase-panel-text p{margin:0;font-size:14px;line-height:1.6;color:#5A4347}
+.showcase-panel-text ul{margin:0;padding:0 0 0 18px;font-size:13px;line-height:1.6;color:#5A4347;display:flex;flex-direction:column;gap:4px}
+.showcase-panel-text ul li::marker{color:#6B1E2E}
+.showcase-panel-visual{flex:1;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;min-height:420px}
+.phone-mockup{width:230px;height:410px;background:#FFFFFF;border-radius:30px;box-shadow:0 20px 60px -12px rgba(74,20,32,.25);border:3px solid #2A1A1D;overflow:hidden;position:relative}
+.phone-notch{position:absolute;top:0;left:50%;transform:translateX(-50%);width:100px;height:22px;background:#2A1A1D;border-radius:0 0 16px 16px;z-index:2}
+.phone-screen{padding:34px 14px 14px;height:100%;box-sizing:border-box;display:flex;flex-direction:column;gap:6px;overflow:hidden}
+.mock-header{font-size:11px;font-weight:700;color:#6B1E2E;padding:4px 0;border-bottom:1px solid #EBD8D0}
+.mock-row{display:flex;align-items:center;gap:8px;padding:7px 0;border-bottom:1px solid #F5EFEC}
+.mock-dot{width:8px;height:8px;border-radius:50%;flex:none}
+.mock-btn{background:#6B1E2E;color:#FFF;font-size:9px;font-weight:700;padding:6px 10px;border-radius:8px;text-align:center;margin-top:auto}
+.mock-card{background:#FDFAF8;border:1px solid #EBD8D0;border-radius:10px;padding:8px;display:flex;flex-direction:column;gap:4px}
+.mock-card-title{font-size:9px;font-weight:700;color:#2A1A1D}
+.mock-card-sub{font-size:8px;color:#8A7A7E}
+.mock-tag{font-size:7px;font-weight:700;padding:2px 6px;border-radius:4px;display:inline-block;width:fit-content}
+.wa-bubble{background:#DCF8C6;border-radius:10px 10px 2px 10px;padding:8px 10px;font-size:8px;line-height:1.5;color:#2A1A1D;max-width:85%;align-self:flex-end;position:relative}
+.wa-bubble-in{background:#FFFFFF;border-radius:10px 10px 10px 2px;align-self:flex-start}
+.wa-time{font-size:7px;color:#8A7A7E;text-align:right;margin-top:2px}
+@media (max-width:860px){
+  .showcase-grid{grid-template-columns:1fr;min-height:auto}
+  .showcase-tabs{flex-direction:row;overflow-x:auto;border-right:0;border-bottom:1px solid #EBD8D0;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+  .showcase-tabs::-webkit-scrollbar{display:none}
+  .showcase-tab{flex:none;border-bottom:0;border-right:1px solid #EBD8D0;padding:14px 16px;min-width:150px}
+  .showcase-tab:last-child{border-right:0}
+  .showcase-tab.active::before{left:0;right:0;top:auto;bottom:0;width:100%;height:3px;border-radius:3px 3px 0 0}
+  .showcase-tab-text p{display:none}
+  .showcase-panel{flex-direction:column}
+  .showcase-panel-text{flex:none;padding:24px 20px}
+  .showcase-panel-visual{min-height:320px}
+}
 </style>
 </head>
 <body>
@@ -248,6 +301,280 @@ details[open] .faq-plus{transform:rotate(45deg)}
 
 </div>
 </section>
+
+<section aria-label="Agenda e links" style="background:#FFFFFF;border-top:1px solid #EBD8D0;border-bottom:1px solid #EBD8D0">
+<div class="showcase">
+<p class="showcase-label">Agendamento e comunicação</p>
+<h2 class="showcase-title">Agenda organizada e confirmada — <span>do agendamento ao termo assinado</span></h2>
+
+<div class="showcase-grid">
+<div class="showcase-tabs" role="tablist">
+
+<button class="showcase-tab active" role="tab" data-tab="0" aria-selected="true">
+<div class="showcase-tab-icon" style="background:#F6D6CE"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#6B1E2E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg></div>
+<div class="showcase-tab-text"><h4>Agenda inteligente</h4><p>Equipe, salas e encaixes</p></div>
+<div class="tab-progress"></div>
+</button>
+
+<button class="showcase-tab" role="tab" data-tab="1" aria-selected="false">
+<div class="showcase-tab-icon" style="background:#E8D6EB"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#6B4A8B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div>
+<div class="showcase-tab-text"><h4>Confirmação automática</h4><p>Lembrete pelo WhatsApp</p></div>
+<div class="tab-progress"></div>
+</button>
+
+<button class="showcase-tab" role="tab" data-tab="2" aria-selected="false">
+<div class="showcase-tab-icon" style="background:#F5ECD7"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#8A6A2F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.5.5l3-3a5 5 0 0 0-7-7l-1.7 1.7"/><path d="M14 11a5 5 0 0 0-7.5-.5l-3 3a5 5 0 0 0 7 7l1.7-1.7"/></svg></div>
+<div class="showcase-tab-text"><h4>Anamnese por link</h4><p>Paciente preenche antes</p></div>
+<div class="tab-progress"></div>
+</button>
+
+<button class="showcase-tab" role="tab" data-tab="3" aria-selected="false">
+<div class="showcase-tab-icon" style="background:#D6E2EB"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#4A6A8B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><path d="M14 3v6h6"/><path d="m9 15 2 2 4-4"/></svg></div>
+<div class="showcase-tab-text"><h4>Termos por link</h4><p>Assinatura digital</p></div>
+<div class="tab-progress"></div>
+</button>
+
+<button class="showcase-tab" role="tab" data-tab="4" aria-selected="false">
+<div class="showcase-tab-icon" style="background:#D8E8D0"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#4A7A3F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg></div>
+<div class="showcase-tab-text"><h4>Ficha da paciente</h4><p>Tudo num só lugar</p></div>
+<div class="tab-progress"></div>
+</button>
+
+</div>
+
+<div class="showcase-content">
+
+<!-- Tab 0: Agenda inteligente -->
+<div class="showcase-panel active" data-panel="0">
+<div class="showcase-panel-text">
+<h3>Agenda inteligente</h3>
+<p>Profissionais, salas e procedimentos numa agenda só. Quando um horário vaga, a lista de espera avisa a próxima paciente.</p>
+<ul>
+<li>Agenda por profissional e por sala</li>
+<li>Lista de espera com aviso automático</li>
+<li>Encaixes sem conflito de horário</li>
+<li>Pacotes com saldo de sessões</li>
+</ul>
+</div>
+<div class="showcase-panel-visual" style="background:linear-gradient(135deg,#F6D6CE 0%,#E8D6EB 60%,#F5EFEC 100%)">
+<div class="phone-mockup">
+<div class="phone-notch"></div>
+<div class="phone-screen">
+<div class="mock-header">📅 Agenda · 14 out, terça</div>
+<div style="display:flex;gap:6px;margin:4px 0 2px">
+<span class="mock-tag" style="background:#F6D6CE;color:#6B1E2E">Dra. Paula</span>
+<span class="mock-tag" style="background:#E8D6EB;color:#6B4A8B">Dra. Ana</span>
+<span class="mock-tag" style="background:#F5EFEC;color:#5A4347">Sala 2</span>
+</div>
+<div class="mock-row"><div class="mock-dot" style="background:#F6D6CE"></div><div style="font-size:9px"><strong>Camila M.</strong><br><span style="color:#8A7A7E;font-size:8px">Limpeza de pele · 14h</span></div></div>
+<div class="mock-row"><div class="mock-dot" style="background:#E8D6EB"></div><div style="font-size:9px"><strong>Fernanda S.</strong><br><span style="color:#8A7A7E;font-size:8px">Peeling · 14h30</span></div></div>
+<div class="mock-row"><div class="mock-dot" style="background:#D8E8D0"></div><div style="font-size:9px"><strong>Juliana R.</strong><br><span style="color:#8A7A7E;font-size:8px">Retorno · 15h</span></div></div>
+<div class="mock-row" style="border:1px dashed #D4A574;border-radius:6px;padding:6px 8px;background:#FFFBF5">
+<div style="font-size:8px;color:#D4A574;font-weight:700">⏳ 16h · vago — lista de espera ativa</div>
+</div>
+<div class="mock-row"><div class="mock-dot" style="background:#F5ECD7"></div><div style="font-size:9px"><strong>Bruna T.</strong><br><span style="color:#8A7A7E;font-size:8px">Drenagem · 16h30</span></div></div>
+<div class="mock-btn">+ Novo agendamento</div>
+</div>
+</div>
+</div>
+</div>
+
+<!-- Tab 1: Confirmação automática -->
+<div class="showcase-panel" data-panel="1">
+<div class="showcase-panel-text">
+<h3>Confirmação automática</h3>
+<p>O lembrete sai pelo WhatsApp com a antecedência que você definir. Quando a paciente confirma, o horário já aparece confirmado na agenda.</p>
+<ul>
+<li>Lembrete 24h ou 48h antes</li>
+<li>Paciente confirma ou remarca com um toque</li>
+<li>Status atualiza direto na agenda</li>
+<li>Menos faltas, sem ligar uma a uma</li>
+</ul>
+</div>
+<div class="showcase-panel-visual" style="background:linear-gradient(135deg,#E8D6EB 0%,#F6D6CE 100%)">
+<div class="phone-mockup">
+<div class="phone-notch"></div>
+<div class="phone-screen" style="background:#E5DDD5;gap:8px;padding-top:34px">
+<div style="display:flex;align-items:center;gap:8px;padding:0 4px 6px;border-bottom:1px solid #d1c9c0">
+<div style="width:28px;height:28px;border-radius:50%;background:#6B1E2E;display:flex;align-items:center;justify-content:center;font-size:9px;color:#FFF;font-weight:700">SE</div>
+<div style="font-size:10px;font-weight:700">Skin Expert Pro</div>
+</div>
+<div class="wa-bubble" style="align-self:flex-end;background:#DCF8C6;max-width:90%">
+<div style="font-size:8px;line-height:1.5">Olá, Camila! 👋<br><br>Sua <strong>limpeza de pele</strong> é amanhã, quarta, às <strong>15h</strong>.<br><br>Podemos confirmar?</div>
+<div style="display:flex;gap:6px;margin-top:6px">
+<span class="mock-tag" style="background:#FFFFFF;color:#4A7A3F;border:1px solid #4A7A3F;font-size:8px;padding:4px 10px">✓ Confirmar</span>
+<span class="mock-tag" style="background:#FFFFFF;color:#D4A574;border:1px solid #D4A574;font-size:8px;padding:4px 10px">↻ Remarcar</span>
+</div>
+<div class="wa-time">10:02</div>
+</div>
+<div class="wa-bubble wa-bubble-in" style="max-width:60%">
+<div style="font-size:8px">✓ Confirmar</div>
+<div class="wa-time">10:04</div>
+</div>
+<div class="wa-bubble" style="align-self:flex-end;background:#DCF8C6;max-width:85%">
+<div style="font-size:8px">Perfeito! ✅ Consulta confirmada. Até amanhã, Camila!</div>
+<div class="wa-time">10:04</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<!-- Tab 2: Anamnese por link -->
+<div class="showcase-panel" data-panel="2">
+<div class="showcase-panel-text">
+<h3>Anamnese por link</h3>
+<p>Envie o link de pré-atendimento antes da consulta. A paciente preenche no celular e as respostas já ficam no prontuário — prontas para a avaliação.</p>
+<ul>
+<li>Modelos personalizáveis de anamnese</li>
+<li>Paciente preenche pelo celular</li>
+<li>Respostas vão direto para o prontuário</li>
+<li>Fotos da pele antes da consulta</li>
+</ul>
+</div>
+<div class="showcase-panel-visual" style="background:linear-gradient(135deg,#F5ECD7 0%,#F6D6CE 100%)">
+<div class="phone-mockup">
+<div class="phone-notch"></div>
+<div class="phone-screen">
+<div style="text-align:center;margin:4px 0 6px">
+<div style="width:32px;height:32px;border-radius:10px;background:#6B1E2E;margin:0 auto 4px;display:flex;align-items:center;justify-content:center;font-size:12px;color:#FFF;font-weight:800">S</div>
+<div style="font-size:9px;font-weight:700">Ficha de pré-atendimento</div>
+<div style="font-size:7px;color:#8A7A7E">Para a sua consulta de amanhã</div>
+</div>
+<div class="mock-card">
+<div class="mock-card-title">Tem alguma alergia a cosméticos?</div>
+<div style="display:flex;gap:6px;margin-top:4px">
+<span class="mock-tag" style="background:#D8E8D0;color:#4A7A3F;padding:3px 10px">Sim</span>
+<span class="mock-tag" style="background:#F5EFEC;color:#5A4347;padding:3px 10px">Não</span>
+</div>
+</div>
+<div class="mock-card">
+<div class="mock-card-title">Usa protetor solar diariamente?</div>
+<div style="display:flex;gap:6px;margin-top:4px">
+<span class="mock-tag" style="background:#F5EFEC;color:#5A4347;padding:3px 10px">Sim</span>
+<span class="mock-tag" style="background:#F6D6CE;color:#6B1E2E;padding:3px 10px">Às vezes</span>
+</div>
+</div>
+<div class="mock-card">
+<div class="mock-card-title">Está grávida ou amamentando?</div>
+<div style="display:flex;gap:6px;margin-top:4px">
+<span class="mock-tag" style="background:#F5EFEC;color:#5A4347;padding:3px 10px">Sim</span>
+<span class="mock-tag" style="background:#D8E8D0;color:#4A7A3F;padding:3px 10px">Não</span>
+</div>
+</div>
+<div class="mock-card">
+<div class="mock-card-title">📸 Envie uma foto do rosto sem maquiagem</div>
+<div style="border:1px dashed #EBD8D0;border-radius:6px;padding:8px;text-align:center;margin-top:4px">
+<div style="font-size:8px;color:#8A7A7E">Toque para tirar foto</div>
+</div>
+</div>
+<div class="mock-btn">Enviar respostas</div>
+</div>
+</div>
+</div>
+</div>
+
+<!-- Tab 3: Termos por link -->
+<div class="showcase-panel" data-panel="3">
+<div class="showcase-panel-text">
+<h3>Termos de consentimento por link</h3>
+<p>Envie o termo de consentimento para a paciente assinar antes do procedimento. Assinatura digital, com validade — sem papel, sem impressora.</p>
+<ul>
+<li>Modelos prontos ou personalizados</li>
+<li>Paciente assina no celular</li>
+<li>Termo fica salvo no prontuário</li>
+<li>Assinatura digital com data e hora</li>
+</ul>
+</div>
+<div class="showcase-panel-visual" style="background:linear-gradient(135deg,#D6E2EB 0%,#E8D6EB 100%)">
+<div class="phone-mockup">
+<div class="phone-notch"></div>
+<div class="phone-screen">
+<div style="text-align:center;margin:4px 0 6px">
+<div style="width:32px;height:32px;border-radius:10px;background:#6B1E2E;margin:0 auto 4px;display:flex;align-items:center;justify-content:center;font-size:12px;color:#FFF;font-weight:800">S</div>
+<div style="font-size:9px;font-weight:700">Termo de Consentimento</div>
+<div style="font-size:7px;color:#8A7A7E">Peeling químico</div>
+</div>
+<div class="mock-card" style="font-size:7px;color:#5A4347;line-height:1.5;max-height:90px;overflow:hidden">
+<div class="mock-card-title" style="font-size:8px">Declaração</div>
+Declaro que fui informada sobre o procedimento de peeling químico, seus benefícios, riscos e cuidados pós-procedimento. Autorizo a realização do tratamento...
+</div>
+<div class="mock-card">
+<div class="mock-card-title">☑ Li e concordo com os termos acima</div>
+</div>
+<div style="margin-top:6px">
+<div style="font-size:8px;font-weight:700;margin-bottom:4px;color:#5A4347">Assinatura:</div>
+<div style="border:1px solid #EBD8D0;border-radius:8px;height:50px;background:#FDFAF8;display:flex;align-items:center;justify-content:center">
+<svg width="120" height="30" viewBox="0 0 120 30" fill="none"><path d="M10 22 Q20 8 35 18 Q50 28 60 14 Q70 2 85 16 Q95 24 110 10" stroke="#2A1A1D" stroke-width="1.5" fill="none" stroke-linecap="round"/></svg>
+</div>
+</div>
+<div style="display:flex;justify-content:space-between;margin-top:4px;font-size:7px;color:#8A7A7E">
+<span>📅 14/10/2026</span>
+<span>🕐 13:42</span>
+</div>
+<div class="mock-btn">Assinar e enviar</div>
+</div>
+</div>
+</div>
+</div>
+
+<!-- Tab 4: Ficha da paciente -->
+<div class="showcase-panel" data-panel="4">
+<div class="showcase-panel-text">
+<h3>Tudo na ficha da paciente</h3>
+<p>Agenda, anamnese, termos assinados, fotos e evolução — tudo fica no mesmo lugar. Na hora da consulta, é só abrir a ficha e está tudo lá.</p>
+<ul>
+<li>Histórico completo de atendimentos</li>
+<li>Anamneses e termos assinados</li>
+<li>Fotos de evolução</li>
+<li>Prontuário sempre atualizado</li>
+</ul>
+</div>
+<div class="showcase-panel-visual" style="background:linear-gradient(135deg,#D8E8D0 0%,#D6E2EB 60%,#F5EFEC 100%)">
+<div class="phone-mockup">
+<div class="phone-notch"></div>
+<div class="phone-screen">
+<div style="display:flex;align-items:center;gap:8px;padding-bottom:6px;border-bottom:1px solid #EBD8D0">
+<div style="width:30px;height:30px;border-radius:50%;background:#F6D6CE;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;color:#6B1E2E">CM</div>
+<div><div style="font-size:10px;font-weight:700">Camila Martins</div><div style="font-size:7px;color:#8A7A7E">Pele mista · Melasma grau II</div></div>
+</div>
+<div class="mock-card" style="margin-top:4px">
+<div style="display:flex;justify-content:space-between;align-items:center">
+<div class="mock-card-title">📋 Anamnese</div>
+<span class="mock-tag" style="background:#D8E8D0;color:#4A7A3F">Preenchida ✓</span>
+</div>
+<div class="mock-card-sub">Enviada em 12/10 · 14 respostas</div>
+</div>
+<div class="mock-card">
+<div style="display:flex;justify-content:space-between;align-items:center">
+<div class="mock-card-title">📝 Termo de consentimento</div>
+<span class="mock-tag" style="background:#D8E8D0;color:#4A7A3F">Assinado ✓</span>
+</div>
+<div class="mock-card-sub">Peeling químico · Assinado 14/10</div>
+</div>
+<div class="mock-card">
+<div class="mock-card-title">📅 Próxima consulta</div>
+<div class="mock-card-sub">28/10 às 14h · Retorno peeling</div>
+</div>
+<div class="mock-card">
+<div class="mock-card-title">📸 Fotos de evolução</div>
+<div style="display:flex;gap:4px;margin-top:3px">
+<div style="width:36px;height:36px;border-radius:6px;background:#F6D6CE"></div>
+<div style="width:36px;height:36px;border-radius:6px;background:#F5ECD7"></div>
+<div style="width:36px;height:36px;border-radius:6px;background:#E8D6EB"></div>
+<div style="width:36px;height:36px;border-radius:6px;background:#D6E2EB;display:flex;align-items:center;justify-content:center;font-size:8px;color:#4A6A8B;font-weight:700">+3</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+</div>
+</section>
+
 <section aria-label="Para quem é" style="background: #F5EFEC; border-top: 1px solid #EBD8D0; border-bottom: 1px solid #EBD8D0">
 <div style="max-width: 1200px; margin: 0 auto; padding: 20px 24px; display: flex; flex-direction: column; align-items: center; gap: 10px">
 <span style="font-size: 11px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: #6B1E2E">Feito para profissionais da estética</span>
@@ -637,6 +964,35 @@ details[open] .faq-plus{transform:rotate(45deg)}
     window.addEventListener('scroll', barraVisivel, {passive:true});
     barraVisivel();
   }
+})();
+</script>
+<script>
+(function(){
+  var tabs=document.querySelectorAll('.showcase-tab');
+  var panels=document.querySelectorAll('.showcase-panel');
+  var timer,current=0;
+  function activate(i){
+    tabs.forEach(function(t){t.classList.remove('active');t.setAttribute('aria-selected','false')});
+    panels.forEach(function(p){p.classList.remove('active')});
+    tabs[i].classList.add('active');
+    tabs[i].setAttribute('aria-selected','true');
+    panels[i].classList.add('active');
+    current=i;
+  }
+  function advance(){
+    activate((current+1)%tabs.length);
+  }
+  function startTimer(){
+    clearInterval(timer);
+    timer=setInterval(advance,7000);
+  }
+  tabs.forEach(function(t,i){
+    t.addEventListener('click',function(){
+      activate(i);
+      startTimer();
+    });
+  });
+  if(tabs.length) startTimer();
 })();
 </script>
 </body>
