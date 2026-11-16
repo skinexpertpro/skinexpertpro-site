@@ -31,6 +31,13 @@ html{scroll-behavior:smooth}
 
 body{margin:0;background:#FBF4F1}
 a{color:#6B1E2E}a:hover{color:#4A1420}
+/* Faixa promocional topo */
+.promo-banner{background:#D4A574;overflow:hidden;position:relative;padding:0;border-top:3px dashed #4A1420;border-bottom:3px dashed #4A1420}
+.promo-banner-track{display:flex;width:max-content;animation:promo-scroll 18s linear infinite}
+.promo-banner-track span{white-space:nowrap;font-family:'Syne',sans-serif;font-weight:800;font-size:14px;letter-spacing:0.12em;color:#4A1420;padding:10px 0;text-transform:uppercase}
+.promo-banner-track span::after{content:'✦';margin:0 24px;font-size:10px;vertical-align:middle;color:#6B1E2E}
+@keyframes promo-scroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+@media (prefers-reduced-motion: reduce){.promo-banner-track{animation:none}}
 .marquee{overflow:hidden;-webkit-mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent)}
 .marquee-track{display:flex;width:max-content;animation:marquee 32s linear infinite}
 .marquee:hover .marquee-track{animation-play-state:paused}
@@ -57,6 +64,13 @@ details[open] .faq-plus{transform:rotate(45deg)}
 </head>
 <body>
 <div style="font-family: 'Inter', system-ui, sans-serif; color: #2A1A1D; background: #FBF4F1; min-height: 100vh">
+
+<!-- Faixa promocional animada -->
+<div class="promo-banner" role="marquee" aria-label="Promoção de lançamento">
+<div class="promo-banner-track">
+<span>LANÇAMENTO 19 NOV</span><span>TESTE 14 DIAS GRÁTIS</span><span>LANÇAMENTO 19 NOV</span><span>TESTE 14 DIAS GRÁTIS</span><span>LANÇAMENTO 19 NOV</span><span>TESTE 14 DIAS GRÁTIS</span><span>LANÇAMENTO 19 NOV</span><span>TESTE 14 DIAS GRÁTIS</span><span>LANÇAMENTO 19 NOV</span><span>TESTE 14 DIAS GRÁTIS</span><span>LANÇAMENTO 19 NOV</span><span>TESTE 14 DIAS GRÁTIS</span><span>LANÇAMENTO 19 NOV</span><span>TESTE 14 DIAS GRÁTIS</span><span>LANÇAMENTO 19 NOV</span><span>TESTE 14 DIAS GRÁTIS</span>
+</div>
+</div>
 
 <header style="background: #FBF4F1; border-bottom: 1px solid #EBD8D0">
 <nav aria-label="Principal" class="nav-principal" style="max-width: 1200px; margin: 0 auto; padding: 18px 24px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px">
