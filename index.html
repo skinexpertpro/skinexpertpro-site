@@ -15,9 +15,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Skin Expert Pro — ciência dos ativos e gestão para profissionais da estética</title>
-<meta name="description" content="Sistema para profissionais da estética que atendem por conta própria: anamnese, avaliação cutânea, planos de skincare com base de ativos, agenda e financeiro num só lugar.">
+<meta name="description" content="Sistema para profissionais da estética que atendem por conta própria: anamnese, avaliação cutânea, planos de skincare com base de ativos, agenda e financeiro num só lugar. Teste 14 dias grátis.">
 <meta property="og:title" content="Skin Expert Pro">
-<meta property="og:description" content="A ciência dos ativos e a gestão do seu negócio, no mesmo lugar.">
+<meta property="og:description" content="A ciência dos ativos e a gestão do seu negócio, no mesmo lugar. Teste 14 dias grátis.">
 <link rel="icon" href="img/favicon.ico">
 <link rel="icon" type="image/png" sizes="32x32" href="img/icone-32.png">
 <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
@@ -39,26 +39,40 @@ a{color:#6B1E2E}a:hover{color:#4A1420}
 details summary{list-style:none;cursor:pointer}
 details summary::-webkit-details-marker{display:none}
 details[open] .faq-plus{transform:rotate(45deg)}
+/* Celular: o topo fica só com logo, Entrar e o botão; barra fixa de teste grátis no rodapé da tela */
+.barra-cta{display:none}
+@media (max-width: 720px){
+  .nav-links{display:none !important}
+  .nav-principal{padding:12px 16px !important;flex-wrap:nowrap !important}
+  .nav-acoes a{padding:10px 14px !important;font-size:14px !important;white-space:nowrap}
+  .barra-cta{font-family:'Inter',system-ui,sans-serif;display:flex;position:fixed;left:0;right:0;bottom:0;z-index:50;align-items:center;justify-content:space-between;gap:12px;padding:10px 16px calc(10px + env(safe-area-inset-bottom));background:#FFFFFF;border-top:1px solid #EBD8D0;box-shadow:0 -8px 24px -12px rgba(74,20,32,.35);transform:translateY(110%);transition:transform .25s ease}
+  .barra-cta.visivel{transform:none}
+  .barra-cta span{font-size:13px;line-height:1.35;color:#5A4347}
+  .barra-cta strong{display:block;font-size:15px;color:#2A1A1D}
+  .barra-cta a{flex:none;text-decoration:none;font-weight:800;font-size:15px;padding:13px 20px;border-radius:999px;background:#6B1E2E;color:#FFFFFF}
+  footer{padding-bottom:72px}
+}
+@media (prefers-reduced-motion: reduce){.barra-cta{transition:none}}
 </style>
 </head>
 <body>
 <div style="font-family: 'Inter', system-ui, sans-serif; color: #2A1A1D; background: #FBF4F1; min-height: 100vh">
 
 <header style="background: #FBF4F1; border-bottom: 1px solid #EBD8D0">
-<nav aria-label="Principal" style="max-width: 1200px; margin: 0 auto; padding: 18px 24px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px">
+<nav aria-label="Principal" class="nav-principal" style="max-width: 1200px; margin: 0 auto; padding: 18px 24px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px">
 <a href="#topo" style="display: flex; align-items: center; gap: 10px; text-decoration: none; color: #2A1A1D">
 <svg width="42" height="42" viewBox="0 0 100 100" fill="none" aria-hidden="true"><defs><clipPath id="tr-h"><rect x="2" y="2" width="96" height="96" rx="26"></rect></clipPath></defs><rect x="2" y="2" width="96" height="96" rx="26" fill="#6B1E2E"></rect><g clip-path="url(#tr-h)" stroke-linecap="round"><g stroke="#B5615E" stroke-width="1.5" transform="rotate(28 50 50)"><path d="M-30 -6 Q0 -11 30 -6 T90 -6 T150 -6"></path><path d="M-30 2 Q0 -3 30 2 T90 2 T150 2"></path><path d="M-30 10 Q0 5 30 10 T90 10 T150 10"></path><path d="M-30 18 Q0 13 30 18 T90 18 T150 18"></path><path d="M-30 26 Q0 21 30 26 T90 26 T150 26"></path><path d="M-30 34 Q0 29 30 34 T90 34 T150 34"></path><path d="M-30 42 Q0 37 30 42 T90 42 T150 42"></path><path d="M-30 50 Q0 45 30 50 T90 50 T150 50"></path><path d="M-30 58 Q0 53 30 58 T90 58 T150 58"></path><path d="M-30 66 Q0 61 30 66 T90 66 T150 66"></path><path d="M-30 74 Q0 69 30 74 T90 74 T150 74"></path><path d="M-30 82 Q0 77 30 82 T90 82 T150 82"></path><path d="M-30 90 Q0 85 30 90 T90 90 T150 90"></path><path d="M-30 98 Q0 93 30 98 T90 98 T150 98"></path><path d="M-30 106 Q0 101 30 106 T90 106 T150 106"></path></g><g stroke="#F6D6CE" stroke-width="1.7" transform="rotate(-16 50 50)"><path d="M-30 -2 Q-5 -8 20 -2 T70 -2 T120 -2 T170 -2"></path><path d="M-30 6 Q-5 0 20 6 T70 6 T120 6 T170 6"></path><path d="M-30 14 Q-5 8 20 14 T70 14 T120 14 T170 14"></path><path d="M-30 22 Q-5 16 20 22 T70 22 T120 22 T170 22"></path><path d="M-30 30 Q-5 24 20 30 T70 30 T120 30 T170 30"></path><path d="M-30 38 Q-5 32 20 38 T70 38 T120 38 T170 38"></path><path d="M-30 46 Q-5 40 20 46 T70 46 T120 46 T170 46"></path><path d="M-30 54 Q-5 48 20 54 T70 54 T120 54 T170 54"></path><path d="M-30 62 Q-5 56 20 62 T70 62 T120 62 T170 62"></path><path d="M-30 70 Q-5 64 20 70 T70 70 T120 70 T170 70"></path><path d="M-30 78 Q-5 72 20 78 T70 78 T120 78 T170 78"></path><path d="M-30 86 Q-5 80 20 86 T70 86 T120 86 T170 86"></path><path d="M-30 94 Q-5 88 20 94 T70 94 T120 94 T170 94"></path><path d="M-30 102 Q-5 96 20 102 T70 102 T120 102 T170 102"></path></g></g></svg>
 <span style="display: flex; flex-direction: column; line-height: 0.95"><span style="font-family: 'Syne', sans-serif; font-weight: 800; font-size: 24px; letter-spacing: -0.03em; color: #6B1E2E">skin</span><span style="font-family: 'Syne', sans-serif; font-weight: 600; font-size: 10.5px; letter-spacing: 0.08em; color: #6B1E2E">expert pro</span></span>
 </a>
-<div style="display: flex; flex-wrap: wrap; align-items: center; gap: 28px; font-size: 15px; font-weight: 600">
+<div class="nav-links" style="display: flex; flex-wrap: wrap; align-items: center; gap: 28px; font-size: 15px; font-weight: 600">
 <a href="#recursos" style="text-decoration: none; color: #2A1A1D">Recursos</a>
 <a href="#ativos" style="text-decoration: none; color: #2A1A1D">Ciência dos ativos</a>
 <a href="#planos" style="text-decoration: none; color: #2A1A1D">Planos</a>
 <a href="#duvidas" style="text-decoration: none; color: #2A1A1D">Dúvidas</a>
 </div>
-<div style="display: flex; align-items: center; gap: 12px">
+<div class="nav-acoes" style="display: flex; align-items: center; gap: 12px">
 <a href="https://app.skinexpertpro.com" style="text-decoration: none; font-weight: 700; font-size: 15px; padding: 12px 16px; color: #6B1E2E">Entrar</a>
-<a href="#planos" style="text-decoration: none; font-weight: 700; font-size: 15px; padding: 12px 20px; border-radius: 999px; background: #6B1E2E; color: #FFFFFF">Criar conta</a>
+<a href="https://app.skinexpertpro.com/?cadastro=1" style="text-decoration: none; font-weight: 700; font-size: 15px; padding: 12px 20px; border-radius: 999px; background: #6B1E2E; color: #FFFFFF">Testar grátis</a>
 </div>
 </nav>
 </header>
@@ -69,9 +83,10 @@ details[open] .faq-plus{transform:rotate(45deg)}
 <h1 style="margin: 0; font-family: 'Playfair Display', Georgia, serif; font-weight: 700; letter-spacing: -0.01em; font-size: clamp(40px, 5.2vw, 66px); line-height: 1.04; color: #2A1A1D">A ciência dos ativos e a gestão do seu negócio, <span style="color: #6B1E2E">no mesmo lugar.</span></h1>
 <p style="margin: 0; font-size: 19px; line-height: 1.6; color: #5A4347; max-width: 560px">Anamnese, planos de skincare com produtos e ativos explicados, agenda e financeiro num sistema pensado para quem faz tudo sozinha — da avaliação da pele ao fechamento do mês.</p>
 <div style="display: flex; flex-wrap: wrap; gap: 12px; padding-top: 4px">
-<a href="https://app.skinexpertpro.com/?cadastro=1" style="text-decoration: none; font-weight: 700; font-size: 16px; padding: 16px 28px; border-radius: 999px; background: #6B1E2E; color: #FFFFFF">Criar minha conta</a>
+<a href="https://app.skinexpertpro.com/?cadastro=1" style="text-decoration: none; font-weight: 700; font-size: 16px; padding: 16px 28px; border-radius: 999px; background: #6B1E2E; color: #FFFFFF">Testar 14 dias grátis</a>
 <a href="#como-funciona" style="text-decoration: none; font-weight: 700; font-size: 16px; padding: 16px 24px; border-radius: 999px; border: 1.5px solid #6B1E2E; color: #6B1E2E">Ver como funciona</a>
 </div>
+<p style="margin: -8px 0 0; font-size: 15px; line-height: 1.55; color: #5A4347; max-width: 560px"><strong style="color: #6B1E2E">Você só é cobrada no 15º dia</strong> e pode cancelar antes, sem custo. Depois, <span data-apartir>a partir de R$ 69/mês</span>.</p>
 <div style="display: flex; flex-wrap: wrap; gap: 20px; font-size: 14px; color: #5A4347; font-weight: 600">
 <span style="display: flex; align-items: center; gap: 8px"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#9E4A44" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg>No computador e no celular</span>
 <span style="display: flex; align-items: center; gap: 8px"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#9E4A44" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg>Brasil e União Europeia</span>
@@ -243,6 +258,10 @@ details[open] .faq-plus{transform:rotate(45deg)}
 <p style="margin: 0; font-size: 16px; line-height: 1.6; color: #EBD8D0">Ela recebe o plano com os links dos produtos. O plano fica salvo, com data, nas Recomendações da paciente.</p>
 </div>
 </div>
+<div style="display: flex; flex-wrap: wrap; align-items: center; gap: 14px 22px">
+<a href="https://app.skinexpertpro.com/?cadastro=1" style="text-decoration: none; font-weight: 800; font-size: 16px; padding: 16px 28px; border-radius: 999px; background: #F6D6CE; color: #4A1420">Testar 14 dias grátis</a>
+<span style="font-size: 15px; line-height: 1.5; color: #EBD8D0">Crie a conta, escolha o plano e monte o primeiro plano de skincare hoje.</span>
+</div>
 </div>
 </section>
 
@@ -300,6 +319,14 @@ details[open] .faq-plus{transform:rotate(45deg)}
 <span style="flex: none; width: 46px; height: 46px; border-radius: 12px; background: #F6D6CE; display: flex; align-items: center; justify-content: center"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#6B1E2E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9 12 3l9 6v11a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1z"></path><path d="M9 21v-7h6v7"></path></svg></span>
 <div style="display: flex; flex-direction: column; gap: 6px"><h3 style="margin: 0; font-size: 17px; font-weight: 800">Meu Negócio</h3><p style="margin: 0; font-size: 15px; line-height: 1.55; color: #5A4347">Serviços, pacotes, categorias e horários de atendimento organizados.</p></div>
 </div>
+<div style="background: #FFFFFF; border: 1px solid #EBD8D0; border-radius: 18px; padding: 24px; display: flex; gap: 16px">
+<span style="flex: none; width: 46px; height: 46px; border-radius: 12px; background: #F6D6CE; display: flex; align-items: center; justify-content: center"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#6B1E2E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 8l-9-5-9 5 9 5 9-5z"></path><path d="M3 8v8l9 5 9-5V8"></path><path d="M12 13v8"></path></svg></span>
+<div style="display: flex; flex-direction: column; gap: 6px"><h3 style="margin: 0; font-size: 17px; font-weight: 800">Pacotes de sessões</h3><p style="margin: 0; font-size: 15px; line-height: 1.55; color: #5A4347">Venda o pacote e o sistema cuida do saldo: a sessão é reservada ao agendar e descontada quando o atendimento acontece.</p></div>
+</div>
+<div style="background: #FFFFFF; border: 1px solid #EBD8D0; border-radius: 18px; padding: 24px; display: flex; gap: 16px">
+<span style="flex: none; width: 46px; height: 46px; border-radius: 12px; background: #F6D6CE; display: flex; align-items: center; justify-content: center"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#6B1E2E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><path d="M14 2v6h6"></path><path d="M8 17c1.5-1.5 2.5-1.5 3.5 0s2 1.5 3.5 0"></path></svg></span>
+<div style="display: flex; flex-direction: column; gap: 6px"><h3 style="margin: 0; font-size: 17px; font-weight: 800">Termos de consentimento</h3><p style="margin: 0; font-size: 15px; line-height: 1.55; color: #5A4347">Modelos prontos por procedimento. A paciente assina pelo celular, por link ou na cabine, e o termo fica guardado na ficha.</p></div>
+</div>
 
 <div style="background: #FFFFFF; border: 1px solid #EBD8D0; border-radius: 18px; padding: 24px; display: flex; gap: 16px">
 <span style="flex: none; width: 46px; height: 46px; border-radius: 12px; background: #F6D6CE; display: flex; align-items: center; justify-content: center"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#6B1E2E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 8 12 3 3 8v8l9 5 9-5z"></path><path d="m3 8 9 5 9-5M12 13v8"></path></svg></span>
@@ -343,7 +370,7 @@ details[open] .faq-plus{transform:rotate(45deg)}
 <div style="max-width: 680px; display: flex; flex-direction: column; gap: 16px; text-align: center; align-items: center">
 <span style="font-size: 13px; font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase; color: #9E4A44">Planos</span>
 <h2 style="margin: 0; font-family: 'Playfair Display', Georgia, serif; font-weight: 700; letter-spacing: -0.01em; font-size: clamp(32px, 3.6vw, 46px); line-height: 1.1">Escolha o plano do tamanho da sua agenda.</h2>
-<p style="margin: 0; font-size: 18px; line-height: 1.6; color: #5A4347">Pague em reais ou euros. Escolha a forma de pagamento que preferir.</p>
+<p style="margin: 0; font-size: 18px; line-height: 1.6; color: #5A4347"><strong style="color: #6B1E2E">14 dias grátis em qualquer plano.</strong> Você só é cobrada no 15º dia e pode cancelar antes, sem custo. Pague em reais ou euros.</p>
 </div>
 <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 12px">
 <div role="group" aria-label="Período de cobrança" style="display: flex; gap: 4px; padding: 4px; border-radius: 999px; background: #F6D6CE"><button type="button" class="seg" data-per="m" aria-pressed="true">Mensal</button><button type="button" class="seg" data-per="t" aria-pressed="false">Trimestral</button><button type="button" class="seg" data-per="a" aria-pressed="false">Anual</button></div>
@@ -354,7 +381,7 @@ details[open] .faq-plus{transform:rotate(45deg)}
 <div style="display: flex; flex-direction: column; gap: 6px"><h3 style="margin: 0; font-size: 22px; font-weight: 800; font-family: 'Playfair Display', Georgia, serif">Essencial</h3><span style="font-size: 15px; color: #5A4347">Tudo para organizar o seu atendimento</span></div>
 <div style="display: flex; align-items: baseline; gap: 6px"><span data-price="essencial" style="font-family: 'Playfair Display', Georgia, serif; font-weight: 700; font-size: 44px; line-height: 1">R$ 69</span><span style="font-size: 15px; color: #5A4347">/mês</span></div>
 <span data-note="essencial" style="font-size: 14px; color: #5A4347; margin-top: -12px">cobrado mensalmente · + IVA</span>
-<ul style="margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 10px; font-size: 15px"><li style="display: flex; gap: 10px"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#6B1E2E" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex: none; margin-top: 2px"><path d="M20 6 9 17l-5-5"></path></svg>Agenda organizada</li><li style="display: flex; gap: 10px"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#6B1E2E" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex: none; margin-top: 2px"><path d="M20 6 9 17l-5-5"></path></svg>Pacientes e prontuário</li><li style="display: flex; gap: 10px"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#6B1E2E" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex: none; margin-top: 2px"><path d="M20 6 9 17l-5-5"></path></svg>Planos de SkinCare em PDF</li><li style="display: flex; gap: 10px"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#6B1E2E" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex: none; margin-top: 2px"><path d="M20 6 9 17l-5-5"></path></svg>Catálogo e Dicionário de Ativos</li><li style="display: flex; gap: 10px"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#6B1E2E" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex: none; margin-top: 2px"><path d="M20 6 9 17l-5-5"></path></svg>Financeiro e estoque</li></ul>
+<ul style="margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 10px; font-size: 15px"><li style="display: flex; gap: 10px"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#6B1E2E" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex: none; margin-top: 2px"><path d="M20 6 9 17l-5-5"></path></svg>Agenda organizada</li><li style="display: flex; gap: 10px"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#6B1E2E" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex: none; margin-top: 2px"><path d="M20 6 9 17l-5-5"></path></svg>Pacientes e prontuário</li><li style="display: flex; gap: 10px"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#6B1E2E" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex: none; margin-top: 2px"><path d="M20 6 9 17l-5-5"></path></svg>Planos de SkinCare em PDF</li><li style="display: flex; gap: 10px"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#6B1E2E" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex: none; margin-top: 2px"><path d="M20 6 9 17l-5-5"></path></svg>Catálogo e Dicionário de Ativos</li><li style="display: flex; gap: 10px"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#6B1E2E" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex: none; margin-top: 2px"><path d="M20 6 9 17l-5-5"></path></svg>Financeiro e estoque</li><li style="display: flex; gap: 10px"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#6B1E2E" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex: none; margin-top: 2px"><path d="M20 6 9 17l-5-5"></path></svg>Pacotes com saldo de sessões</li><li style="display: flex; gap: 10px"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#6B1E2E" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex: none; margin-top: 2px"><path d="M20 6 9 17l-5-5"></path></svg>Termos com assinatura digital</li></ul>
 <a data-assinar="essencial" href="https://app.skinexpertpro.com/?cadastro=1&plano=essencial" style="margin-top: auto; text-align: center; text-decoration: none; font-weight: 700; font-size: 16px; padding: 15px 20px; border-radius: 999px; border: 1.5px solid #6B1E2E; color: #6B1E2E">Testar 14 dias grátis</a>
 </div>
 <div style="border-radius: 22px; padding: 32px; display: flex; flex-direction: column; gap: 20px; position: relative; background: #6B1E2E; color: #FFFFFF;">
@@ -362,7 +389,7 @@ details[open] .faq-plus{transform:rotate(45deg)}
 <div style="display: flex; flex-direction: column; gap: 6px"><h3 style="margin: 0; font-size: 22px; font-weight: 800; font-family: 'Playfair Display', Georgia, serif">Studio</h3><span style="font-size: 15px; color: #F6D6CE">Para quem divide a sala com 1 ou 2 colegas</span></div>
 <div style="display: flex; align-items: baseline; gap: 6px"><span data-price="studio" style="font-family: 'Playfair Display', Georgia, serif; font-weight: 700; font-size: 44px; line-height: 1">R$ 119</span><span style="font-size: 15px; color: #F6D6CE">/mês</span></div>
 <span data-note="studio" style="font-size: 14px; color: #F6D6CE; margin-top: -12px">cobrado mensalmente · + IVA</span>
-<ul style="margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 10px; font-size: 15px"><li style="display: flex; gap: 10px"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#F6D6CE" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex: none; margin-top: 2px"><path d="M20 6 9 17l-5-5"></path></svg>Tudo do Essencial</li><li style="display: flex; gap: 10px"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#F6D6CE" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex: none; margin-top: 2px"><path d="M20 6 9 17l-5-5"></path></svg>Até 3 profissionais na mesma conta</li></ul>
+<ul style="margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 10px; font-size: 15px"><li style="display: flex; gap: 10px"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#F6D6CE" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex: none; margin-top: 2px"><path d="M20 6 9 17l-5-5"></path></svg>Tudo do Essencial</li><li style="display: flex; gap: 10px"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#F6D6CE" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex: none; margin-top: 2px"><path d="M20 6 9 17l-5-5"></path></svg>Estúdio com até 3 profissionais</li><li style="display: flex; gap: 10px"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#F6D6CE" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex: none; margin-top: 2px"><path d="M20 6 9 17l-5-5"></path></svg>Agenda com uma coluna por profissional</li><li style="display: flex; gap: 10px"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#F6D6CE" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex: none; margin-top: 2px"><path d="M20 6 9 17l-5-5"></path></svg>Salas compartilhadas ou separadas</li><li style="display: flex; gap: 10px"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#F6D6CE" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex: none; margin-top: 2px"><path d="M20 6 9 17l-5-5"></path></svg>Pacientes e financeiro de cada uma, sempre privados</li><li style="display: flex; gap: 10px"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#F6D6CE" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex: none; margin-top: 2px"><path d="M20 6 9 17l-5-5"></path></svg>Uma só assinatura para o estúdio</li></ul>
 <a data-assinar="studio" href="https://app.skinexpertpro.com/?cadastro=1&plano=studio" style="margin-top: auto; text-align: center; text-decoration: none; font-weight: 700; font-size: 16px; padding: 15px 20px; border-radius: 999px; background: #FFFFFF; color: #6B1E2E">Testar 14 dias grátis</a>
 </div>
 <div style="border-radius: 22px; padding: 32px; display: flex; flex-direction: column; gap: 20px; position: relative; background: #FBF4F1; border: 1px solid #EBD8D0; overflow: hidden;">
@@ -373,7 +400,7 @@ details[open] .faq-plus{transform:rotate(45deg)}
 <span style="margin-top: auto; text-align: center; text-decoration: none; font-weight: 700; font-size: 16px; padding: 15px 20px; border-radius: 999px; background: transparent; color: #6B1E2E; border: 1.5px dashed #D0897F; cursor: default">Em breve</span>
 </div>
 </div>
-<span style="font-size: 14px; color: #5A4347; font-weight: 600">Pagamento seguro via Stripe · Cancele quando quiser</span>
+<span style="font-size: 14px; color: #5A4347; font-weight: 600; text-align: center">14 dias grátis · Pagamento seguro via Stripe · Cancele quando quiser</span>
 </div>
 </section>
 
@@ -383,11 +410,14 @@ details[open] .faq-plus{transform:rotate(45deg)}
 <h2 style="margin: 0; font-family: 'Playfair Display', Georgia, serif; font-weight: 700; letter-spacing: -0.01em; font-size: clamp(32px, 3.6vw, 46px); line-height: 1.1">Tudo o que você precisa saber</h2>
 </div>
 <div style="display: flex; flex-direction: column; gap: 12px">
-<details style="background: #FFFFFF; border: 1px solid #EBD8D0; border-radius: 16px; padding: 0 24px"><summary style="display: flex; justify-content: space-between; align-items: center; gap: 16px; padding: 22px 0; font-size: 17px; font-weight: 700">Para quem é o Skin Expert Pro?<span class="faq-plus" style="font-size: 26px; color: #6B1E2E; transition: transform .2s" aria-hidden="true">+</span></summary><p style="margin: 0 0 22px; font-size: 16px; line-height: 1.6; color: #5A4347">Para esteticistas e cosmetólogas que atendem por conta própria. Se você passar a dividir a agenda, os planos Studio e Expert permitem até 3 profissionais na mesma conta.</p></details>
+<details style="background: #FFFFFF; border: 1px solid #EBD8D0; border-radius: 16px; padding: 0 24px"><summary style="display: flex; justify-content: space-between; align-items: center; gap: 16px; padding: 22px 0; font-size: 17px; font-weight: 700">Como funciona o teste grátis de 14 dias?<span class="faq-plus" style="font-size: 26px; color: #6B1E2E; transition: transform .2s" aria-hidden="true">+</span></summary><p style="margin: 0 0 22px; font-size: 16px; line-height: 1.6; color: #5A4347">Você cria a conta, escolhe o plano e cadastra o cartão. Durante 14 dias usa o sistema completo sem pagar nada. A primeira cobrança só acontece no 15º dia; se cancelar antes, não paga nada.</p></details>
+<details style="background: #FFFFFF; border: 1px solid #EBD8D0; border-radius: 16px; padding: 0 24px"><summary style="display: flex; justify-content: space-between; align-items: center; gap: 16px; padding: 22px 0; font-size: 17px; font-weight: 700">Posso cancelar quando quiser?<span class="faq-plus" style="font-size: 26px; color: #6B1E2E; transition: transform .2s" aria-hidden="true">+</span></summary><p style="margin: 0 0 22px; font-size: 16px; line-height: 1.6; color: #5A4347">Sim, sem multa e sem precisar falar com ninguém: é um botão em Configurações › Minha Assinatura. Você continua com acesso até o fim do período já pago, e os seus dados continuam guardados.</p></details>
+<details style="background: #FFFFFF; border: 1px solid #EBD8D0; border-radius: 16px; padding: 0 24px"><summary style="display: flex; justify-content: space-between; align-items: center; gap: 16px; padding: 22px 0; font-size: 17px; font-weight: 700">Como é o pagamento?<span class="faq-plus" style="font-size: 26px; color: #6B1E2E; transition: transform .2s" aria-hidden="true">+</span></summary><p style="margin: 0 0 22px; font-size: 16px; line-height: 1.6; color: #5A4347">Com cartão, em reais ou em euros, no plano mensal, trimestral ou anual. O pagamento é processado pelo Stripe: os dados do cartão não passam pelo Skin Expert Pro. Os impostos do seu país são somados no pagamento.</p></details>
+<details style="background: #FFFFFF; border: 1px solid #EBD8D0; border-radius: 16px; padding: 0 24px"><summary style="display: flex; justify-content: space-between; align-items: center; gap: 16px; padding: 22px 0; font-size: 17px; font-weight: 700">Para quem é o Skin Expert Pro?<span class="faq-plus" style="font-size: 26px; color: #6B1E2E; transition: transform .2s" aria-hidden="true">+</span></summary><p style="margin: 0 0 22px; font-size: 16px; line-height: 1.6; color: #5A4347">Para profissionais da estética que atendem por conta própria: esteticistas, cosmetólogas, biomédicas, enfermeiras e fisioterapeutas estetas, entre outras. Se você divide a sala com 1 ou 2 colegas, o plano Studio reúne até 3 profissionais, cada uma com a sua conta e os seus dados privados.</p></details>
+<details style="background: #FFFFFF; border: 1px solid #EBD8D0; border-radius: 16px; padding: 0 24px"><summary style="display: flex; justify-content: space-between; align-items: center; gap: 16px; padding: 22px 0; font-size: 17px; font-weight: 700">Preciso instalar alguma coisa? Funciona no celular?<span class="faq-plus" style="font-size: 26px; color: #6B1E2E; transition: transform .2s" aria-hidden="true">+</span></summary><p style="margin: 0 0 22px; font-size: 16px; line-height: 1.6; color: #5A4347">Não precisa instalar nada: o sistema abre no navegador, no computador e no celular. No celular você tem o dashboard, a agenda e as pacientes à mão entre um atendimento e outro.</p></details>
+<details style="background: #FFFFFF; border: 1px solid #EBD8D0; border-radius: 16px; padding: 0 24px"><summary style="display: flex; justify-content: space-between; align-items: center; gap: 16px; padding: 22px 0; font-size: 17px; font-weight: 700">A paciente precisa instalar alguma coisa?<span class="faq-plus" style="font-size: 26px; color: #6B1E2E; transition: transform .2s" aria-hidden="true">+</span></summary><p style="margin: 0 0 22px; font-size: 16px; line-height: 1.6; color: #5A4347">Não. Ela responde a ficha de anamnese e assina os termos por um link, e recebe o plano de skincare em PDF, com os links dos produtos indicados.</p></details>
 <details style="background: #FFFFFF; border: 1px solid #EBD8D0; border-radius: 16px; padding: 0 24px"><summary style="display: flex; justify-content: space-between; align-items: center; gap: 16px; padding: 22px 0; font-size: 17px; font-weight: 700">Funciona em Portugal e no resto da Europa?<span class="faq-plus" style="font-size: 26px; color: #6B1E2E; transition: transform .2s" aria-hidden="true">+</span></summary><p style="margin: 0 0 22px; font-size: 16px; line-height: 1.6; color: #5A4347">Sim. Há uma versão adaptada à União Europeia, e os preços aparecem na moeda do país de residência de cada paciente.</p></details>
 <details style="background: #FFFFFF; border: 1px solid #EBD8D0; border-radius: 16px; padding: 0 24px"><summary style="display: flex; justify-content: space-between; align-items: center; gap: 16px; padding: 22px 0; font-size: 17px; font-weight: 700">Posso cadastrar meus próprios produtos?<span class="faq-plus" style="font-size: 26px; color: #6B1E2E; transition: transform .2s" aria-hidden="true">+</span></summary><p style="margin: 0 0 22px; font-size: 16px; line-height: 1.6; color: #5A4347">O catálogo é mantido e revisado pela equipe do Skin Expert Pro, para que ingredientes e ativos estejam sempre corretos. Você pode sugerir produtos pelo e-mail contato@skinexpertpro.com.</p></details>
-<details style="background: #FFFFFF; border: 1px solid #EBD8D0; border-radius: 16px; padding: 0 24px"><summary style="display: flex; justify-content: space-between; align-items: center; gap: 16px; padding: 22px 0; font-size: 17px; font-weight: 700">A paciente precisa instalar alguma coisa?<span class="faq-plus" style="font-size: 26px; color: #6B1E2E; transition: transform .2s" aria-hidden="true">+</span></summary><p style="margin: 0 0 22px; font-size: 16px; line-height: 1.6; color: #5A4347">Não. Ela responde a ficha de anamnese por um link e recebe o plano de skincare em PDF, com os links dos produtos indicados.</p></details>
-<details style="background: #FFFFFF; border: 1px solid #EBD8D0; border-radius: 16px; padding: 0 24px"><summary style="display: flex; justify-content: space-between; align-items: center; gap: 16px; padding: 22px 0; font-size: 17px; font-weight: 700">Posso experimentar antes de assinar?<span class="faq-plus" style="font-size: 26px; color: #6B1E2E; transition: transform .2s" aria-hidden="true">+</span></summary><p style="margin: 0 0 22px; font-size: 16px; line-height: 1.6; color: #5A4347">Sim. Peça um acesso de demonstração pelo e-mail contato@skinexpertpro.com e conheça o sistema por dentro antes de escolher o plano.</p></details>
 <details style="background: #FFFFFF; border: 1px solid #EBD8D0; border-radius: 16px; padding: 0 24px"><summary style="display: flex; justify-content: space-between; align-items: center; gap: 16px; padding: 22px 0; font-size: 17px; font-weight: 700">Meus dados estão seguros?<span class="faq-plus" style="font-size: 26px; color: #6B1E2E; transition: transform .2s" aria-hidden="true">+</span></summary><p style="margin: 0 0 22px; font-size: 16px; line-height: 1.6; color: #5A4347">Os dados das suas pacientes são privados e só você os vê. O sistema segue a LGPD e o RGPD.</p></details>
 </div>
 </section>
@@ -395,8 +425,9 @@ details[open] .faq-plus{transform:rotate(45deg)}
 <section style="padding: 0 24px 104px">
 <div style="max-width: 1200px; margin: 0 auto; border-radius: 28px; background: #6B1E2E; color: #FFFFFF; padding: clamp(40px, 6vw, 80px) 24px; display: flex; flex-direction: column; align-items: center; gap: 24px; text-align: center">
 <h2 style="margin: 0; max-width: 760px; font-family: 'Playfair Display', Georgia, serif; font-weight: 700; letter-spacing: -0.01em; font-size: clamp(32px, 4vw, 52px); line-height: 1.08">Mais critério na cabine. Menos tempo com papelada.</h2>
-<p style="margin: 0; max-width: 560px; font-size: 18px; line-height: 1.6; color: #EBD8D0">Crie sua conta e organize o seu atendimento ainda hoje.</p>
-<a href="https://app.skinexpertpro.com/?cadastro=1" style="text-decoration: none; font-weight: 800; font-size: 17px; padding: 18px 32px; border-radius: 999px; background: #F6D6CE; color: #4A1420">Criar minha conta</a>
+<p style="margin: 0; max-width: 560px; font-size: 18px; line-height: 1.6; color: #EBD8D0">Experimente por 14 dias sem pagar nada e organize o seu atendimento ainda hoje.</p>
+<a href="https://app.skinexpertpro.com/?cadastro=1" style="text-decoration: none; font-weight: 800; font-size: 17px; padding: 18px 32px; border-radius: 999px; background: #F6D6CE; color: #4A1420">Testar 14 dias grátis</a>
+<span style="font-size: 14px; color: #EBD8D0">Só é cobrada no 15º dia · Cancele quando quiser</span>
 </div>
 </section>
 
@@ -438,12 +469,15 @@ details[open] .faq-plus{transform:rotate(45deg)}
 </footer>
 
 </div>
+<div class="barra-cta" id="barraCta"><span><strong>14 dias grátis</strong>depois, <span data-apartir>a partir de R$ 69/mês</span></span><a href="https://app.skinexpertpro.com/?cadastro=1">Testar grátis</a></div>
 <script>
 (function(){
   var BASE={BRL:[69,119,149],EUR:[19,39,59]};
   var DESC={m:1,t:0.95,a:0.9};
   var KEYS=['essencial','studio','expert'];
   var cur='BRL', per='m';
+  // Quem abre o site na Europa já vê os preços em euros (pode trocar no botão R$ / €)
+  try{ if(/^Europe\//.test(Intl.DateTimeFormat().resolvedOptions().timeZone||'')) cur='EUR'; }catch(e){}
   // Assinar: primeiro a pessoa cria a conta no app; lá ela confirma o plano e vai para o pagamento
   // (Stripe, com 14 dias grátis). O plano, o período e a moeda escolhidos aqui vão junto no link.
   function linkDe(plano){
@@ -462,6 +496,7 @@ details[open] .faq-plus{transform:rotate(45deg)}
       document.querySelector('[data-note="'+k+'"]').textContent=
         (per==='m'?'cobrado mensalmente':(per==='t'?fmt(m*3)+' a cada 3 meses':fmt(m*12)+' por ano'))+(cur==='EUR'?' · + IVA':' · + impostos');
     });
+    document.querySelectorAll('[data-apartir]').forEach(function(e){e.textContent='a partir de '+fmt(BASE[cur][0])+'/mês'});
     document.querySelectorAll('[data-assinar]').forEach(function(a){a.href=linkDe(a.dataset.assinar)});
     document.querySelectorAll('[data-per]').forEach(function(b){b.setAttribute('aria-pressed',b.dataset.per===per)});
     document.querySelectorAll('[data-cur]').forEach(function(b){b.setAttribute('aria-pressed',b.dataset.cur===cur)});
@@ -469,6 +504,16 @@ details[open] .faq-plus{transform:rotate(45deg)}
   document.querySelectorAll('[data-per]').forEach(function(b){b.addEventListener('click',function(){per=b.dataset.per;render()})});
   document.querySelectorAll('[data-cur]').forEach(function(b){b.addEventListener('click',function(){cur=b.dataset.cur;render()})});
   render();
+  // Barra "Testar grátis" no celular: aparece depois da primeira tela e some na seção de planos
+  var barra=document.getElementById('barraCta'), planos=document.getElementById('planos'), nosPlanos=false;
+  function barraVisivel(){ barra.classList.toggle('visivel', window.scrollY>520 && !nosPlanos); }
+  if(barra){
+    if('IntersectionObserver' in window && planos){
+      new IntersectionObserver(function(es){ nosPlanos=es[0].isIntersecting; barraVisivel(); },{rootMargin:'-20% 0px -20% 0px'}).observe(planos);
+    }
+    window.addEventListener('scroll', barraVisivel, {passive:true});
+    barraVisivel();
+  }
 })();
 </script>
 </body>
