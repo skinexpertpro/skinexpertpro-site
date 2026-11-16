@@ -31,15 +31,12 @@ html{scroll-behavior:smooth}
 
 body{margin:0;background:#FBF4F1}
 a{color:#6B1E2E}a:hover{color:#4A1420}
-/* Faixa promocional topo — estilo caution tape */
-.promo-wrap{background:#1a1a16;padding:10px 0;overflow:hidden}
-.promo-banner{background:#E8D56B;position:relative;overflow:hidden}
-.promo-banner::before,.promo-banner::after{content:'';position:absolute;left:0;right:0;height:8px;z-index:2;background:repeating-linear-gradient(-45deg,#1a1a16 0,#1a1a16 5px,#E8D56B 5px,#E8D56B 10px)}
-.promo-banner::before{top:0}
-.promo-banner::after{bottom:0}
-.promo-banner-track{display:flex;width:max-content;animation:promo-scroll 30s linear infinite;padding:10px 0}
-.promo-banner-track span{white-space:nowrap;font-family:'Inter',system-ui,sans-serif;font-weight:900;font-size:15px;letter-spacing:0.06em;color:#1a1a16;text-transform:uppercase}
-.promo-banner-track span::after{content:'·';margin:0 18px;font-weight:900}
+/* Faixa promocional topo */
+.promo-wrap{overflow:hidden}
+.promo-banner{background:#D4A574;position:relative;overflow:hidden}
+.promo-banner-track{display:flex;width:max-content;animation:promo-scroll 30s linear infinite;padding:7px 0}
+.promo-banner-track span{white-space:nowrap;font-family:'Inter',system-ui,sans-serif;font-weight:600;font-size:12px;letter-spacing:0.14em;color:#4A1420;text-transform:uppercase}
+.promo-banner-track span::after{content:'✦';margin:0 24px;font-size:8px;vertical-align:middle;opacity:.5}
 @keyframes promo-scroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
 @media (prefers-reduced-motion: reduce){.promo-banner-track{animation:none}}
 /* Animações do menu */
