@@ -171,12 +171,12 @@ details[open] .faq-plus{transform:rotate(45deg)}
 <body>
 <div style="font-family: 'Inter', system-ui, sans-serif; color: #2A1A1D; background: #FBF4F1; min-height: 100vh">
 
-<!-- Faixa BLACK NOVEMBER -->
+<!-- Faixa da promoção: Black November até 30/11, Preço de lançamento até 31/12 -->
 <a href="#planos" data-promo aria-label="Black November: ver os planos" style="display: block; text-decoration: none; background: radial-gradient(600px 80px at 50% 0%, rgba(232,201,143,0.28) 0%, rgba(232,201,143,0) 70%), #120B0D; color: #FFFFFF">
 <div style="max-width: 1200px; margin: 0 auto; padding: 12px 24px; display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 10px 18px; font-size: 14.5px">
-<span style="font-family: 'Outfit', system-ui, sans-serif; font-weight: 600; font-size: 15px; letter-spacing: 0.22em; text-transform: uppercase; background: linear-gradient(90deg, #E8C98F, #F6E2B8, #B8925A); -webkit-background-clip: text; background-clip: text; color: transparent">Black November</span>
+<span style="font-family: 'Outfit', system-ui, sans-serif; font-weight: 600; font-size: 15px; letter-spacing: 0.22em; text-transform: uppercase; background: linear-gradient(90deg, #E8C98F, #F6E2B8, #B8925A); -webkit-background-clip: text; background-clip: text; color: transparent" data-promo-tag>Black November</span>
 <span aria-hidden="true" style="width: 4px; height: 4px; border-radius: 50%; background: #B5615E"></span>
-<span style="color: #F3E3DE">Preço especial de lançamento no plano anual — só até 30/11</span>
+<span style="color: #F3E3DE">Preço especial de lançamento no plano anual — só até <span data-promo-ate>30/11</span></span>
 <span style="display: inline-flex; align-items: center; gap: 8px; font-weight: 600; padding: 7px 8px 7px 16px; border-radius: 999px; color: #120B0D; background: #E8C98F">Aproveitar<span style="width: 22px; height: 22px; border-radius: 50%; background: #120B0D; display: flex; align-items: center; justify-content: center"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#E8C98F" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"></path></svg></span></span>
 </div>
 </a>
@@ -814,7 +814,7 @@ Declaro que fui informada sobre o procedimento de peeling químico, seus benefí
 <h2 style="margin: 0; font-family: 'Outfit', system-ui, sans-serif; font-weight: 300; letter-spacing: -0.01em; font-size: clamp(26px, 2.8vw, 36px); line-height: 1.1">Escolha o plano do tamanho da sua agenda.</h2>
 <p style="margin: 0; font-size: 15px; line-height: 1.5; color: #5A4347"><strong style="color: #6B1E2E">14 dias grátis em qualquer plano.</strong> Só cobrada no 15º dia. Cancele antes, sem custo.</p>
 </div>
-<button type="button" data-promo data-promo-anual style="all: unset; box-sizing: border-box; cursor: pointer; display: inline-flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 8px 12px; padding: 10px 18px; border-radius: 999px; background: #120B0D; color: #F3E3DE; font-size: 14px; text-align: center"><span style="font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: #E8C98F">Black November</span><span>Plano anual com preço de lançamento, Essencial e Studio, até 30/11</span></button>
+<button type="button" data-promo data-promo-anual style="all: unset; box-sizing: border-box; cursor: pointer; display: inline-flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 8px 12px; padding: 10px 18px; border-radius: 999px; background: #120B0D; color: #F3E3DE; font-size: 14px; text-align: center"><span style="font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: #E8C98F" data-promo-tag>Black November</span><span>Plano anual com preço de lançamento, Essencial e Studio, até <span data-promo-ate>30/11</span></span></button>
 <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 10px">
 <div role="group" aria-label="Período de cobrança" style="display: flex; gap: 4px; padding: 4px; border-radius: 999px; background: #F6D6CE"><button type="button" class="seg" data-per="m" aria-pressed="true">Mensal</button><button type="button" class="seg" data-per="t" aria-pressed="false">Trimestral</button><button type="button" class="seg" data-per="a" aria-pressed="false">Anual</button></div>
 <div role="group" aria-label="Moeda" style="display: flex; gap: 4px; padding: 4px; border-radius: 999px; border: 1px solid #EBD8D0"><button type="button" class="seg" data-cur="BRL" aria-pressed="true">R$</button><button type="button" class="seg" data-cur="EUR" aria-pressed="false">€</button></div>
@@ -955,8 +955,13 @@ Declaro que fui informada sobre o procedimento de peeling químico, seus benefí
   var BASE={BRL:[69,119,149],EUR:[19,39,59]};
   var DESC={m:1,t:0.95,a:0.9};
   // Black November: anual com preço de lançamento (30% sobre o mensal) para Essencial e Studio, até 30/11.
-  var PROMO_FIM=new Date('2026-12-01T03:00:00Z');
-  var promo=new Date()<PROMO_FIM;
+  // Até 30/11 é "Black November"; de 01/12 a 31/12 vira "Preço de lançamento" (horário de Brasília).
+  var PROMO_FIM=new Date('2027-01-01T03:00:00Z'), BLACK_FIM=new Date('2026-12-01T03:00:00Z');
+  var agora=new Date(), promo=agora<PROMO_FIM, black=agora<BLACK_FIM;
+  var PROMO_NOME=black?'Black November':'Lançamento', PROMO_ATE=black?'30/11':'31/12';
+  document.querySelectorAll('[data-promo-tag]').forEach(function(e){e.textContent=PROMO_NOME});
+  document.querySelectorAll('[data-promo-ate]').forEach(function(e){e.textContent=PROMO_ATE});
+  document.querySelectorAll('[data-promo][aria-label]').forEach(function(e){e.setAttribute('aria-label',PROMO_NOME+': ver os planos')});
   var PROMO_A={essencial:0.7,studio:0.7};
   var LINKS_PROMO={
     essencial:{BRL:'https://buy.stripe.com/eVq4gzf6n7590SA0LTdEs0d',EUR:'https://buy.stripe.com/3cIeVdcYffBFata9ipdEs0f'},
@@ -994,7 +999,7 @@ Declaro que fui informada sobre o procedimento de peeling químico, seus benefí
       var m=BASE[cur][i]*(bf?PROMO_A[k]:DESC[per]);
       document.querySelector('[data-price="'+k+'"]').textContent=fmt(m);
       document.querySelector('[data-note="'+k+'"]').textContent=
-        (per==='m'?'cobrado mensalmente':(per==='t'?fmt(m*3)+' a cada 3 meses':fmt(m*12)+' por ano'))+(bf?' · preço de lançamento Black November':'')+(cur==='EUR'?' · + IVA':' · + impostos');
+        (per==='m'?'cobrado mensalmente':(per==='t'?fmt(m*3)+' a cada 3 meses':fmt(m*12)+' por ano'))+(bf?(black?' · preço de lançamento Black November':' · preço de lançamento'):'')+(cur==='EUR'?' · + IVA':' · + impostos');
     });
     document.querySelectorAll('[data-apartir]').forEach(function(e){e.textContent='a partir de '+fmt(BASE[cur][0])+'/mês'});
     document.querySelectorAll('[data-assinar]').forEach(function(a){a.href=linkDe(a.dataset.assinar)});
