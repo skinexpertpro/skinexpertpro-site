@@ -82,7 +82,7 @@ a{color:#6B1E2E}a:hover{color:#4A1420}
 .fc7{bottom:38%;left:22%;animation:float-2 5.8s ease-in-out infinite;opacity:.5}
 .fc8{top:12%;left:32%;animation:float-4 6.5s ease-in-out infinite;opacity:.4}
 @media (max-width:1080px){
-  .float-section{min-height:auto;padding:40px 16px}
+  .float-section{min-height:auto;padding:40px 16px;flex-direction:column}
   .float-card{position:relative !important;top:auto !important;left:auto !important;right:auto !important;bottom:auto !important;animation:none !important;opacity:1 !important}
   .float-grid{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;width:100%}
   .float-center{margin-bottom:28px}
@@ -159,43 +159,50 @@ details[open] .faq-plus{transform:rotate(45deg)}
   .showcase-panel-text{flex:none;padding:24px 20px}
   .showcase-panel-visual{min-height:320px}
 }
+/* Redesign opção 3 */
+.glass{background:rgba(255,255,255,0.72);border:1px solid rgba(255,255,255,0.9);-webkit-backdrop-filter:blur(18px);backdrop-filter:blur(18px);box-shadow:0 24px 60px -28px rgba(74,20,32,0.45)}
+.glass-soft{background:rgba(255,255,255,0.72);border:1px solid rgba(255,255,255,0.9)}
+.pill-link{text-decoration:none;font-size:15px;font-weight:500;padding:11px 16px;border-radius:999px;color:#4A3337;transition:background .2s ease,color .2s ease}
+.pill-link:hover{background:rgba(107,30,46,0.08);color:#6B1E2E}
+@media (max-width: 960px){#antes{grid-template-columns:1fr !important}#antes .span2{grid-column:auto !important}.hero-flutua{position:relative !important;right:auto !important;top:auto !important;width:auto !important;margin-top:16px}}
+@media (max-width: 720px){.nav-principal{border-radius:24px !important}.mon-side{display:none !important}.mon-screen{height:auto !important}.mon-grid2{grid-template-columns:1fr !important}}
 </style>
 </head>
 <body>
 <div style="font-family: 'Inter', system-ui, sans-serif; color: #2A1A1D; background: #FBF4F1; min-height: 100vh">
 
-<header style="background: #FBF4F1; border-bottom: 1px solid #EBD8D0">
-<nav aria-label="Principal" class="nav-principal" style="max-width: 1200px; margin: 0 auto; padding: 18px 24px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px">
-<a href="#topo" style="display: flex; align-items: center; gap: 10px; text-decoration: none; color: #2A1A1D">
-<svg width="42" height="42" viewBox="0 0 100 100" fill="none" aria-hidden="true"><defs><clipPath id="tr-h"><rect x="2" y="2" width="96" height="96" rx="26"></rect></clipPath></defs><rect x="2" y="2" width="96" height="96" rx="26" fill="#6B1E2E"></rect><g clip-path="url(#tr-h)" stroke-linecap="round"><g stroke="#B5615E" stroke-width="1.5" transform="rotate(28 50 50)"><path d="M-30 -6 Q0 -11 30 -6 T90 -6 T150 -6"></path><path d="M-30 2 Q0 -3 30 2 T90 2 T150 2"></path><path d="M-30 10 Q0 5 30 10 T90 10 T150 10"></path><path d="M-30 18 Q0 13 30 18 T90 18 T150 18"></path><path d="M-30 26 Q0 21 30 26 T90 26 T150 26"></path><path d="M-30 34 Q0 29 30 34 T90 34 T150 34"></path><path d="M-30 42 Q0 37 30 42 T90 42 T150 42"></path><path d="M-30 50 Q0 45 30 50 T90 50 T150 50"></path><path d="M-30 58 Q0 53 30 58 T90 58 T150 58"></path><path d="M-30 66 Q0 61 30 66 T90 66 T150 66"></path><path d="M-30 74 Q0 69 30 74 T90 74 T150 74"></path><path d="M-30 82 Q0 77 30 82 T90 82 T150 82"></path><path d="M-30 90 Q0 85 30 90 T90 90 T150 90"></path><path d="M-30 98 Q0 93 30 98 T90 98 T150 98"></path><path d="M-30 106 Q0 101 30 106 T90 106 T150 106"></path></g><g stroke="#F6D6CE" stroke-width="1.7" transform="rotate(-16 50 50)"><path d="M-30 -2 Q-5 -8 20 -2 T70 -2 T120 -2 T170 -2"></path><path d="M-30 6 Q-5 0 20 6 T70 6 T120 6 T170 6"></path><path d="M-30 14 Q-5 8 20 14 T70 14 T120 14 T170 14"></path><path d="M-30 22 Q-5 16 20 22 T70 22 T120 22 T170 22"></path><path d="M-30 30 Q-5 24 20 30 T70 30 T120 30 T170 30"></path><path d="M-30 38 Q-5 32 20 38 T70 38 T120 38 T170 38"></path><path d="M-30 46 Q-5 40 20 46 T70 46 T120 46 T170 46"></path><path d="M-30 54 Q-5 48 20 54 T70 54 T120 54 T170 54"></path><path d="M-30 62 Q-5 56 20 62 T70 62 T120 62 T170 62"></path><path d="M-30 70 Q-5 64 20 70 T70 70 T120 70 T170 70"></path><path d="M-30 78 Q-5 72 20 78 T70 78 T120 78 T170 78"></path><path d="M-30 86 Q-5 80 20 86 T70 86 T120 86 T170 86"></path><path d="M-30 94 Q-5 88 20 94 T70 94 T120 94 T170 94"></path><path d="M-30 102 Q-5 96 20 102 T70 102 T120 102 T170 102"></path></g></g></svg>
-<span style="display: flex; flex-direction: column; line-height: 0.95"><span style="font-family: 'Syne', sans-serif; font-weight: 800; font-size: 24px; letter-spacing: -0.03em; color: #6B1E2E">skin</span><span style="font-family: 'Syne', sans-serif; font-weight: 600; font-size: 10.5px; letter-spacing: 0.08em; color: #6B1E2E">expert pro</span></span>
-</a>
-<div class="nav-links" style="display: flex; flex-wrap: wrap; align-items: center; gap: 28px; font-size: 15px; font-weight: 600">
-<a href="#solucoes" class="nav-link">Soluções</a>
-<a href="#diferencial" class="nav-link">Diferencial</a>
-<a href="#planos" class="nav-link">Planos</a>
-<a href="#duvidas" class="nav-link">Dúvidas</a>
+<!-- Faixa BLACK NOVEMBER -->
+<a href="#planos" data-promo aria-label="Black November: ver os planos" style="display: block; text-decoration: none; background: radial-gradient(600px 80px at 50% 0%, rgba(232,201,143,0.28) 0%, rgba(232,201,143,0) 70%), #120B0D; color: #FFFFFF">
+<div style="max-width: 1200px; margin: 0 auto; padding: 12px 24px; display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 10px 18px; font-size: 14.5px">
+<span style="font-family: 'Outfit', system-ui, sans-serif; font-weight: 600; font-size: 15px; letter-spacing: 0.22em; text-transform: uppercase; background: linear-gradient(90deg, #E8C98F, #F6E2B8, #B8925A); -webkit-background-clip: text; background-clip: text; color: transparent">Black November</span>
+<span aria-hidden="true" style="width: 4px; height: 4px; border-radius: 50%; background: #B5615E"></span>
+<span style="color: #F3E3DE">Preço especial de lançamento no plano anual — só até 30/11</span>
+<span style="display: inline-flex; align-items: center; gap: 8px; font-weight: 600; padding: 7px 8px 7px 16px; border-radius: 999px; color: #120B0D; background: #E8C98F">Aproveitar<span style="width: 22px; height: 22px; border-radius: 50%; background: #120B0D; display: flex; align-items: center; justify-content: center"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#E8C98F" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"></path></svg></span></span>
 </div>
-<div class="nav-acoes" style="display: flex; align-items: center; gap: 12px">
-<a href="https://app.skinexpertpro.com" class="nav-entrar">Entrar</a>
-<a href="#planos" class="nav-cta-btn">Testar grátis</a>
+</a>
+
+<header style="max-width: 1280px; margin: 0 auto; padding: 18px 28px">
+<nav aria-label="Principal" class="glass nav-principal" style="border-radius: 999px; padding: 8px 8px 8px 10px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px">
+<div style="display: flex; flex-wrap: wrap; align-items: center; gap: 6px">
+<a href="#topo" aria-label="Skin Expert Pro — início" style="display: flex; align-items: center; gap: 10px; text-decoration: none; padding-right: 10px">
+<svg width="40" height="40" viewBox="0 0 100 100" fill="none" aria-hidden="true"><defs><clipPath id="tr-e"><rect x="2" y="2" width="96" height="96" rx="26"></rect></clipPath></defs><rect x="2" y="2" width="96" height="96" rx="26" fill="#6B1E2E"></rect><g clip-path="url(#tr-e)" stroke-linecap="round"><g stroke="#B5615E" stroke-width="1.5" transform="rotate(28 50 50)"><path d="M-30 2 Q0 -3 30 2 T90 2 T150 2"></path><path d="M-30 18 Q0 13 30 18 T90 18 T150 18"></path><path d="M-30 34 Q0 29 30 34 T90 34 T150 34"></path><path d="M-30 50 Q0 45 30 50 T90 50 T150 50"></path><path d="M-30 66 Q0 61 30 66 T90 66 T150 66"></path><path d="M-30 82 Q0 77 30 82 T90 82 T150 82"></path><path d="M-30 98 Q0 93 30 98 T90 98 T150 98"></path></g><g stroke="#F6D6CE" stroke-width="1.7" transform="rotate(-16 50 50)"><path d="M-30 6 Q-5 0 20 6 T70 6 T120 6 T170 6"></path><path d="M-30 22 Q-5 16 20 22 T70 22 T120 22 T170 22"></path><path d="M-30 38 Q-5 32 20 38 T70 38 T120 38 T170 38"></path><path d="M-30 54 Q-5 48 20 54 T70 54 T120 54 T170 54"></path><path d="M-30 70 Q-5 64 20 70 T70 70 T120 70 T170 70"></path><path d="M-30 86 Q-5 80 20 86 T70 86 T120 86 T170 86"></path><path d="M-30 102 Q-5 96 20 102 T70 102 T120 102 T170 102"></path></g></g></svg>
+<span style="display: flex; flex-direction: column; line-height: 0.95"><span style="font-family: 'Syne', sans-serif; font-weight: 800; font-size: 21px; letter-spacing: -0.03em; color: #6B1E2E">skin</span><span style="font-family: 'Syne', sans-serif; font-weight: 600; font-size: 9.5px; letter-spacing: 0.08em; color: #6B1E2E">expert pro</span></span>
+</a>
+<span class="nav-links" style="display: flex; flex-wrap: wrap; align-items: center; gap: 2px"><a href="#solucoes" class="pill-link">Soluções</a><a href="#diferencial" class="pill-link">Diferencial</a><a href="#planos" class="pill-link">Planos</a><a href="#duvidas" class="pill-link">Dúvidas</a></span>
+</div>
+<div class="nav-acoes" style="display: flex; align-items: center; gap: 6px">
+<a href="https://app.skinexpertpro.com" style="text-decoration: none; font-size: 15px; font-weight: 600; padding: 11px 16px; color: #6B1E2E">Entrar</a>
+<a href="#planos" style="text-decoration: none; font-size: 15px; font-weight: 600; padding: 11px 20px; border-radius: 999px; color: #FFFFFF; background: #2A1A1D">Testar grátis</a>
 </div>
 </nav>
 </header>
 
-<!-- Faixa BLACK NOVEMBER — entre header e hero -->
-<div class="promo-wrap">
-<div class="promo-banner" role="marquee" aria-label="Promoção Black November">
-<div class="promo-banner-track">
-<span>BLACK NOVEMBER</span><span>BLACK NOVEMBER</span><span>BLACK NOVEMBER</span><span>BLACK NOVEMBER</span><span>BLACK NOVEMBER</span><span>BLACK NOVEMBER</span><span>BLACK NOVEMBER</span><span>BLACK NOVEMBER</span><span>BLACK NOVEMBER</span><span>BLACK NOVEMBER</span><span>BLACK NOVEMBER</span><span>BLACK NOVEMBER</span><span>BLACK NOVEMBER</span><span>BLACK NOVEMBER</span><span>BLACK NOVEMBER</span><span>BLACK NOVEMBER</span>
-</div>
-</div>
-</div>
+
 
 <section id="topo" style="max-width: 1200px; margin: 0 auto; padding: 20px 24px 40px; display: flex; flex-wrap: wrap; gap: 32px; align-items: center">
 <div style="flex: 1 1 460px; min-width: 0; display: flex; flex-direction: column; gap: 18px">
 <span style="align-self: flex-start; font-size: 12px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: #2A1A1D; background: linear-gradient(135deg, #F6D6CE, #E8C9A0); padding: 7px 12px; border-radius: 999px">Para profissionais da estética que atendem por conta própria</span>
-<h1 style="margin: 0; font-family: 'Outfit', system-ui, sans-serif; font-weight: 300; letter-spacing: -0.01em; font-size: clamp(28px, 3.5vw, 44px); line-height: 1.06; color: #2A1A1D">A ciência dos ativos e a gestão do seu negócio, <span style="color: #6B1E2E">no mesmo lugar.</span></h1>
+<h1 style="margin: 0; font-family: 'Outfit', system-ui, sans-serif; font-weight: 300; letter-spacing: -0.01em; font-size: clamp(28px, 3.5vw, 44px); line-height: 1.06; color: #2A1A1D">A ciência dos ativos e a gestão do seu negócio, <span style="background: linear-gradient(90deg, #6B1E2E 0%, #A5524A 55%, #B8925A 100%); -webkit-background-clip: text; background-clip: text; color: transparent">no mesmo lugar.</span></h1>
 <p style="margin: 0; font-size: 15px; line-height: 1.5; color: #5A4347; max-width: 560px">Anamnese, planos de skincare com produtos e ativos explicados, agenda e financeiro num sistema pensado para quem faz tudo sozinha — da avaliação da pele ao fechamento do mês.</p>
 <div style="display: flex; flex-wrap: wrap; gap: 10px; padding-top: 2px">
 <a href="#planos" style="text-decoration: none; font-weight: 700; font-size: 15px; padding: 14px 24px; border-radius: 999px; background: linear-gradient(135deg, #6B1E2E, #8B2E3E); color: #FFFFFF; box-shadow: 0 4px 20px rgba(107,30,46,0.35)">Testar 14 dias grátis</a>
@@ -210,42 +217,41 @@ details[open] .faq-plus{transform:rotate(45deg)}
 </div>
 
 <div style="flex: 1 1 460px; min-width: 0">
-<div style="background: #FFFFFF; border: 1px solid #EBD8D0; border-radius: 16px; overflow: hidden; box-shadow: 0 30px 60px -30px rgba(74,20,32,0.4); font-family: 'Inter', system-ui, sans-serif; color: #2c1b20">
-<div style="display: flex; align-items: center; gap: 12px; padding: 10px 14px; background: #f3ece4; border-bottom: 1px solid #e8ded0">
-<span style="display: flex; gap: 6px" aria-hidden="true"><span style="width: 10px; height: 10px; border-radius: 50%; background: #e0b4ab"></span><span style="width: 10px; height: 10px; border-radius: 50%; background: #e8d3b0"></span><span style="width: 10px; height: 10px; border-radius: 50%; background: #c9d8c0"></span></span>
-<span style="flex: 1; text-align: center; font-size: 11px; color: #8a7768; background: #FFFFFF; border-radius: 6px; padding: 4px 10px">skinexpertpro.com</span>
+<div style="width: 100%; box-sizing: border-box; border-radius: 30px; padding: 12px; background: #2A1A1D; box-shadow: 0 50px 90px -40px rgba(42,26,29,0.7); position: relative">
+<div class="mon-screen" style="border-radius: 20px; overflow: hidden; display: flex; text-align: left; background: linear-gradient(170deg, #FBF6F2 0%, #F3E4DC 100%); height: 440px">
+<div class="mon-side" style="flex: none; width: 104px; padding: 16px 10px; display: flex; flex-direction: column; gap: 6px; background: rgba(255,255,255,0.55); border-right: 1px solid rgba(107,30,46,0.08); font-size: 12.5px; font-weight: 500; color: #4A3337">
+<span style="font-family: 'Syne', sans-serif; font-weight: 800; font-size: 16px; color: #6B1E2E; padding: 0 8px 12px">skin<span style="font-weight: 600; font-size: 9px; letter-spacing: 0.08em"> expert pro</span></span>
+<span style="padding: 9px 10px; border-radius: 12px; color: #FFFFFF; background: linear-gradient(135deg, #8A2B3D, #6B1E2E)">Dashboard</span><span style="padding: 9px 10px">Agenda</span><span style="padding: 9px 10px">Pacientes</span><span style="padding: 9px 10px">Formulações</span><span style="padding: 9px 10px">Catálogo</span><span style="padding: 9px 10px">Financeiro</span><span style="padding: 9px 10px">Meu Negócio</span>
 </div>
-<div style="display: flex">
-<div style="flex: none; width: 44px; background: #4a1524; padding: 14px 0; display: flex; flex-direction: column; align-items: center; gap: 12px" aria-hidden="true"><span style="width: 22px; height: 22px; border-radius: 6px; background: #6d2340"></span><span style="width: 22px; height: 22px; border-radius: 6px; background: rgba(233,220,201,0.18)"></span><span style="width: 22px; height: 22px; border-radius: 6px; background: rgba(233,220,201,0.18)"></span><span style="width: 22px; height: 22px; border-radius: 6px; background: rgba(233,220,201,0.18)"></span><span style="width: 22px; height: 22px; border-radius: 6px; background: rgba(233,220,201,0.18)"></span><span style="width: 22px; height: 22px; border-radius: 6px; background: rgba(233,220,201,0.18)"></span></div>
-<div style="flex: 1; min-width: 0; background: #f7f1e7; padding: 14px; display: flex; flex-direction: column; gap: 10px">
-<div style="display: flex; align-items: center; gap: 10px">
-<span style="width: 32px; height: 32px; border-radius: 50%; background: #f2e2e6; color: #7a2440; display: flex; align-items: center; justify-content: center; font-size: 12px; font-weight: 700">ML</span>
-<div style="display: flex; flex-direction: column; gap: 1px"><span style="font-family: 'Outfit', system-ui, sans-serif; font-size: 15px; font-weight: 300">Marina L.</span><span style="font-size: 10.5px; color: #4a7a3d; font-weight: 600">Ativo</span></div>
+<div style="flex: 1; min-width: 0; padding: 20px; display: flex; flex-direction: column; gap: 14px">
+<div style="display: flex; justify-content: space-between; align-items: center"><span style="font-family: 'Outfit', system-ui, sans-serif; font-size: 22px; font-weight: 400">Bom dia, Carla</span><span style="font-size: 12px; color: #5A4347">Perfil: Carla M.</span></div>
+<div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px">
+<div class="glass-soft" style="border-radius: 16px; padding: 12px; display: flex; flex-direction: column; gap: 4px"><span style="font-size: 11px; color: #5A4347">Atendimentos hoje</span><span style="font-family: 'Outfit', system-ui, sans-serif; font-size: 26px; font-weight: 300">4</span></div>
+<div class="glass-soft" style="border-radius: 16px; padding: 12px; display: flex; flex-direction: column; gap: 4px"><span style="font-size: 11px; color: #5A4347">Fichas pendentes</span><span style="font-family: 'Outfit', system-ui, sans-serif; font-size: 26px; font-weight: 300">1</span></div>
+<div class="glass-soft" style="border-radius: 16px; padding: 12px; display: flex; flex-direction: column; gap: 4px"><span style="font-size: 11px; color: #5A4347">Planos enviados</span><span style="font-family: 'Outfit', system-ui, sans-serif; font-size: 26px; font-weight: 300">2</span></div>
 </div>
-<div style="display: flex; gap: 6px; overflow: hidden"><span style="flex: none; font-size: 10.5px; font-weight: 600; padding: 6px 10px; border-radius: 8px; border: 1px solid #e8ded0; background: #FFFFFF; color: #2c1b20">Dados</span><span style="flex: none; font-size: 10.5px; font-weight: 600; padding: 6px 10px; border-radius: 8px; border: 1px solid #e8ded0; background: #FFFFFF; color: #2c1b20">Anamnese Clínica</span><span style="flex: none; font-size: 10.5px; font-weight: 600; padding: 6px 10px; border-radius: 8px; border: 1px solid #e8ded0; background: #FFFFFF; color: #2c1b20">Avaliação Cutânea</span><span style="flex: none; font-size: 10.5px; font-weight: 600; padding: 6px 10px; border-radius: 8px; border: 1px solid #4a1524; background: #4a1524; color: #FFFFFF">Plano de SkinCare</span><span style="flex: none; font-size: 10.5px; font-weight: 600; padding: 6px 10px; border-radius: 8px; border: 1px solid #e8ded0; background: #FFFFFF; color: #2c1b20">Recomendações</span></div>
-<div style="background: #FFFFFF; border: 1px solid #e8ded0; border-radius: 12px; padding: 12px; display: flex; flex-direction: column; gap: 10px">
-<div style="display: flex; flex-wrap: wrap; align-items: center; gap: 8px">
-<span style="font-size: 11px; color: #8a7768; font-weight: 600">34 anos · Feminino</span>
-<span style="font-size: 10.5px; font-weight: 700; padding: 4px 9px; border-radius: 999px; background: #f3e6d2; color: #8a6a2f">Sistema Baumann: OSPT</span>
-<span style="font-size: 10.5px; font-weight: 700; padding: 4px 9px; border-radius: 999px; background: #f3e6d2; color: #8a6a2f">Fototipo: III</span>
+<div class="mon-grid2" style="display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr); gap: 12px; flex: 1">
+<div class="glass-soft" style="border-radius: 18px; padding: 14px; display: flex; flex-direction: column; gap: 10px">
+<span style="font-size: 13px; font-weight: 600">Agenda de hoje</span>
+<div style="display: flex; gap: 10px; align-items: center; font-size: 12px"><span style="width: 44px; color: #6B1E2E; font-weight: 600">10:00</span><span style="flex: 1">Limpeza de pele · Marina L.</span></div>
+<div style="display: flex; gap: 10px; align-items: center; font-size: 12px"><span style="width: 44px; color: #6B1E2E; font-weight: 600">11:30</span><span style="flex: 1">Peeling · Ana P.</span></div>
+<div style="display: flex; gap: 10px; align-items: center; font-size: 12px"><span style="width: 44px; color: #6B1E2E; font-weight: 600">14:30</span><span style="flex: 1">Drenagem linfática · Júlia R.</span></div>
+<div style="display: flex; gap: 10px; align-items: center; font-size: 12px"><span style="width: 44px; color: #6B1E2E; font-weight: 600">16:00</span><span style="flex: 1">Avaliação · Beatriz S.</span></div>
 </div>
-<div style="display: grid; grid-template-columns: minmax(0, 1fr) 90px; gap: 8px">
-<div style="display: flex; flex-direction: column; gap: 4px"><span style="font-size: 10.5px; font-weight: 600; color: #8a7768">Objetivo do Plano de SkinCare</span><span style="font-size: 11.5px; border: 1px solid #e8ded0; border-radius: 8px; padding: 7px 9px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis">Controle da oleosidade e clareamento de manchas</span></div>
-<div style="display: flex; flex-direction: column; gap: 4px"><span style="font-size: 10.5px; font-weight: 600; color: #8a7768">Duração (dias)</span><span style="font-size: 11.5px; border: 1px solid #e8ded0; border-radius: 8px; padding: 7px 9px">30</span></div>
-</div>
-</div>
-<div style="background: #FFFFFF; border: 1px solid #e8ded0; border-radius: 12px; padding: 12px; display: flex; flex-direction: column; gap: 8px">
-<span style="display: flex; align-items: center; gap: 8px; font-family: 'Outfit', system-ui, sans-serif; font-size: 14px; font-weight: 300"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M9 11l3 3L22 4"></path><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"></path></svg>Jornada da Rotina</span>
-<div style="border: 1px solid #e8ded0; border-radius: 10px; padding: 10px 12px; background: #fafbfc"><div style="display: flex; align-items: center; justify-content: space-between; gap: 8px"><div style="display: flex; align-items: center; gap: 7px; font-size: 12px; font-weight: 700; color: #2c1b20; min-width: 0"><span style="flex: none; font-size: 9px; font-weight: 800; padding: 3px 7px; border-radius: 999px; text-transform: uppercase; letter-spacing: .03em; background: #f6ead2; color: #8a6a2f">Manhã</span><span style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis">Gel de Limpeza Purificante <span style="color: #8a7768; font-weight: 500">— Limpeza</span></span></div><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#8a7768" stroke-width="2" aria-hidden="true" style="flex: none"><polyline points="3 6 5 6 21 6"></polyline><path d="M19 6l-1 14a2 2 0 01-2 2H8a2 2 0 01-2-2L5 6"></path></svg></div></div>
-<div style="border: 1px solid #e8ded0; border-radius: 10px; padding: 10px 12px; background: #fafbfc"><div style="display: flex; align-items: center; justify-content: space-between; gap: 8px"><div style="display: flex; align-items: center; gap: 7px; font-size: 12px; font-weight: 700; color: #2c1b20; min-width: 0"><span style="flex: none; font-size: 9px; font-weight: 800; padding: 3px 7px; border-radius: 999px; text-transform: uppercase; letter-spacing: .03em; background: #f6ead2; color: #8a6a2f">Manhã</span><span style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis">Sérum Niacinamida 10% <span style="color: #8a7768; font-weight: 500">— Tratamento</span></span></div><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#8a7768" stroke-width="2" aria-hidden="true" style="flex: none"><polyline points="3 6 5 6 21 6"></polyline><path d="M19 6l-1 14a2 2 0 01-2 2H8a2 2 0 01-2-2L5 6"></path></svg></div><div style="margin-top: 10px; padding-top: 10px; border-top: 1px solid #e8ded0; display: grid; grid-template-columns: 90px minmax(0, 1fr); gap: 6px 10px; font-size: 11px"><span style="color: #8a7768; font-weight: 600">Frequência</span><span style="font-weight: 600">Diário</span><span style="color: #8a7768; font-weight: 600">Modo de uso</span><span style="line-height: 1.45">Aplicar 3 gotas no rosto limpo, antes do protetor solar.</span></div></div>
-<div style="border: 1px solid #e8ded0; border-radius: 10px; padding: 10px 12px; background: #fafbfc"><div style="display: flex; align-items: center; justify-content: space-between; gap: 8px"><div style="display: flex; align-items: center; gap: 7px; font-size: 12px; font-weight: 700; color: #2c1b20; min-width: 0"><span style="flex: none; font-size: 9px; font-weight: 800; padding: 3px 7px; border-radius: 999px; text-transform: uppercase; letter-spacing: .03em; background: #f6ead2; color: #8a6a2f">Manhã</span><span style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis">Protetor Solar FPS 50 <span style="color: #8a7768; font-weight: 500">— Proteção solar</span></span></div><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#8a7768" stroke-width="2" aria-hidden="true" style="flex: none"><polyline points="3 6 5 6 21 6"></polyline><path d="M19 6l-1 14a2 2 0 01-2 2H8a2 2 0 01-2-2L5 6"></path></svg></div></div>
-<div style="border: 1px solid #e8ded0; border-radius: 10px; padding: 10px 12px; background: #fafbfc"><div style="display: flex; align-items: center; justify-content: space-between; gap: 8px"><div style="display: flex; align-items: center; gap: 7px; font-size: 12px; font-weight: 700; color: #2c1b20; min-width: 0"><span style="flex: none; font-size: 9px; font-weight: 800; padding: 3px 7px; border-radius: 999px; text-transform: uppercase; letter-spacing: .03em; background: #4a1524; color: #FFFFFF">Noite</span><span style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis">Gel de Ácido Azelaico <span style="color: #8a7768; font-weight: 500">— Tratamento</span></span></div><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#8a7768" stroke-width="2" aria-hidden="true" style="flex: none"><polyline points="3 6 5 6 21 6"></polyline><path d="M19 6l-1 14a2 2 0 01-2 2H8a2 2 0 01-2-2L5 6"></path></svg></div></div>
-<div style="border: 1px solid #e8ded0; border-radius: 10px; padding: 10px 12px; background: #fafbfc"><div style="display: flex; align-items: center; justify-content: space-between; gap: 8px"><div style="display: flex; align-items: center; gap: 7px; font-size: 12px; font-weight: 700; color: #2c1b20; min-width: 0"><span style="flex: none; font-size: 9px; font-weight: 800; padding: 3px 7px; border-radius: 999px; text-transform: uppercase; letter-spacing: .03em; background: #4a1524; color: #FFFFFF">Noite</span><span style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis">Creme Hidratante com Ceramidas <span style="color: #8a7768; font-weight: 500">— Hidratação</span></span></div><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#8a7768" stroke-width="2" aria-hidden="true" style="flex: none"><polyline points="3 6 5 6 21 6"></polyline><path d="M19 6l-1 14a2 2 0 01-2 2H8a2 2 0 01-2-2L5 6"></path></svg></div></div>
-</div>
-<div style="display: flex; justify-content: flex-end"><span style="font-size: 11.5px; font-weight: 700; padding: 8px 14px; border-radius: 999px; background: #4a1524; color: #FFFFFF">Finalizar Plano de SkinCare</span></div>
+<div class="glass-soft" style="border-radius: 18px; padding: 14px; display: flex; flex-direction: column; gap: 8px">
+<span style="font-size: 13px; font-weight: 600">Entradas da semana</span>
+<svg width="100%" height="120" viewBox="0 0 200 120" preserveAspectRatio="none" aria-hidden="true"><g fill="#E7C3BB"><rect x="8" y="70" width="18" height="50" rx="5"></rect><rect x="36" y="50" width="18" height="70" rx="5"></rect><rect x="64" y="80" width="18" height="40" rx="5"></rect><rect x="120" y="60" width="18" height="60" rx="5"></rect><rect x="148" y="40" width="18" height="80" rx="5"></rect><rect x="176" y="90" width="18" height="30" rx="5"></rect></g><rect x="92" y="20" width="18" height="100" rx="5" fill="#6B1E2E"></rect></svg>
 </div>
 </div>
 </div>
+</div>
+<div aria-hidden="true" style="margin: 0 auto; width: 160px; height: 36px; background: linear-gradient(#3A2A2D, #2A1A1D); clip-path: polygon(20% 0, 80% 0, 100% 100%, 0 100%)"></div>
+<div class="glass hero-flutua" style="position: absolute; top: 373px; right: -36px; width: 290px; box-sizing: border-box; border-radius: 24px; padding: 18px; display: flex; flex-direction: column; gap: 10px; text-align: left; font-family: 'Inter', system-ui, sans-serif; color: #2A1A1D">
+<span style="font-size: 14px; font-weight: 600">Plano de SkinCare · Marina L.</span>
+<div class="glass-soft" style="border-radius: 14px; padding: 10px 12px; display: flex; align-items: center; gap: 10px"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#B8925A" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"></path></svg><span style="font-size: 13px">Limpeza · Sérum · Protetor</span></div>
+<div class="glass-soft" style="border-radius: 14px; padding: 10px 12px; display: flex; align-items: center; gap: 10px"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#6B1E2E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"></path></svg><span style="font-size: 13px">Limpeza · Ácido azelaico · Hidratante</span></div>
+<div style="display: flex; align-items: center; gap: 8px; font-size: 12.5px; font-weight: 600; color: #4A6A33"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg>PDF enviado à paciente</div>
+</div></div>
 </div>
 </section>
 
@@ -599,37 +605,24 @@ Declaro que fui informada sobre o procedimento de peeling químico, seus benefí
 </div>
 </section>
 
-<section style="max-width: 1200px; margin: 0 auto; padding: 44px 24px 24px; display: flex; flex-direction: column; gap: 24px">
-<div style="max-width: 720px; display: flex; flex-direction: column; gap: 8px">
-<span style="font-size: 11px; font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase; color: #9E4A44">Antes do Skin Expert Pro</span>
-<h2 style="margin: 0; font-family: 'Outfit', system-ui, sans-serif; font-weight: 300; letter-spacing: -0.01em; font-size: clamp(22px, 2.5vw, 32px); line-height: 1.1">Você estudou a pele a fundo. Sua rotina não precisa ser um caderno, três planilhas e um WhatsApp lotado.</h2>
+<section id="antes" style="max-width: 1200px; margin: 0 auto; padding: 56px 24px 24px; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; z-index: 1">
+<div class="span2" style="grid-column: span 2; display: flex; flex-direction: column; justify-content: flex-end; gap: 14px; padding: 8px 8px 8px 0">
+<span style="font-size: 13px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: #6B1E2E">Antes do Skin Expert Pro</span>
+<h2 style="margin: 0; font-family: &quot;Outfit&quot;, system-ui, sans-serif; font-weight: 300; letter-spacing: -0.02em; font-size: clamp(32px, 3.8vw, 54px); line-height: 1.04">Você estudou a pele a fundo. <span style="color: #6B1E2E">Sua rotina não precisa ser um caderno, três planilhas e um WhatsApp lotado.</span></h2>
 </div>
-<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 16px">
-<div style="background: #FFFFFF; border: 1px solid #EBD8D0; border-radius: 16px; padding: 22px; display: flex; flex-direction: column; gap: 10px">
-<span style="font-family: 'Outfit', system-ui, sans-serif; font-size: 26px; color: #D4A574; line-height: 1; font-weight: 300">01</span>
-<h3 style="margin: 0; font-size: 15px; font-weight: 800">Fichas espalhadas</h3>
-<p style="margin: 0; font-size: 13px; line-height: 1.5; color: #5A4347">Anamnese no papel, fotos no celular e evolução na memória. Tudo passa a ficar no registro de cada paciente.</p>
-</div>
-<div style="background: #FFFFFF; border: 1px solid #EBD8D0; border-radius: 16px; padding: 22px; display: flex; flex-direction: column; gap: 10px">
-<span style="font-family: 'Outfit', system-ui, sans-serif; font-size: 26px; color: #D4A574; line-height: 1; font-weight: 300">02</span>
-<h3 style="margin: 0; font-size: 15px; font-weight: 800">Indicação de home care sem base</h3>
-<p style="margin: 0; font-size: 13px; line-height: 1.5; color: #5A4347">Saiba o que cada produto contém, para que serve cada ativo e o que evitar para cada cliente, de forma personalizada, antes de recomendar.</p>
-</div>
-<div style="background: #FFFFFF; border: 1px solid #EBD8D0; border-radius: 16px; padding: 22px; display: flex; flex-direction: column; gap: 10px">
-<span style="font-family: 'Outfit', system-ui, sans-serif; font-size: 26px; color: #D4A574; line-height: 1; font-weight: 300">03</span>
-<h3 style="margin: 0; font-size: 15px; font-weight: 800">Caixa sem controle</h3>
-<p style="margin: 0; font-size: 13px; line-height: 1.5; color: #5A4347">Comandas e contas pagas entram sozinhas num único livro-caixa. No fim do mês, é só exportar.</p>
-</div>
-</div>
-<div style="text-align: center; padding-top: 8px">
-<a href="#como-funciona" style="display: inline-block; background: #6B1E2E; color: #FFFFFF; font-size: 14px; font-weight: 700; padding: 12px 26px; border-radius: 999px; text-decoration: none; transition: opacity .2s">Veja como funciona →</a>
+<div class="glass" style="border-radius: 28px; padding: 26px; display: flex; flex-direction: column; gap: 12px; min-height: 220px"><span style="font-family: &quot;Outfit&quot;, system-ui, sans-serif; font-weight: 300; font-size: 64px; line-height: 0.9; color: #C98C86">01</span><h3 style="margin: auto 0 0; font-size: 19px; font-weight: 600">Fichas espalhadas</h3><p style="margin: 0; font-size: 15px; line-height: 1.6; color: #5A4347">Anamnese no papel, fotos no celular e evolução na memória. Tudo passa a ficar no registro de cada paciente.</p></div>
+<div class="glass" style="border-radius: 28px; padding: 26px; display: flex; flex-direction: column; gap: 12px; min-height: 220px"><span style="font-family: &quot;Outfit&quot;, system-ui, sans-serif; font-weight: 300; font-size: 64px; line-height: 0.9; color: #C98C86">02</span><h3 style="margin: auto 0 0; font-size: 19px; font-weight: 600">Home care sem base</h3><p style="margin: 0; font-size: 15px; line-height: 1.6; color: #5A4347">Saiba o que cada produto contém, para que serve cada ativo e o que evitar para cada cliente, de forma personalizada, antes de recomendar.</p></div>
+<div class="span2" style="grid-column: span 2; border-radius: 28px; padding: 26px; display: flex; flex-wrap: wrap; align-items: stretch; justify-content: space-between; gap: 20px; color: #FFFFFF; background: linear-gradient(150deg, #8A2B3D 0%, #5A1828 100%); min-height: 220px">
+<div style="display: flex; flex-direction: column; gap: 12px; max-width: 380px"><span style="font-family: &quot;Outfit&quot;, system-ui, sans-serif; font-weight: 300; font-size: 64px; line-height: 0.9; color: #E8C98F">03</span><h3 style="margin: auto 0 0; font-size: 19px; font-weight: 600">Caixa sem controle</h3><p style="margin: 0; font-size: 15px; line-height: 1.6; color: #F3E3DE">Comandas e contas pagas entram sozinhas num único livro-caixa. No fim do mês, é só exportar.</p></div>
+<svg width="240" height="110" viewBox="0 0 240 110" aria-hidden="true" style="width: 287px; height: 123px; align-self: flex-end"><path d="M0 90 C40 85 50 50 90 58 S150 96 180 60 S220 20 240 24" fill="none" stroke="#E8C98F" stroke-width="2.5"></path><path d="M0 100 C50 98 90 86 130 88 S200 70 240 68" fill="none" stroke="rgba(255,255,255,0.4)" stroke-width="1.6"></path></svg>
 </div>
 </section>
 
-<section id="diferencial" style="max-width: 1200px; margin: 0 auto; padding: 44px 24px; display: flex; flex-wrap: wrap; gap: 32px; align-items: center">
+<section id="diferencial" style="max-width: 1200px; margin: 0 auto; padding: 44px 24px">
+<div style="border-radius: 40px; padding: clamp(28px, 4vw, 56px); display: flex; flex-wrap: wrap; gap: 32px 48px; align-items: center; background: linear-gradient(160deg, #F7EAE5 0%, #F3E3DE 55%, #EFD6CE 100%); border: 1px solid #EBD8D0">
 <div style="flex: 1 1 440px; min-width: 0; display: flex; flex-direction: column; gap: 16px">
 <span style="font-size: 11px; font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase; color: #9E4A44">Diferencial</span>
-<h2 style="margin: 0; font-family: 'Outfit', system-ui, sans-serif; font-weight: 300; letter-spacing: -0.01em; font-size: clamp(22px, 2.5vw, 32px); line-height: 1.1">Um dicionário de ativos que pensa como cosmetóloga.</h2>
+<h2 style="margin: 0; font-family: 'Outfit', system-ui, sans-serif; font-weight: 300; letter-spacing: -0.01em; font-size: clamp(22px, 2.5vw, 32px); line-height: 1.1">Um dicionário de ativos <span style="color: #6B1E2E">que pensa como cosmetóloga.</span></h2>
 <p style="margin: 0; font-size: 14px; line-height: 1.5; color: #5A4347">Pesquise cada ativo por mecanismo de ação, pH, concentração de uso e restrições. Filtre por paciente gestante, fórmulas veganas ou orgânicas, período de uso e classes de ativos — e guarde seus favoritos.</p>
 <ul style="margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 10px">
 <li style="display: flex; gap: 8px; font-size: 13px; line-height: 1.5"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#6B1E2E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex: none"><circle cx="11" cy="11" r="7"></circle><path d="m20 20-3.5-3.5"></path></svg><span><strong>Busca guiada</strong> por perfil da paciente, período, classe e subclasse do ativo.</span></li>
@@ -666,8 +659,9 @@ Declaro que fui informada sobre o procedimento de peeling químico, seus benefí
 </div>
 </div>
 </div>
-<div style="text-align: center; padding-top: 16px">
+<div style="flex: 1 1 100%; text-align: center; padding-top: 8px">
 <a href="#solucoes" style="display: inline-block; background: #6B1E2E; color: #FFFFFF; font-size: 15px; font-weight: 700; padding: 14px 30px; border-radius: 999px; text-decoration: none; transition: opacity .2s">Conhecer as soluções →</a>
+</div>
 </div>
 </section>
 
@@ -820,6 +814,7 @@ Declaro que fui informada sobre o procedimento de peeling químico, seus benefí
 <h2 style="margin: 0; font-family: 'Outfit', system-ui, sans-serif; font-weight: 300; letter-spacing: -0.01em; font-size: clamp(26px, 2.8vw, 36px); line-height: 1.1">Escolha o plano do tamanho da sua agenda.</h2>
 <p style="margin: 0; font-size: 15px; line-height: 1.5; color: #5A4347"><strong style="color: #6B1E2E">14 dias grátis em qualquer plano.</strong> Só cobrada no 15º dia. Cancele antes, sem custo.</p>
 </div>
+<button type="button" data-promo data-promo-anual style="all: unset; box-sizing: border-box; cursor: pointer; display: inline-flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 8px 12px; padding: 10px 18px; border-radius: 999px; background: #120B0D; color: #F3E3DE; font-size: 14px; text-align: center"><span style="font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: #E8C98F">Black November</span><span>Plano anual com preço de lançamento, Essencial e Studio, até 30/11</span></button>
 <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 10px">
 <div role="group" aria-label="Período de cobrança" style="display: flex; gap: 4px; padding: 4px; border-radius: 999px; background: #F6D6CE"><button type="button" class="seg" data-per="m" aria-pressed="true">Mensal</button><button type="button" class="seg" data-per="t" aria-pressed="false">Trimestral</button><button type="button" class="seg" data-per="a" aria-pressed="false">Anual</button></div>
 <div role="group" aria-label="Moeda" style="display: flex; gap: 4px; padding: 4px; border-radius: 999px; border: 1px solid #EBD8D0"><button type="button" class="seg" data-cur="BRL" aria-pressed="true">R$</button><button type="button" class="seg" data-cur="EUR" aria-pressed="false">€</button></div>
@@ -959,6 +954,15 @@ Declaro que fui informada sobre o procedimento de peeling químico, seus benefí
 (function(){
   var BASE={BRL:[69,119,149],EUR:[19,39,59]};
   var DESC={m:1,t:0.95,a:0.9};
+  // Black November: anual com preço de lançamento (30% sobre o mensal) para Essencial e Studio, até 30/11.
+  var PROMO_FIM=new Date('2026-12-01T03:00:00Z');
+  var promo=new Date()<PROMO_FIM;
+  var PROMO_A={essencial:0.7,studio:0.7};
+  var LINKS_PROMO={
+    essencial:{BRL:'https://buy.stripe.com/eVq4gzf6n7590SA0LTdEs0d',EUR:'https://buy.stripe.com/3cIeVdcYffBFata9ipdEs0f'},
+    studio:{BRL:'https://buy.stripe.com/cNi00jcYfexBbxecuBdEs0e',EUR:'https://buy.stripe.com/fZu8wPgar9dh30I9ipdEs0g'}
+  };
+  if(!promo) document.querySelectorAll('[data-promo]').forEach(function(e){e.style.display='none'});
   var KEYS=['essencial','studio','expert'];
   var cur='BRL', per='m';
   // Quem abre o site na Europa já vê os preços em euros (pode trocar no botão R$ / €)
@@ -975,6 +979,7 @@ Declaro que fui informada sobre o procedimento de peeling químico, seus benefí
     }
   };
   function linkDe(plano){
+    if(promo&&per==='a'&&LINKS_PROMO[plano]) return LINKS_PROMO[plano][cur];
     return LINKS[plano]&&LINKS[plano][cur]?LINKS[plano][cur][per]:'#planos';
   }
   function fmt(v){
@@ -985,10 +990,11 @@ Declaro que fui informada sobre o procedimento de peeling químico, seus benefí
   }
   function render(){
     KEYS.forEach(function(k,i){
-      var m=BASE[cur][i]*DESC[per];
+      var bf=promo&&per==='a'&&PROMO_A[k];
+      var m=BASE[cur][i]*(bf?PROMO_A[k]:DESC[per]);
       document.querySelector('[data-price="'+k+'"]').textContent=fmt(m);
       document.querySelector('[data-note="'+k+'"]').textContent=
-        (per==='m'?'cobrado mensalmente':(per==='t'?fmt(m*3)+' a cada 3 meses':fmt(m*12)+' por ano'))+(cur==='EUR'?' · + IVA':' · + impostos');
+        (per==='m'?'cobrado mensalmente':(per==='t'?fmt(m*3)+' a cada 3 meses':fmt(m*12)+' por ano'))+(bf?' · preço de lançamento Black November':'')+(cur==='EUR'?' · + IVA':' · + impostos');
     });
     document.querySelectorAll('[data-apartir]').forEach(function(e){e.textContent='a partir de '+fmt(BASE[cur][0])+'/mês'});
     document.querySelectorAll('[data-assinar]').forEach(function(a){a.href=linkDe(a.dataset.assinar)});
@@ -997,6 +1003,7 @@ Declaro que fui informada sobre o procedimento de peeling químico, seus benefí
   }
   document.querySelectorAll('[data-per]').forEach(function(b){b.addEventListener('click',function(){per=b.dataset.per;render()})});
   document.querySelectorAll('[data-cur]').forEach(function(b){b.addEventListener('click',function(){cur=b.dataset.cur;render()})});
+  document.querySelectorAll('[data-promo-anual]').forEach(function(b){b.addEventListener('click',function(){per='a';render()})});
   render();
   // Barra "Testar grátis" no celular: aparece depois da primeira tela e some na seção de planos
   var barra=document.getElementById('barraCta'), planos=document.getElementById('planos'), nosPlanos=false;
