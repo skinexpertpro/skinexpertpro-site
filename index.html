@@ -166,6 +166,38 @@ details[open] .faq-plus{transform:rotate(45deg)}
 .pill-link:hover{background:rgba(107,30,46,0.08);color:#6B1E2E}
 @media (max-width: 960px){#antes{grid-template-columns:1fr !important}#antes .span2{grid-column:auto !important}.hero-flutua{position:relative !important;right:auto !important;top:auto !important;width:auto !important;margin-top:16px}}
 @media (max-width: 720px){.nav-principal{border-radius:24px !important}.mon-side{display:none !important}.mon-screen{height:auto !important}.mon-grid2{grid-template-columns:1fr !important}}
+/* Versão celular escolhida (24/11): o que aparece, o que resume e o que some */
+.cm-vertodas,.cm-vercomp{display:none}
+@media (max-width: 720px){
+  .cm-esc{display:none !important}
+  .barra-cta{display:none !important}
+  footer{padding-bottom:0 !important}
+  .cm-promo{flex-wrap:nowrap !important;padding:8px 16px !important;gap:12px !important;justify-content:space-between !important}
+  .cm-promo span[data-promo-tag]{font-size:13px !important;letter-spacing:.18em !important}
+  .cm-promo > span:last-child{padding:5px 6px 5px 12px !important;font-size:13px !important;flex:none}
+  #topo{gap:20px !important;padding-bottom:28px !important}
+  .cm-linha{flex-wrap:nowrap !important;justify-content:flex-start !important;overflow-x:auto;scrollbar-width:none;-webkit-mask-image:linear-gradient(90deg,#000 85%,transparent);mask-image:linear-gradient(90deg,#000 85%,transparent);width:100%}
+  .cm-linha::-webkit-scrollbar{display:none}
+  .cm-linha > span{flex:none}
+  .showcase{padding:40px 16px !important}
+  .showcase-title{margin-bottom:20px !important}
+  .showcase-panel-text ul{display:none !important}
+  .showcase-panel-text{padding:18px 18px 8px !important;gap:8px !important}
+  .showcase-panel-visual{min-height:0 !important;padding:8px 0 16px}
+  .phone-mockup{transform:scale(.68);margin:-66px 0}
+  #antes.cm-antes{display:grid !important;grid-template-columns:repeat(3,82%) !important;overflow-x:auto;scroll-snap-type:x mandatory;scroll-padding:0 16px;gap:12px !important;padding:36px 16px 16px !important;scrollbar-width:none}
+  #antes.cm-antes::-webkit-scrollbar{display:none}
+  #antes.cm-antes > .span2:first-child{grid-column:1 / -1 !important;position:sticky;left:0;width:calc(100vw - 32px);padding:0 !important}
+  #antes.cm-antes > div:not(:first-child){grid-column:auto !important;scroll-snap-align:start;min-height:0 !important;padding:20px !important}
+  #antes.cm-antes > div:not(:first-child) svg{display:none}
+  #antes.cm-antes > div:not(:first-child) span[style*="64px"]{font-size:40px !important}
+  #antes.cm-antes h2{font-size:28px !important}
+  #diferencial{padding:28px 16px !important}
+  .cm-sol:not(.aberta) .cm-extra{display:none !important}
+  .cm-vertodas,.cm-vercomp{display:block;align-self:center;margin:0 auto;font:700 14px Inter,system-ui,sans-serif;min-height:44px;padding:0 22px;border-radius:999px;border:1.5px solid #6B1E2E;background:transparent;color:#6B1E2E;cursor:pointer}
+  .cm-comp{display:none !important}
+  .comp-aberta .cm-comp{display:block !important}
+}
 </style>
 </head>
 <body>
@@ -173,10 +205,10 @@ details[open] .faq-plus{transform:rotate(45deg)}
 
 <!-- Faixa da promoção: Black November até 30/11, Preço de lançamento até 31/12 -->
 <a href="#planos" data-promo aria-label="Black November: ver os planos" style="display: block; text-decoration: none; background: radial-gradient(600px 80px at 50% 0%, rgba(232,201,143,0.28) 0%, rgba(232,201,143,0) 70%), #120B0D; color: #FFFFFF">
-<div style="max-width: 1200px; margin: 0 auto; padding: 12px 24px; display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 10px 18px; font-size: 14.5px">
+<div class="cm-promo" style="max-width: 1200px; margin: 0 auto; padding: 12px 24px; display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 10px 18px; font-size: 14.5px">
 <span style="font-family: 'Outfit', system-ui, sans-serif; font-weight: 600; font-size: 15px; letter-spacing: 0.22em; text-transform: uppercase; background: linear-gradient(90deg, #E8C98F, #F6E2B8, #B8925A); -webkit-background-clip: text; background-clip: text; color: transparent" data-promo-tag>Black November</span>
-<span aria-hidden="true" style="width: 4px; height: 4px; border-radius: 50%; background: #B5615E"></span>
-<span style="color: #F3E3DE">Preço especial de lançamento no plano anual — só até <span data-promo-ate>30/11</span></span>
+<span class="cm-esc" aria-hidden="true" style="width: 4px; height: 4px; border-radius: 50%; background: #B5615E"></span>
+<span class="cm-esc" style="color: #F3E3DE">Preço especial de lançamento no plano anual — só até <span data-promo-ate>30/11</span></span>
 <span style="display: inline-flex; align-items: center; gap: 8px; font-weight: 600; padding: 7px 8px 7px 16px; border-radius: 999px; color: #120B0D; background: #E8C98F">Aproveitar<span style="width: 22px; height: 22px; border-radius: 50%; background: #120B0D; display: flex; align-items: center; justify-content: center"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#E8C98F" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"></path></svg></span></span>
 </div>
 </a>
@@ -206,10 +238,10 @@ details[open] .faq-plus{transform:rotate(45deg)}
 <p style="margin: 0; font-size: 15px; line-height: 1.5; color: #5A4347; max-width: 560px">Anamnese, planos de skincare com produtos e ativos explicados, agenda e financeiro num sistema pensado para quem faz tudo sozinha — da avaliação da pele ao fechamento do mês.</p>
 <div style="display: flex; flex-wrap: wrap; gap: 10px; padding-top: 2px">
 <a href="#planos" style="text-decoration: none; font-weight: 700; font-size: 15px; padding: 14px 24px; border-radius: 999px; background: linear-gradient(135deg, #6B1E2E, #8B2E3E); color: #FFFFFF; box-shadow: 0 4px 20px rgba(107,30,46,0.35)">Testar 14 dias grátis</a>
-<a href="#como-funciona" style="text-decoration: none; font-weight: 700; font-size: 15px; padding: 14px 20px; border-radius: 999px; border: 1.5px solid #6B1E2E; color: #6B1E2E">Ver como funciona</a>
+<a class="cm-esc" href="#como-funciona" style="text-decoration: none; font-weight: 700; font-size: 15px; padding: 14px 20px; border-radius: 999px; border: 1.5px solid #6B1E2E; color: #6B1E2E">Ver como funciona</a>
 </div>
 <p style="margin: -6px 0 0; font-size: 13px; line-height: 1.5; color: #5A4347; max-width: 560px"><strong style="color: #6B1E2E">Você só é cobrada no 15º dia</strong> e pode cancelar antes, sem custo. Depois, <span data-apartir>a partir de R$ 69/mês</span>.</p>
-<div style="display: flex; flex-wrap: wrap; gap: 16px; font-size: 13px; color: #5A4347; font-weight: 600">
+<div class="cm-esc" style="display: flex; flex-wrap: wrap; gap: 16px; font-size: 13px; color: #5A4347; font-weight: 600">
 <span style="display: flex; align-items: center; gap: 8px"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#9E4A44" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg>No computador e no celular</span>
 <span style="display: flex; align-items: center; gap: 8px"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#9E4A44" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg>Brasil e União Europeia</span>
 <span style="display: flex; align-items: center; gap: 8px"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#9E4A44" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg>LGPD e RGPD</span>
@@ -238,15 +270,15 @@ details[open] .faq-plus{transform:rotate(45deg)}
 <div style="display: flex; gap: 10px; align-items: center; font-size: 12px"><span style="width: 44px; color: #6B1E2E; font-weight: 600">14:30</span><span style="flex: 1">Drenagem linfática · Júlia R.</span></div>
 <div style="display: flex; gap: 10px; align-items: center; font-size: 12px"><span style="width: 44px; color: #6B1E2E; font-weight: 600">16:00</span><span style="flex: 1">Avaliação · Beatriz S.</span></div>
 </div>
-<div class="glass-soft" style="border-radius: 18px; padding: 14px; display: flex; flex-direction: column; gap: 8px">
+<div class="glass-soft cm-esc" style="border-radius: 18px; padding: 14px; display: flex; flex-direction: column; gap: 8px">
 <span style="font-size: 13px; font-weight: 600">Entradas da semana</span>
 <svg width="100%" height="120" viewBox="0 0 200 120" preserveAspectRatio="none" aria-hidden="true"><g fill="#E7C3BB"><rect x="8" y="70" width="18" height="50" rx="5"></rect><rect x="36" y="50" width="18" height="70" rx="5"></rect><rect x="64" y="80" width="18" height="40" rx="5"></rect><rect x="120" y="60" width="18" height="60" rx="5"></rect><rect x="148" y="40" width="18" height="80" rx="5"></rect><rect x="176" y="90" width="18" height="30" rx="5"></rect></g><rect x="92" y="20" width="18" height="100" rx="5" fill="#6B1E2E"></rect></svg>
 </div>
 </div>
 </div>
 </div>
-<div aria-hidden="true" style="margin: 0 auto; width: 160px; height: 36px; background: linear-gradient(#3A2A2D, #2A1A1D); clip-path: polygon(20% 0, 80% 0, 100% 100%, 0 100%)"></div>
-<div class="glass hero-flutua" style="position: absolute; top: 373px; right: -36px; width: 290px; box-sizing: border-box; border-radius: 24px; padding: 18px; display: flex; flex-direction: column; gap: 10px; text-align: left; font-family: 'Inter', system-ui, sans-serif; color: #2A1A1D">
+<div class="cm-esc" aria-hidden="true" style="margin: 0 auto; width: 160px; height: 36px; background: linear-gradient(#3A2A2D, #2A1A1D); clip-path: polygon(20% 0, 80% 0, 100% 100%, 0 100%)"></div>
+<div class="cm-esc glass hero-flutua" style="position: absolute; top: 373px; right: -36px; width: 290px; box-sizing: border-box; border-radius: 24px; padding: 18px; display: flex; flex-direction: column; gap: 10px; text-align: left; font-family: 'Inter', system-ui, sans-serif; color: #2A1A1D">
 <span style="font-size: 14px; font-weight: 600">Plano de SkinCare · Marina L.</span>
 <div class="glass-soft" style="border-radius: 14px; padding: 10px 12px; display: flex; align-items: center; gap: 10px"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#B8925A" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"></path></svg><span style="font-size: 13px">Limpeza · Sérum · Protetor</span></div>
 <div class="glass-soft" style="border-radius: 14px; padding: 10px 12px; display: flex; align-items: center; gap: 10px"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#6B1E2E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"></path></svg><span style="font-size: 13px">Limpeza · Ácido azelaico · Hidratante</span></div>
@@ -255,7 +287,7 @@ details[open] .faq-plus{transform:rotate(45deg)}
 </div>
 </section>
 
-<section aria-label="Tudo em um só lugar" style="background: #FFFFFF; border-top: 1px solid #EBD8D0">
+<section class="cm-esc" aria-label="Tudo em um só lugar" style="background: #FFFFFF; border-top: 1px solid #EBD8D0">
 <div class="float-section" style="max-width: 1200px; margin: 0 auto">
 
 <div class="float-center" style="text-align: center; display: flex; flex-direction: column; align-items: center; gap: 20px; position: relative; z-index: 2">
@@ -318,7 +350,7 @@ details[open] .faq-plus{transform:rotate(45deg)}
 <section aria-label="Para quem é" style="background: #F5EFEC; border-top: 1px solid #EBD8D0; border-bottom: 1px solid #EBD8D0">
 <div style="max-width: 1200px; margin: 0 auto; padding: 20px 24px; display: flex; flex-direction: column; align-items: center; gap: 10px">
 <span style="font-size: 11px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: #6B1E2E">Feito para profissionais da estética</span>
-<div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 6px">
+<div class="cm-linha" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 6px">
 <span style="display: inline-flex; align-items: center; gap: 8px; font-size: 12px; font-weight: 600; color: #2A1A1D; background: #FFFFFF; border: 1px solid #EBD8D0; border-radius: 999px; padding: 7px 12px"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#6B1E2E" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg>Esteticistas</span>
 <span style="display: inline-flex; align-items: center; gap: 8px; font-size: 12px; font-weight: 600; color: #2A1A1D; background: #FFFFFF; border: 1px solid #EBD8D0; border-radius: 999px; padding: 7px 12px"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#6B1E2E" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg>Biomédicas Estetas</span>
 <span style="display: inline-flex; align-items: center; gap: 8px; font-size: 12px; font-weight: 600; color: #2A1A1D; background: #FFFFFF; border: 1px solid #EBD8D0; border-radius: 999px; padding: 7px 12px"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#6B1E2E" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg>Enfermeiras Estetas</span>
@@ -605,7 +637,7 @@ Declaro que fui informada sobre o procedimento de peeling químico, seus benefí
 </div>
 </section>
 
-<section id="antes" style="max-width: 1200px; margin: 0 auto; padding: 56px 24px 24px; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; z-index: 1">
+<section class="cm-antes" id="antes" style="max-width: 1200px; margin: 0 auto; padding: 56px 24px 24px; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; z-index: 1">
 <div class="span2" style="grid-column: span 2; display: flex; flex-direction: column; justify-content: flex-end; gap: 14px; padding: 8px 8px 8px 0">
 <span style="font-size: 13px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: #6B1E2E">Antes do Skin Expert Pro</span>
 <h2 style="margin: 0; font-family: &quot;Outfit&quot;, system-ui, sans-serif; font-weight: 300; letter-spacing: -0.02em; font-size: clamp(32px, 3.8vw, 54px); line-height: 1.04">Você estudou a pele a fundo. <span style="color: #6B1E2E">Sua rotina não precisa ser um caderno, três planilhas e um WhatsApp lotado.</span></h2>
@@ -624,7 +656,7 @@ Declaro que fui informada sobre o procedimento de peeling químico, seus benefí
 <span style="font-size: 11px; font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase; color: #9E4A44">Diferencial</span>
 <h2 style="margin: 0; font-family: 'Outfit', system-ui, sans-serif; font-weight: 300; letter-spacing: -0.01em; font-size: clamp(22px, 2.5vw, 32px); line-height: 1.1">Um dicionário de ativos <span style="color: #6B1E2E">que pensa como cosmetóloga.</span></h2>
 <p style="margin: 0; font-size: 14px; line-height: 1.5; color: #5A4347">Pesquise cada ativo por mecanismo de ação, pH, concentração de uso e restrições. Filtre por paciente gestante, fórmulas veganas ou orgânicas, período de uso e classes de ativos — e guarde seus favoritos.</p>
-<ul style="margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 10px">
+<ul class="cm-esc" style="margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 10px">
 <li style="display: flex; gap: 8px; font-size: 13px; line-height: 1.5"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#6B1E2E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex: none"><circle cx="11" cy="11" r="7"></circle><path d="m20 20-3.5-3.5"></path></svg><span><strong>Busca guiada</strong> por perfil da paciente, período, classe e subclasse do ativo.</span></li>
 <li style="display: flex; gap: 8px; font-size: 13px; line-height: 1.5"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#6B1E2E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex: none"><path d="M10 2v7.5L4.5 19a2 2 0 0 0 1.7 3h11.6a2 2 0 0 0 1.7-3L14 9.5V2"></path><path d="M8.5 2h7"></path></svg><span><strong>Catálogo de produtos conectado</strong>: a lista de ingredientes de cada produto aponta para os ativos — e você vê quais produtos contêm cada ativo.</span></li>
 <li style="display: flex; gap: 8px; font-size: 13px; line-height: 1.5"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#6B1E2E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex: none"><path d="M12 3 2 8l10 5 10-5-10-5Z"></path><path d="m2 16 10 5 10-5"></path></svg><span><strong>Base em crescimento</strong>, revisada por uma esteticista e cosmetóloga, compartilhada por todas as profissionais.</span></li>
@@ -633,14 +665,14 @@ Declaro que fui informada sobre o procedimento de peeling químico, seus benefí
 <div style="flex: 1 1 440px; min-width: 0; display: flex; flex-direction: column; gap: 16px">
 <div style="background: #FFFFFF; border: 1px solid #EBD8D0; border-radius: 20px; padding: 20px; display: flex; flex-direction: column; gap: 14px">
 <div style="display: flex; align-items: center; gap: 10px; border: 1px solid #EBD8D0; border-radius: 12px; padding: 12px 14px; color: #5A4347; font-size: 15px"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="m20 20-3.5-3.5"></path></svg>Buscar ativo…</div>
-<div style="display: flex; flex-wrap: wrap; gap: 8px">
+<div class="cm-esc" style="display: flex; flex-wrap: wrap; gap: 8px">
 <span style="font-size: 13px; font-weight: 700; padding: 8px 12px; border-radius: 999px; background: #6B1E2E; color: #FFFFFF">Gestante</span>
 <span style="font-size: 13px; font-weight: 700; padding: 8px 12px; border-radius: 999px; border: 1px solid #EBD8D0">Vegano</span>
 <span style="font-size: 13px; font-weight: 700; padding: 8px 12px; border-radius: 999px; border: 1px solid #EBD8D0">Orgânico</span>
 <span style="font-size: 13px; font-weight: 700; padding: 8px 12px; border-radius: 999px; background: #6B1E2E; color: #FFFFFF">Uso diurno</span>
 <span style="font-size: 13px; font-weight: 700; padding: 8px 12px; border-radius: 999px; border: 1px solid #EBD8D0">Clareadores</span>
 </div>
-<div style="display: flex; gap: 20px; border-bottom: 1px solid #EBD8D0; font-size: 14px; font-weight: 700">
+<div class="cm-esc" style="display: flex; gap: 20px; border-bottom: 1px solid #EBD8D0; font-size: 14px; font-weight: 700">
 <span style="padding: 8px 0; border-bottom: 2px solid #6B1E2E; color: #6B1E2E">Todos</span>
 <span style="padding: 8px 0; color: #5A4347">Favoritos</span>
 <span style="padding: 8px 0; color: #5A4347">Selecionados</span>
@@ -701,7 +733,7 @@ Declaro que fui informada sobre o procedimento de peeling químico, seus benefí
 <h2 style="margin: 0; font-family: 'Outfit', system-ui, sans-serif; font-weight: 300; letter-spacing: -0.01em; font-size: clamp(22px, 2.5vw, 32px); line-height: 1.1">Tudo o que você precisa para organizar a cabine — num só lugar.</h2>
 <p style="margin: 0; font-size: 14px; line-height: 1.5; color: #5A4347">Pensado para quem atende sozinha, com espaço para crescer quando a agenda lotar.</p>
 </div>
-<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 12px">
+<div class="cm-sol" id="cmSol" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 12px">
 
 <div style="background: #FFFFFF; border: 1px solid #EBD8D0; border-radius: 14px; padding: 14px; display: flex; gap: 12px">
 <span style="flex: none; width: 38px; height: 38px; border-radius: 10px; background: #F6D6CE; display: flex; align-items: center; justify-content: center"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#6B1E2E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"></rect><path d="M16 2v4M8 2v4M3 10h18"></path></svg></span>
@@ -717,11 +749,11 @@ Declaro que fui informada sobre o procedimento de peeling químico, seus benefí
 <span style="flex: none; width: 38px; height: 38px; border-radius: 10px; background: #F6D6CE; display: flex; align-items: center; justify-content: center"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#6B1E2E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><circle cx="12" cy="12" r="4"></circle></svg></span>
 <div style="display: flex; flex-direction: column; gap: 6px"><h3 style="margin: 0; font-size: 15px; font-weight: 800">Avaliação cutânea</h3><p style="margin: 0; font-size: 13px; line-height: 1.5; color: #5A4347">Fitzpatrick, Baumann e Glogau, hidratação, oleosidade, acne, rosácea, discromias e olheiras.</p></div>
 </div>
-<div style="background: #FFFFFF; border: 1px solid #EBD8D0; border-radius: 14px; padding: 14px; display: flex; gap: 12px">
+<div class="cm-extra" style="background: #FFFFFF; border: 1px solid #EBD8D0; border-radius: 14px; padding: 14px; display: flex; gap: 12px">
 <span style="flex: none; width: 38px; height: 38px; border-radius: 10px; background: #F6D6CE; display: flex; align-items: center; justify-content: center"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#6B1E2E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.5.5l3-3a5 5 0 0 0-7-7l-1.7 1.7"></path><path d="M14 11a5 5 0 0 0-7.5-.5l-3 3a5 5 0 0 0 7 7l1.7-1.7"></path></svg></span>
 <div style="display: flex; flex-direction: column; gap: 6px"><h3 style="margin: 0; font-size: 15px; font-weight: 800">Ficha por link</h3><p style="margin: 0; font-size: 13px; line-height: 1.5; color: #5A4347">A paciente preenche a anamnese antes de chegar; as respostas caem no painel.</p></div>
 </div>
-<div style="background: #FFFFFF; border: 1px solid #EBD8D0; border-radius: 14px; padding: 14px; display: flex; gap: 12px">
+<div class="cm-extra" style="background: #FFFFFF; border: 1px solid #EBD8D0; border-radius: 14px; padding: 14px; display: flex; gap: 12px">
 <span style="flex: none; width: 38px; height: 38px; border-radius: 10px; background: #F6D6CE; display: flex; align-items: center; justify-content: center"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#6B1E2E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2v4M12 18v4M4.9 4.9l2.8 2.8M16.3 16.3l2.8 2.8M2 12h4M18 12h4"></path></svg></span>
 <div style="display: flex; flex-direction: column; gap: 6px"><h3 style="margin: 0; font-size: 15px; font-weight: 800">Áreas de atuação</h3><p style="margin: 0; font-size: 13px; line-height: 1.5; color: #5A4347">Ative harmonização facial, tricologia ou estética corporal conforme o seu trabalho.</p></div>
 </div>
@@ -730,7 +762,7 @@ Declaro que fui informada sobre o procedimento de peeling químico, seus benefí
 <div style="display: flex; flex-direction: column; gap: 6px"><h3 style="margin: 0; font-size: 15px; font-weight: 800">Planos de SkinCare</h3><p style="margin: 0; font-size: 13px; line-height: 1.5; color: #5A4347">Rotinas de manhã e noite em PDF, com links dos produtos para a paciente.</p></div>
 </div>
 
-<div style="background: #FFFFFF; border: 1px solid #EBD8D0; border-radius: 14px; padding: 14px; display: flex; gap: 12px">
+<div class="cm-extra" style="background: #FFFFFF; border: 1px solid #EBD8D0; border-radius: 14px; padding: 14px; display: flex; gap: 12px">
 <span style="flex: none; width: 38px; height: 38px; border-radius: 10px; background: #F6D6CE; display: flex; align-items: center; justify-content: center"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#6B1E2E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 2v7.5L4.5 19a2 2 0 0 0 1.7 3h11.6a2 2 0 0 0 1.7-3L14 9.5V2"></path><path d="M8.5 2h7M7 15h10"></path></svg></span>
 <div style="display: flex; flex-direction: column; gap: 6px"><h3 style="margin: 0; font-size: 15px; font-weight: 800">Formulações Cosméticas</h3><p style="margin: 0; font-size: 13px; line-height: 1.5; color: #5A4347">Base de ativos pesquisável, com busca guiada e favoritos.</p></div>
 </div>
@@ -745,34 +777,31 @@ Declaro que fui informada sobre o procedimento de peeling químico, seus benefí
 <div style="display: flex; flex-direction: column; gap: 6px"><h3 style="margin: 0; font-size: 15px; font-weight: 800">Financeiro integrado</h3><p style="margin: 0; font-size: 13px; line-height: 1.5; color: #5A4347">Comandas, contas a pagar e receber num único livro-caixa, com exportação em CSV.</p></div>
 </div>
 
-<div style="background: #FFFFFF; border: 1px solid #EBD8D0; border-radius: 14px; padding: 14px; display: flex; gap: 12px">
+<div class="cm-extra" style="background: #FFFFFF; border: 1px solid #EBD8D0; border-radius: 14px; padding: 14px; display: flex; gap: 12px">
 <span style="flex: none; width: 38px; height: 38px; border-radius: 10px; background: #F6D6CE; display: flex; align-items: center; justify-content: center"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#6B1E2E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9 12 3l9 6v11a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1z"></path><path d="M9 21v-7h6v7"></path></svg></span>
 <div style="display: flex; flex-direction: column; gap: 6px"><h3 style="margin: 0; font-size: 15px; font-weight: 800">Meu Negócio</h3><p style="margin: 0; font-size: 13px; line-height: 1.5; color: #5A4347">Serviços, pacotes, categorias e horários de atendimento organizados.</p></div>
 </div>
-<div style="background: #FFFFFF; border: 1px solid #EBD8D0; border-radius: 14px; padding: 14px; display: flex; gap: 12px">
+<div class="cm-extra" style="background: #FFFFFF; border: 1px solid #EBD8D0; border-radius: 14px; padding: 14px; display: flex; gap: 12px">
 <span style="flex: none; width: 38px; height: 38px; border-radius: 10px; background: #F6D6CE; display: flex; align-items: center; justify-content: center"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#6B1E2E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 8l-9-5-9 5 9 5 9-5z"></path><path d="M3 8v8l9 5 9-5V8"></path><path d="M12 13v8"></path></svg></span>
 <div style="display: flex; flex-direction: column; gap: 6px"><h3 style="margin: 0; font-size: 15px; font-weight: 800">Pacotes de sessões</h3><p style="margin: 0; font-size: 13px; line-height: 1.5; color: #5A4347">Venda o pacote e o sistema cuida do saldo: a sessão é reservada ao agendar e descontada quando o atendimento acontece.</p></div>
 </div>
-<div style="background: #FFFFFF; border: 1px solid #EBD8D0; border-radius: 14px; padding: 14px; display: flex; gap: 12px">
+<div class="cm-extra" style="background: #FFFFFF; border: 1px solid #EBD8D0; border-radius: 14px; padding: 14px; display: flex; gap: 12px">
 <span style="flex: none; width: 38px; height: 38px; border-radius: 10px; background: #F6D6CE; display: flex; align-items: center; justify-content: center"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#6B1E2E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><path d="M14 2v6h6"></path><path d="M8 17c1.5-1.5 2.5-1.5 3.5 0s2 1.5 3.5 0"></path></svg></span>
 <div style="display: flex; flex-direction: column; gap: 6px"><h3 style="margin: 0; font-size: 15px; font-weight: 800">Termos de consentimento</h3><p style="margin: 0; font-size: 13px; line-height: 1.5; color: #5A4347">Modelos prontos por procedimento. A paciente assina pelo celular, por link ou na cabine, e o termo fica guardado na ficha.</p></div>
 </div>
 
-<div style="background: #FFFFFF; border: 1px solid #EBD8D0; border-radius: 14px; padding: 14px; display: flex; gap: 12px">
-<span style="flex: none; width: 38px; height: 38px; border-radius: 10px; background: #F6D6CE; display: flex; align-items: center; justify-content: center"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#6B1E2E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 8 12 3 3 8v8l9 5 9-5z"></path><path d="m3 8 9 5 9-5M12 13v8"></path></svg></span>
-<div style="display: flex; flex-direction: column; gap: 6px"><h3 style="margin: 0; font-size: 15px; font-weight: 800">Estoque</h3><p style="margin: 0; font-size: 13px; line-height: 1.5; color: #5A4347">Controle dos produtos que você usa na cabine e revende.</p></div>
-</div>
 
-<div style="background: #FFFFFF; border: 1px solid #EBD8D0; border-radius: 14px; padding: 14px; display: flex; gap: 12px">
+<div class="cm-extra" style="background: #FFFFFF; border: 1px solid #EBD8D0; border-radius: 14px; padding: 14px; display: flex; gap: 12px">
 <span style="flex: none; width: 38px; height: 38px; border-radius: 10px; background: #F6D6CE; display: flex; align-items: center; justify-content: center"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#6B1E2E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="6" y="2" width="12" height="20" rx="2.5"></rect><path d="M11 18h2"></path></svg></span>
 <div style="display: flex; flex-direction: column; gap: 6px"><h3 style="margin: 0; font-size: 15px; font-weight: 800">No celular também</h3><p style="margin: 0; font-size: 13px; line-height: 1.5; color: #5A4347">Dashboard, agenda e pacientes no celular, para consultar tudo entre um atendimento e outro.</p></div>
 </div>
-<div style="background: #FFFFFF; border: 1px solid #EBD8D0; border-radius: 14px; padding: 14px; display: flex; gap: 12px">
+<div class="cm-extra" style="background: #FFFFFF; border: 1px solid #EBD8D0; border-radius: 14px; padding: 14px; display: flex; gap: 12px">
 <span style="flex: none; width: 38px; height: 38px; border-radius: 10px; background: #F6D6CE; display: flex; align-items: center; justify-content: center"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#6B1E2E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"></path></svg></span>
 <div style="display: flex; flex-direction: column; gap: 6px"><h3 style="margin: 0; font-size: 15px; font-weight: 800">Brasil e Europa</h3><p style="margin: 0; font-size: 13px; line-height: 1.5; color: #5A4347">Preços na moeda do país de residência da paciente e versão adaptada às regras da UE.</p></div>
 </div>
 
 </div>
+<button type="button" class="cm-vertodas" id="cmVerTodas" aria-controls="cmSol" aria-expanded="false">Ver todas as soluções</button>
 <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 12px 16px; padding: 20px 24px; border: 1.5px dashed #D0897F; border-radius: 18px">
 <span style="font-size: 12px; font-weight: 800; letter-spacing: 0.08em; text-transform: uppercase; padding: 6px 10px; border-radius: 999px; background: #6B1E2E; color: #FFFFFF">Em breve</span>
 <span style="font-size: 14px; font-weight: 600">Área educacional com Comunidade e Tutoriais, inclusa no plano Expert.</span>
@@ -782,7 +811,7 @@ Declaro que fui informada sobre o procedimento de peeling químico, seus benefí
 </div>
 </section>
 
-<section style="background: #F6D6CE">
+<section class="cm-esc" style="background: #F6D6CE">
 <div style="max-width: 1200px; margin: 0 auto; padding: 56px 24px; display: flex; flex-wrap: wrap; gap: 36px; align-items: center">
 <div style="flex: 1 1 420px; min-width: 0; display: flex; flex-direction: column; gap: 12px">
 <span style="font-size: 11px; font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase; color: #9E4A44">Segurança e privacidade</span>
@@ -848,7 +877,8 @@ Declaro que fui informada sobre o procedimento de peeling químico, seus benefí
 <!-- Tabela comparativa dos planos -->
 <div style="width: 100%; display: flex; flex-direction: column; gap: 12px; margin-top: 18px">
 <h3 style="margin: 0; text-align: center; font-family: 'Outfit', system-ui, sans-serif; font-weight: 300; font-size: clamp(20px, 2.2vw, 26px)">Compare os planos</h3>
-<div class="cmp-planos" style="width: 100%; overflow-x: auto; border: 1px solid #EBD8D0; border-radius: 18px; background: #FFFFFF">
+<button type="button" class="cm-vercomp" id="cmVerComp" aria-expanded="false">Ver comparação completa</button>
+<div class="cmp-planos cm-comp" style="width: 100%; overflow-x: auto; border: 1px solid #EBD8D0; border-radius: 18px; background: #FFFFFF">
 <table style="width: 100%; min-width: 560px; border-collapse: collapse; font-size: 14px; color: #2c1b20">
 <thead><tr><th scope="col" style="padding: 16px; text-align: left; font-size: 13px; font-weight: 700; color: #5A4347; width: 46%">Funcionalidade</th><th scope="col" style="padding: 16px 10px; text-align: center; font-size: 15px; font-weight: 300; font-family: 'Outfit', system-ui, sans-serif; background: #FBF4F1; color: #6B1E2E">Essencial</th><th scope="col" style="padding: 16px 10px; text-align: center; font-size: 15px; font-weight: 300; font-family: 'Outfit', system-ui, sans-serif">Studio</th><th scope="col" style="padding: 16px 10px; text-align: center; font-size: 15px; font-weight: 300; font-family: 'Outfit', system-ui, sans-serif; color: #5A4347">Expert<br><span style="font-family: inherit; font-size: 11px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: #9E4A44">em breve</span></th></tr></thead>
 <tbody>
@@ -879,7 +909,7 @@ Declaro que fui informada sobre o procedimento de peeling químico, seus benefí
 </tbody>
 </table>
 </div>
-<p style="margin: 0; font-size: 12.5px; line-height: 1.5; color: #5A4347; text-align: center">Todos os planos com 14 dias grátis. No Studio, os pacientes e o financeiro de cada profissional são sempre privados.</p>
+<p class="cm-comp" style="margin: 0; font-size: 12.5px; line-height: 1.5; color: #5A4347; text-align: center">Todos os planos com 14 dias grátis. No Studio, os pacientes e o financeiro de cada profissional são sempre privados.</p>
 </div>
 </div>
 </section>
@@ -1049,6 +1079,14 @@ Declaro que fui informada sobre o procedimento de peeling químico, seus benefí
     });
   });
   if(tabs.length) startTimer();
+})();
+</script>
+<script>
+(function(){
+  var b=document.getElementById('cmVerTodas'),g=document.getElementById('cmSol');
+  if(b&&g)b.addEventListener('click',function(){var a=g.classList.toggle('aberta');b.setAttribute('aria-expanded',a);b.textContent=a?'Ver menos':'Ver todas as soluções';if(!a)g.scrollIntoView({block:'start'});});
+  var c=document.getElementById('cmVerComp');
+  if(c)c.addEventListener('click',function(){var w=c.parentNode,a=w.classList.toggle('comp-aberta');c.setAttribute('aria-expanded',a);c.textContent=a?'Fechar comparação':'Ver comparação completa';});
 })();
 </script>
 </body>
